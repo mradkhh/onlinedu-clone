@@ -439,6 +439,9 @@ p {
   line-height: 150%;
   color: var(--grayColor);
 }
+button {
+  cursor: pointer;
+}
 
 button[data-type="primary"] {
   background-color: var(--greenColor);
@@ -447,13 +450,12 @@ button[data-type="primary"] {
   padding: 16px 24px;
   color: var(--whiteColor);
 }
-button[data-type="primary-outline"] {
+button[data-type="outline"] {
   background-color: var(--whiteColor);
   border: 1px solid var(--greenColor);
   color: var(--blueColor);
   padding: 16px 24px;
   border-radius: 8px;
-  color: var(--whiteColor);
 }
 button[data-type="primary-disabled"] {
   background-color: var(--grayColor);
