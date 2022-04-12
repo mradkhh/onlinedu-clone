@@ -34,12 +34,20 @@ const Header = () => {
             <div>
                 <img src="/Images/logo.png" alt="logo" />
             </div>
+<<<<<<< Updated upstream
             <Dropdown overlay={menu} trigger={['click']}>
               <a className="ant-dropdown-link" onClick={e => e.preventDefault()}>
                 Click me <DownOutlined />
               </a>
             </Dropdown>
             <Search placeholder='Что Вы хотите изучать?' />
+=======
+            <Button type={'primary-outline'} text={'Категории'}/>
+
+            <h1 className={styles.h1}>React
+              <span className={styles.span}>App</span>
+            </h1>
+>>>>>>> Stashed changes
         </Space>
     </Header>
   )
