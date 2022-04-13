@@ -1,0 +1,72 @@
+.header__section {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding-block: 24px;
+
+    > * {
+      display: flex;
+      justify-self: center;
+      align-items: center;
+      gap: 10px;
+    }
+
+    &__info-btn {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 100%;
+    }
+
+    .input__field {
+      max-width: 500px;
+      width: 100%;
+      position: relative;
+      input {
+        width: 100%;
+        border-radius: 8px;
+        padding-block: 12px;
+        padding-left: 48px;
+        border: none;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 100%;
+        background-color: rgba(137, 141, 166, 0.08);
+
+        &::placeholder {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 100%;
+        }
+      }
+
+      svg {
+        position: absolute;
+        left: 21px;
+      }
+    }
+
+    .lang__btn {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 100%;
+    }
+    .lang__link {
+      background-color: #000;
+    }
+
+    .sign {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 100%;
+    }
+
+    .ant-modal-body {
+      color: red;
+    }
+  }
+}

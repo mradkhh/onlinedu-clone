@@ -366,6 +366,7 @@ h6 {
   --whiteColor: #ffffff;
   --blackColor: #000000;
   --greenColor: #26caac;
+  --greenHoverColor: #1ea088;
   --blueColor: #0d2e69;
   --grayColor: #898da6;
   --lightGreenColor: #6fcf97;
@@ -375,7 +376,7 @@ h6 {
   --lightBlueColor: #2f80ed;
 }
 
-body {
+html {
   font-family: "Cera Pro", serif;
 }
 
@@ -439,6 +440,21 @@ p {
   line-height: 150%;
   color: var(--grayColor);
 }
+
+input {
+  outline: none;
+  width: 100%;
+  border-radius: 8px;
+  padding-block: 12px;
+  padding-left: 10px;
+  border: none;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  background-color: rgba(137, 141, 166, 0.08);
+}
+
 button {
   cursor: pointer;
   border-radius: 8px;
@@ -450,16 +466,23 @@ button[data-type="primary"] {
   background-color: var(--greenColor);
   color: var(--whiteColor);
 }
+button[data-type="primary"]:hover {
+  background-color: var(--greenHoverColor);
+}
 button[data-type="outline"] {
   background-color: var(--whiteColor);
-  color: var(--blueColor);
+  color: var(--greenColor);
+}
+button[data-type="outline"]:hover {
+  background-color: var(--greenColor);
+  color: var(--whiteColor);
 }
 button[data-type="primary-disabled"] {
   background-color: var(--grayColor);
   color: var(--whiteColor);
 }
 button[data-type="secondary"] {
-  background-color: transparent;
-  border: 1px solid transparent;
-  color: var(--blackColor);
+  background: none;
+  border: none;
+  color: var(--blueColor);
 }
