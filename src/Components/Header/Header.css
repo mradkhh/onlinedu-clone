@@ -34,7 +34,6 @@
   line-height: 100%;
 }
 .header__section .header .input__field {
-  max-width: 540px;
   width: 100%;
   position: relative;
 }
@@ -73,6 +72,7 @@
   left: 21px;
 }
 .header__section .header .lang__btn {
+  margin-left: auto;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;

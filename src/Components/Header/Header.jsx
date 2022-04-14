@@ -12,6 +12,7 @@ const Lang = styled.div`
   align-items: center;
   flex-direction: column;
   border-radius: 8px;
+  background-color: var(--whiteColor);
   box-shadow: 0px 0px 22px -8px rgba(68, 76, 82, 0.35);
   overflow: hidden;
 

@@ -34,7 +34,6 @@
     }
 
     .input__field {
-      max-width: 540px;
       width: 100%;
       position: relative;
       input {
@@ -64,6 +63,7 @@
     }
 
     .lang__btn {
+      margin-left: auto;
       font-style: normal;
       font-weight: 500;
       font-size: 16px;
