@@ -6,6 +6,9 @@
     align-items: center;
     gap: 20px;
     padding-block: 24px;
+    @media (max-width: 575.99px) {
+     padding-block: 16px;
+    }
     @media (max-width: 400px) {
       gap: 10px;
      padding-block: 12px;
@@ -75,7 +78,7 @@
       font-weight: 500;
       font-size: 16px;
       line-height: 100%;
-      @media (max-width: 576px) {
+      @media (max-width: 575.99px) {
         padding: 12px;
       }
     }
@@ -95,7 +98,7 @@
   .ant-modal-content {
     border-radius: 10px !important;
     padding: 32px 100px 42px;
-    @media (max-width: 768px) {
+    @media (max-width: 767.99px) {
       padding: 32px 20px 42px;
     }
 
