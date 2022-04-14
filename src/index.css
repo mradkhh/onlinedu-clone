@@ -457,11 +457,11 @@ input {
   background-color: rgba(137, 141, 166, 0.08);
 }
 
-input[type=checkbox] {
+input[type="checkbox"] {
   cursor: pointer;
   -webkit-appearance: none;
   appearance: none;
-  border: 1px solid #898DA6;
+  border: 1px solid #898da6;
   font: inherit;
   background-color: var(--whiteColor);
   color: var(--greenColor);
@@ -498,11 +498,6 @@ button {
   transition: all 200ms ease;
 }
 
-button:active {
-  background-color: var(--greenActiveColor) !important;
-  border: 1px solid var(--greenActiveColor) !important;
-}
-
 button[data-type="primary"] {
   background-color: var(--greenColor);
   color: var(--whiteColor);
@@ -529,4 +524,21 @@ button[data-type="secondary"] {
   background: none;
   border: none;
   color: var(--blueColor);
+}
+
+button[data-type="secondary"]:active {
+  background-color: none !important;
+  border: none !important;
+}
+button:active {
+  background-color: var(--greenActiveColor);
+  border: 1px solid var(--greenActiveColor);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: var(--lightGrayColor);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--greenColor);
 }

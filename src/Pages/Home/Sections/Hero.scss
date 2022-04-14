@@ -1,14 +1,36 @@
 .hero__section {
   .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 95px;
+    @media (max-width: 990.99px) {
+      flex-direction: column;
+      gap: 20px;
+    }
     &__info {
+      max-width: 505px;
+      width: 100%;
+      margin-top: 53px;
       &-title {
+        margin-bottom: 8px;
+      }
+
+      &-subtitle {
+        margin-bottom: 16px;
       }
 
       &-btn {
         font-weight: 700;
         font-size: 18px;
         line-height: 100%;
+      }
+    }
 
+    &__img {
+      margin-top: 54px;
+      @media (max-width: 990.99px) {
+        margin-top: 0;
       }
     }
   }

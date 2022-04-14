@@ -11,7 +11,9 @@ const Hero = () => {
             <p className='hero__info-subtitle'>Лучшие онлайн-курсы, собранные в одном месте, помогут Вам сконцентрироваться на изучении материала</p>
             <button className="hero__info-btn" data-type='primary'>Начаь квалификацию</button>
           </div>
-          <div className="hero__img"></div>
+          <div className="hero__img">
+            <img src="/Images/hero.png" alt="" />
+          </div>
         </div>
       </div>
     </div>

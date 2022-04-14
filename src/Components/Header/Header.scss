@@ -1,5 +1,5 @@
 .header__section {
-  box-shadow:  0px 1px 0px rgba(137, 141, 166, 0.2);;
+  box-shadow: 0px 1px 0px rgba(137, 141, 166, 0.2);
   .header {
     display: flex;
     justify-content: space-between;
@@ -7,11 +7,11 @@
     gap: 20px;
     padding-block: 24px;
     @media (max-width: 575.99px) {
-     padding-block: 16px;
+      padding-block: 16px;
     }
     @media (max-width: 400px) {
       gap: 10px;
-     padding-block: 12px;
+      padding-block: 12px;
     }
 
     &__logo {
@@ -69,9 +69,6 @@
       font-size: 16px;
       line-height: 100%;
     }
-    .lang__link {
-      background-color: #000;
-    }
 
     .sign {
       margin-left: auto;
@@ -112,7 +109,8 @@
       margin-bottom: 32px;
     }
 
-    .sign-up, .re-password {
+    .sign-up,
+    .re-password {
       display: block;
       padding: 0;
       margin-top: 14px;
@@ -140,7 +138,7 @@
         line-height: 100%;
         color: var(--blueColor);
       }
-      > input[type=password] {
+      > input[type="password"] {
         letter-spacing: 5px;
         color: var(--grayColor);
       }
@@ -164,7 +162,5 @@
         line-height: 100%;
       }
     }
-
-
   }
 }
