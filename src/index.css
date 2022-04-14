@@ -369,6 +369,7 @@ h6 {
   --greenHoverColor: #1ea088;
   --blueColor: #0d2e69;
   --grayColor: #898da6;
+  --lightGrayColor: rgba(137, 141, 166, 0.08);
   --lightGreenColor: #6fcf97;
   --purpleColor: #bb6bd9;
   --orangeColor: #f2994a;
@@ -376,8 +377,8 @@ h6 {
   --lightBlueColor: #2f80ed;
 }
 
-html {
-  font-family: "Cera Pro", serif;
+body {
+  font-family: "Cera Pro", serif !important;
 }
 
 *,
@@ -407,7 +408,7 @@ h2 {
 
 h3 {
   font-weight: 700;
-  font-size: 24px;
+  font-size: 28px;
   line-height: 100%;
   color: var(--blueColor);
 }
@@ -455,11 +456,45 @@ input {
   background-color: rgba(137, 141, 166, 0.08);
 }
 
+input[type=checkbox] {
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  border: 1px solid #898DA6;
+  font: inherit;
+  background-color: var(--whiteColor);
+  color: var(--greenColor);
+  width: 1rem;
+  height: 1rem;
+  border-radius: 4px;
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  border-radius: 4px;
+  background-color: var(--whiteColor);
+  border: 1px solid var(--greenColor);
+  transform-origin: center;
+  transform: scale(0);
+  clip-path: polygon(78% 20%, 94% 34%, 48% 86%, 9% 57%, 22% 39%, 47% 58%);
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+  background-color: var(--greenColor);
+  color: var(--whiteColor);
+}
+
 button {
   cursor: pointer;
   border-radius: 8px;
   padding: 12px 24px;
   border: 1px solid var(--greenColor);
+  transition: all 200ms ease;
 }
 
 button[data-type="primary"] {
@@ -468,6 +503,7 @@ button[data-type="primary"] {
 }
 button[data-type="primary"]:hover {
   background-color: var(--greenHoverColor);
+  border: 1px solid var(--greenHoverColor);
 }
 button[data-type="outline"] {
   background-color: var(--whiteColor);
@@ -482,6 +518,8 @@ button[data-type="primary-disabled"] {
   color: var(--whiteColor);
 }
 button[data-type="secondary"] {
+  padding: 0;
+  padding-block: 10px;
   background: none;
   border: none;
   color: var(--blueColor);

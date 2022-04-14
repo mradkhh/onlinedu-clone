@@ -5,6 +5,15 @@
     align-items: center;
     gap: 20px;
     padding-block: 24px;
+    @media (max-width: 400px) {
+      gap: 10px;
+    }
+
+    &__logo {
+      img {
+        width: 200px;
+      }
+    }
 
     > * {
       display: flex;
@@ -20,7 +29,7 @@
     }
 
     .input__field {
-      max-width: 500px;
+      max-width: 540px;
       width: 100%;
       position: relative;
       input {
@@ -60,13 +69,93 @@
     }
 
     .sign {
+      margin-left: auto;
       font-weight: 500;
       font-size: 16px;
       line-height: 100%;
+      @media (max-width: 576px) {
+        padding: 12px;
+      }
     }
 
-    .ant-modal-body {
-      color: red;
+    .mobile__btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 12px;
     }
+  }
+}
+
+// Modal custom styles
+
+.ant-modal {
+  .ant-modal-content {
+    border-radius: 10px !important;
+    padding: 32px 100px 42px;
+    @media (max-width: 768px) {
+      padding: 32px 20px 42px;
+    }
+
+    h3 {
+      color: var(--blueColor);
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .sign-up, .re-password {
+      display: block;
+      padding: 0;
+      margin-top: 14px;
+      background-color: var(--whiteColor);
+      border: none;
+      color: var(--greenColor);
+    }
+
+    .sign__modal-form {
+      display: flex;
+      justify-content: start;
+      align-items: flex-start;
+      flex-direction: column;
+
+      > label {
+        margin-bottom: 8px;
+        font-size: 14px;
+        line-height: 100%;
+        color: #898da6;
+      }
+
+      > input {
+        margin-bottom: 16px;
+        font-size: 14px;
+        line-height: 100%;
+        color: var(--blueColor);
+      }
+      > input[type=password] {
+        letter-spacing: 5px;
+        color: var(--grayColor);
+      }
+
+      .checkbox {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 8px;
+        font-size: 14px;
+        line-height: 100%;
+        color: #898da6;
+        margin-bottom: 24px;
+      }
+
+      button {
+        width: 100%;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 100%;
+      }
+    }
+
+
   }
 }
