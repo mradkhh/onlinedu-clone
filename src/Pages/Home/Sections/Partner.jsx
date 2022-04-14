@@ -22,20 +22,20 @@ const Partner = () => {
                           slidesPerView: 1,
                         },
                         576: {
-                          width: 540,
+                          width: 576,
                           slidesPerView: 2,
                         },
                         // when window width is >= 768px
                         768: {
-                          width: 750,
+                          width: 768,
                           slidesPerView: 3,
                         },
                         991: {
-                          width: 960,
+                          width: 991,
                           slidesPerView: 4,
                         },
                         1200: {
-                          width: 1140,
+                          width: 1200,
                           slidesPerView: 4,
                         }
                       }}
@@ -43,11 +43,11 @@ const Partner = () => {
                         delay: 1000,
                         disableOnInteraction: false
                     }}
+                    tag={'div'}
                     modules={[Autoplay]}
                     loop={true}
-                    spaceBetween={150}
-                    onSlideChange={() => console.log('slide change')}
-                    onSwiper={(swiper) => console.log(swiper)}
+                    slidesPerView={4}
+                    spaceBetween={50}
                     >
                     <SwiperSlide>
                         <img src="/Images/partner1.png" alt="partner" />
