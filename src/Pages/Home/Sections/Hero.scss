@@ -1,0 +1,15 @@
+.hero__section {
+  .hero {
+    &__info {
+      &-title {
+      }
+
+      &-btn {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 100%;
+
+      }
+    }
+  }
+}

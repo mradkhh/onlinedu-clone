@@ -1,9 +1,10 @@
-import React, {useState} from 'react'
-import './Header.scss'
 import { Dropdown, Modal } from 'antd'
+import "antd/dist/antd.css"
+import React, { useState } from 'react'
+import InputMask from 'react-input-mask'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import InputMask from 'react-input-mask'
+import './Header.scss'
 
 
 const Lang = styled.div`
