@@ -1,9 +1,8 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
+import 'swiper/css/autoplay'
+import './Partner.scss'
 
 const Partner = () => {
   return (
@@ -15,6 +14,7 @@ const Partner = () => {
                   </div>
                   <div className="partner__link">
                   <Swiper
+                    autoplay={true}
                     loop={true}
                     spaceBetween={50}
                     slidesPerView={4}
