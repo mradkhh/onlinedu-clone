@@ -11,7 +11,7 @@
 @media (max-width: 400px) {
   .header__section .header {
     gap: 10px;
-    padding-block: 18px;
+    padding-block: 12px;
   }
 }
 .header__section .header__logo img {
