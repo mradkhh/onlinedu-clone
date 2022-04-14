@@ -1,3 +1,6 @@
+.header__section {
+  box-shadow: 0px 1px 0px rgba(137, 141, 166, 0.2);
+}
 .header__section .header {
   display: flex;
   justify-content: space-between;
