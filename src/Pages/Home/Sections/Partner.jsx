@@ -1,5 +1,6 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/autoplay'
 import './Partner.scss'
@@ -14,7 +15,11 @@ const Partner = () => {
                   </div>
                   <div className="partner__link">
                   <Swiper
-                    autoplay={true}
+                     autoplay={{
+                        delay: 1000,
+                        disableOnInteraction: false
+                    }}
+                    modules={[Autoplay]}
                     loop={true}
                     spaceBetween={50}
                     slidesPerView={4}
