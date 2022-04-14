@@ -15,14 +15,37 @@ const Partner = () => {
                   </div>
                   <div className="partner__link">
                   <Swiper
+                      breakpoints={{
+                        // when window width is >= 640px
+                        320: {
+                          width: 320,
+                          slidesPerView: 1,
+                        },
+                        576: {
+                          width: 540,
+                          slidesPerView: 2,
+                        },
+                        // when window width is >= 768px
+                        768: {
+                          width: 750,
+                          slidesPerView: 3,
+                        },
+                        991: {
+                          width: 960,
+                          slidesPerView: 4,
+                        },
+                        1200: {
+                          width: 1140,
+                          slidesPerView: 4,
+                        }
+                      }}
                      autoplay={{
                         delay: 1000,
                         disableOnInteraction: false
                     }}
                     modules={[Autoplay]}
                     loop={true}
-                    spaceBetween={50}
-                    slidesPerView={4}
+                    spaceBetween={150}
                     onSlideChange={() => console.log('slide change')}
                     onSwiper={(swiper) => console.log(swiper)}
                     >
