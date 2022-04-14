@@ -443,6 +443,43 @@ p {
   color: var(--grayColor);
 }
 
+@media (max-width: 575.99px) {
+  h1 {
+    font-size: 32px;
+    line-height: 130%;
+  }
+
+  h2 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  h3 {
+    font-size: 24px;
+    line-height: 90%;
+  }
+
+  h4 {
+    font-size: 16px;
+    line-height: 90%;
+  }
+
+  h5 {
+    font-size: 14px;
+    line-height: 90%;
+  }
+
+  h6 {
+    font-size: 12px;
+    line-height: 130%;
+  }
+
+  p {
+    font-size: 12px;
+    line-height: 130%;
+  }
+}
+
 input {
   outline: none;
   width: 100%;
