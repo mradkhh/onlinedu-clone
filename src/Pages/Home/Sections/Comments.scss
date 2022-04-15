@@ -9,6 +9,9 @@
 
       h2 {
         margin-bottom: 14px;
+        @media (max-width: 400px) {
+          text-align: center;
+        }
       }
 
       p {

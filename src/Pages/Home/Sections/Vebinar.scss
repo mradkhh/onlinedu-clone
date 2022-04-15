@@ -6,6 +6,10 @@
   background-position-x: right;
   background-size: contain;
   background-color: #fafafafc;
+  @media (max-width: 767.99px) {
+    background-image: none;
+    background-color: var(--lightGrayColor);
+  }
   > img {
     z-index: -12;
     position: absolute;
@@ -15,6 +19,7 @@
 
   .vebinar {
     padding-block: 84px;
+
 
     &__title {
       max-width: 670px;
@@ -37,11 +42,16 @@
       align-items: center;
       gap: 12px;
       margin-bottom: 32px;
+      @media (max-width: 500px) {
+        align-items: start;
+        flex-direction: column;
+      }
 
       &-items {
         display: flex;
         justify-content: start;
         align-items: center;
+
         > img:not(:first-child) {
           margin-left: -15px;
           border-radius: 50%;

@@ -17,6 +17,9 @@
       font-weight: 700;
       font-size: 32px;
       line-height: 40px;
+      @media (max-width: 400px) {
+        text-align: center;
+      }
     }
 
     &__subtitle {
@@ -31,6 +34,10 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      @media (max-width: 767.99px) {
+        flex-direction: column;
+        gap: 20px;
+      }
 
       input {
         padding: 16px 24px;
