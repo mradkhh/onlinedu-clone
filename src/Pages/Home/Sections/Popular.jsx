@@ -14,11 +14,11 @@ const Popular = () => {
             title={"Маркетинг и все его тонкости. Профессия маркетолога с 0 до эксперта "}
             price={"95 000 сум"}
             science={"Маркетинг"}
-            rating={4}
+            rating={4.5}
             choise={false}
             />
             <Card
-            image={"/Images/card1.png"}
+            image={"/Images/card2.png"}
             title={"Маркетинг и все его тонкости. Профессия маркетолога с 0 до эксперта "}
             price={"95 000 сум"}
             science={"Маркетинг"}
@@ -26,7 +26,7 @@ const Popular = () => {
             choise={false}
             />
             <Card
-            image={"/Images/card1.png"}
+            image={"/Images/card3.png"}
             title={"Маркетинг и все его тонкости. Профессия маркетолога с 0 до эксперта "}
             price={"95 000 сум"}
             science={"Маркетинг"}
@@ -34,7 +34,7 @@ const Popular = () => {
             choise={false}
             />
             <Card
-            image={"/Images/card1.png"}
+            image={"/Images/card4.png"}
             title={"Маркетинг и все его тонкости. Профессия маркетолога с 0 до эксперта "}
             price={"95 000 сум"}
             science={"Маркетинг"}
@@ -42,7 +42,7 @@ const Popular = () => {
             choise={false}
             />
             <Card
-            image={"/Images/card1.png"}
+            image={"/Images/card5.png"}
             title={"Маркетинг и все его тонкости. Профессия маркетолога с 0 до эксперта "}
             price={"95 000 сум"}
             science={"Маркетинг"}
@@ -50,7 +50,7 @@ const Popular = () => {
             choise={false}
             />
             <Card
-            image={"/Images/card1.png"}
+            image={"/Images/card6.png"}
             title={"Маркетинг и все его тонкости. Профессия маркетолога с 0 до эксперта "}
             price={"95 000 сум"}
             science={"Маркетинг"}
@@ -58,6 +58,7 @@ const Popular = () => {
             choise={false}
             />
           </div>
+          <button className='all_course' data-type='primary'>Смотреть все курсы</button>
         </div>
       </div>
     </div>

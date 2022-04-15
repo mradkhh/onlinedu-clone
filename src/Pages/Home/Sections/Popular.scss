@@ -1,9 +1,20 @@
 .popular__section {
+  padding-bottom: 90px;
   .popular {
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     &__title {
       text-align: center;
       margin-bottom: 38px;
+    }
+
+    .all_course {
+      margin-top: 60px;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
     }
   }
 }

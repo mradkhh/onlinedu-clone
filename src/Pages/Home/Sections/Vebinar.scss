@@ -1,0 +1,46 @@
+.vebinar__section {
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(90deg, rgba(244,243,243,1) 0%, rgba(244,243,243,1) 48%, rgba(244,243,243,0) 60%);
+  > img {
+    z-index: -12;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .vebinar {
+  padding-block: 84px;
+
+    &__title {
+      max-width: 670px;
+      width: 100%;
+      margin-bottom: 24px;
+    }
+
+    &__subtitle {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 150%;
+      margin-bottom: 24px;
+      max-width: 615px;
+      width: 100%;
+    }
+
+    &__avatars {
+      margin-bottom: 32px;
+
+      &-items {
+        >img:not(:nth-child(1)) {
+          margin-left: -15px;
+        }
+      }
+    }
+
+    button {
+      font-weight: 700;
+      font-size: 18px;
+      padding-block: 16px;
+    }
+  }
+}

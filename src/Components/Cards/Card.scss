@@ -1,4 +1,5 @@
 .card {
+  overflow: hidden;
   background: var(--whiteColor);
   box-shadow: 0px 10px 40px rgba(13, 46, 105, 0.05);
   border-radius: 15px;
@@ -6,9 +7,17 @@
   margin-bottom: 30px;
 
   .card-img {
+    box-shadow: 0px -100px 75px -16px rgba(34, 60, 80, 0.3) inset;
+    overflow: hidden;
+
     position: relative;
     > img {
       width: 100%;
+      transition: all 500ms ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
     }
     .more {
       display: flex;
@@ -17,7 +26,7 @@
       gap: 24px;
       position: absolute;
       inset: auto auto 24px 24px;
-      span {
+      .science {
         padding: 7px 16px;
         font-style: normal;
         font-weight: 500;
@@ -27,17 +36,51 @@
         background-color: var(--orangeColor);
         color: var(--whiteColor);
       }
+      .rating {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 4px;
+        span {
+          font-weight: 700;
+          font-size: 12px;
+          color: var(--yellowColor);
+        }
+      }
     }
   }
 
   .card__body {
     padding: 16px 16px 24px 16px;
+    z-index: 123;
 
     &-title {
       max-width: 338px;
       width: 100%;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 140%;
+      margin-bottom: 16px;
     }
-    button {
+
+    &-more {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      > span {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        color: var(--grayColor);
+      }
+
+      button {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+      }
     }
   }
 }

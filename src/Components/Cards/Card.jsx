@@ -8,18 +8,19 @@ const Card = ({image, title, price, science, rating, choise}) => {
       <div className="card-img">
         <img src={image} alt="science" />
         <div className="more">
-        <span>{science}</span>
+        <span className='science'>{science}</span>
         <div className="rating">
           <img src="/Images/full-star.png" alt="star" />
           <img src="/Images/full-star.png" alt="star" />
           <img src="/Images/full-star.png" alt="star" />
           <img src="/Images/full-star.png" alt="star" />
           <img src="/Images/empty-star.png" alt="star" />
+          <span>{rating}</span>
         </div>
         </div>
       </div>
       <div className="card__body">
-        <div className="card__body-title">{title}</div>
+        <h6 className="card__body-title">{title}</h6>
         <div className="card__body-more">
           <span>{price}</span>
           <button data-type={choise ? 'disabled' : 'primary'}>Выбрать</button>
