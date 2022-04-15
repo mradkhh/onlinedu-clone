@@ -1,6 +1,9 @@
 .professor__section {
   padding-block: 80px;
   .professor {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
     &__info {
       display: flex;
       align-items: center;
@@ -26,6 +29,9 @@
         margin-top: 60px;
         border: 1px solid var(--lightGrayColor);
         border-radius: 15px;
+        max-width: 370px;
+        width: 100%;
+        margin-bottom: 10px;
         img {
           position: absolute;
           z-index: 1234;
@@ -49,8 +55,17 @@
           font-weight: 400;
           font-size: 16px;
           line-height: 160%;
+          max-width: 306px;
+          width: 100%;
         }
       }
     }
+    .more {
+      font-weight: 700;
+      font-size: 18px;
+      margin-top: 50px;
+      margin-inline: auto;
+    }
   }
+
 }

@@ -1,10 +1,12 @@
 import { Dropdown, Modal } from 'antd'
 import "antd/dist/antd.css"
 import React, { useState } from 'react'
+import toast from 'react-hot-toast'
 import InputMask from 'react-input-mask'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import './Header.scss'
+
 
 
 const Lang = styled.div`
@@ -16,6 +18,8 @@ const Lang = styled.div`
   background-color: var(--whiteColor);
   box-shadow: 0px 0px 22px -8px rgba(68, 76, 82, 0.35);
   overflow: hidden;
+
+
 
   h6 {
     padding: 8px 40px;
@@ -39,7 +43,9 @@ const Header = () => {
     </Lang>
   )
 
-
+  const handleToast = () => {
+    toast.success("Yo'riqnoma bosildi!")
+  }
 
   return (
     <div className="header__section">
@@ -50,7 +56,9 @@ const Header = () => {
             <img src="/Images/logo.png" alt="logo" />
           </div>
           </Link>
-          <button className='d-none d-lg-block header__info-btn' data-type='outline'>Yo'riqnoma</button>
+          <button
+          onClick={handleToast}
+          className='d-none d-lg-block header__info-btn' data-type='outline'>Yo'riqnoma</button>
           <div className="d-none d-lg-flex input__field">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M14.4733 13.5266L12 11.0733C12.9601 9.87621 13.425 8.3568 13.2992 6.82747C13.1734 5.29814 12.4664 3.87512 11.3237 2.85103C10.1809 1.82694 8.6892 1.27961 7.15528 1.32158C5.62136 1.36356 4.16181 1.99164 3.07676 3.0767C1.99171 4.16175 1.36362 5.62129 1.32164 7.15522C1.27967 8.68914 1.827 10.1808 2.85109 11.3236C3.87519 12.4664 5.2982 13.1733 6.82753 13.2991C8.35686 13.4249 9.87627 12.96 11.0733 11.9999L13.5267 14.4533C13.5886 14.5158 13.6624 14.5654 13.7436 14.5992C13.8249 14.633 13.912 14.6505 14 14.6505C14.088 14.6505 14.1751 14.633 14.2564 14.5992C14.3376 14.5654 14.4114 14.5158 14.4733 14.4533C14.5935 14.329 14.6607 14.1628 14.6607 13.9899C14.6607 13.817 14.5935 13.6509 14.4733 13.5266ZM7.33333 11.9999C6.41035 11.9999 5.5081 11.7262 4.74067 11.2135C3.97324 10.7007 3.3751 9.97185 3.02189 9.11913C2.66868 8.2664 2.57627 7.32809 2.75633 6.42285C2.9364 5.5176 3.38085 4.68608 4.0335 4.03344C4.68614 3.38079 5.51766 2.93634 6.42291 2.75627C7.32815 2.57621 8.26646 2.66862 9.11919 3.02183C9.97191 3.37504 10.7007 3.97318 11.2135 4.74061C11.7263 5.50804 12 6.41029 12 7.33327C12 8.57095 11.5083 9.75793 10.6332 10.6331C9.75799 11.5083 8.57101 11.9999 7.33333 11.9999Z" fill="#0D2E69" stroke="#0D2E69" strokeWidth="0.4" />
