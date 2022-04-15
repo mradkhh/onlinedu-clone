@@ -47,7 +47,7 @@ const Partner = () => {
                     modules={[Autoplay]}
                     loop={true}
                     slidesPerView={4}
-                    spaceBetween={50}
+                    spaceBetween={10}
                     >
                     <SwiperSlide>
                         <img src="/Images/partner1.png" alt="partner" />
