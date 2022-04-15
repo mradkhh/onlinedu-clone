@@ -22,6 +22,7 @@ const Professor = () => {
             320: {
               width: 320,
               slidesPerView: 1,
+              spaceBetween: 40
             },
             460: {
               width: 440,
