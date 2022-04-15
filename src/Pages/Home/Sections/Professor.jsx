@@ -61,7 +61,7 @@ const Professor = () => {
           }}
           modules={[Autoplay]}
           loop={true}
-          spaceBetween={20}
+          spaceBetween={40}
           >
           <SwiperSlide style={{
             maxWidth: 600,
