@@ -22,20 +22,20 @@ const Partner = () => {
                           slidesPerView: 1,
                         },
                         576: {
-                          width: 576,
+                          width: 540,
                           slidesPerView: 2,
                         },
                         // when window width is >= 768px
                         768: {
-                          width: 768,
+                          width: 740,
                           slidesPerView: 3,
                         },
                         991: {
-                          width: 991,
+                          width: 960,
                           slidesPerView: 4,
                         },
                         1200: {
-                          width: 1200,
+                          width: 1140,
                           slidesPerView: 4,
                         }
                       }}
@@ -61,7 +61,7 @@ const Partner = () => {
                     <SwiperSlide>
                         <img src="/Images/partner4.png" alt="partner" />
                     </SwiperSlide>
-                    
+
                     </Swiper>
                   </div>
               </div>
