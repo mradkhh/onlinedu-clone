@@ -1,0 +1,43 @@
+.card {
+  background: var(--whiteColor);
+  box-shadow: 0px 10px 40px rgba(13, 46, 105, 0.05);
+  border-radius: 15px;
+  border: none;
+  margin-bottom: 30px;
+
+  .card-img {
+    position: relative;
+    > img {
+      width: 100%;
+    }
+    .more {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      gap: 24px;
+      position: absolute;
+      inset: auto auto 24px 24px;
+      span {
+        padding: 7px 16px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+        border-radius: 8px;
+        background-color: var(--orangeColor);
+        color: var(--whiteColor);
+      }
+    }
+  }
+
+  .card__body {
+    padding: 16px 16px 24px 16px;
+
+    &-title {
+      max-width: 338px;
+      width: 100%;
+    }
+    button {
+    }
+  }
+}

@@ -546,7 +546,7 @@ button[data-type="outline"]:hover {
   background-color: var(--greenColor);
   color: var(--whiteColor);
 }
-button[data-type="primary-disabled"] {
+button[data-type="disabled"] {
   background-color: var(--grayColor);
   color: var(--whiteColor);
 }
