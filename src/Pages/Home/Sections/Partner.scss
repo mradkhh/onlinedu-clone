@@ -1,5 +1,6 @@
 .partner__section {
   padding-block: 72px;
+  background-color: var(--lightGrayColor);
   .partner {
     &__info {
       display: flex;
@@ -15,8 +16,12 @@
 
     &__link {
       img {
-        max-width: 270px;
+        max-width: 250px;
         width: 100%;
+
+        @media (max-width: 1300px) {
+          max-width: 200px;
+        }
       }
     }
   }

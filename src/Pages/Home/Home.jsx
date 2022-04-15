@@ -7,6 +7,7 @@ import About from './Sections/About'
 import Validity from './Sections/Validity'
 import Popular from './Sections/Popular'
 import Vebinar from './Sections/Vebinar'
+import Professor from './Sections/Professor'
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
         <Validity/>
         <Popular/>
         <Vebinar/>
+        <Professor/>
     </>
   )
 }

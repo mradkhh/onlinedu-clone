@@ -8,7 +8,7 @@ import './Comments.scss'
 
 const Comments = () => {
   return (
-      <div className="comments__section">
+     <div className="comments__section">
           <div className="container">
               <div className="comments">
                   <div className="comments__info">

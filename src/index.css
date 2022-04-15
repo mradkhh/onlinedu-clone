@@ -372,6 +372,7 @@ h6 {
   --greenHoverColor: #1ea088;
   --blueColor: #0d2e69;
   --grayColor: #898da6;
+  --lighterGrayColor: #d7d7d7;
   --lightGrayColor: #f4f3f3;
   --lightGreenColor: #6fcf97;
   --purpleColor: #bb6bd9;
@@ -550,8 +551,10 @@ button[data-type="outline"]:hover {
   color: var(--whiteColor);
 }
 button[data-type="disabled"] {
-  background-color: var(--grayColor);
+  background-color: var(--lighterGrayColor);
+  border: 1px solid var(--lighterGrayColor);
   color: var(--whiteColor);
+  cursor:not-allowed;
 }
 button[data-type="secondary"] {
   padding: 0;
@@ -564,10 +567,6 @@ button[data-type="secondary"] {
 button[data-type="secondary"]:active {
   background-color: none !important;
   border: none !important;
-}
-button:active {
-  background-color: var(--greenActiveColor);
-  border: 1px solid var(--greenActiveColor);
 }
 
 ::-webkit-scrollbar {

@@ -1,7 +1,11 @@
 .vebinar__section {
   overflow: hidden;
   position: relative;
-  background: linear-gradient(90deg, rgba(244,243,243,1) 0%, rgba(244,243,243,1) 48%, rgba(244,243,243,0) 60%);
+  background-image: url("../../../../public/Images/vebinar.png");
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-size: contain;
+  background-color: #fafafafc;
   > img {
     z-index: -12;
     position: absolute;
@@ -10,7 +14,7 @@
   }
 
   .vebinar {
-  padding-block: 84px;
+    padding-block: 84px;
 
     &__title {
       max-width: 670px;
@@ -28,12 +32,44 @@
     }
 
     &__avatars {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      gap: 12px;
       margin-bottom: 32px;
 
       &-items {
-        >img:not(:nth-child(1)) {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        > img:not(:first-child) {
+          margin-left: -15px;
+          border-radius: 50%;
+          border: 2px solid var(--whiteColor);
+        }
+
+        .circle {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: var(--blueColor);
+          color: var(--whiteColor);
+          font-weight: 700;
+          font-size: 14px;
+          width: 47px;
+          height: 47px;
+          border-radius: 50%;
+          border: 2px solid var(--whiteColor);
           margin-left: -15px;
         }
+      }
+
+      &-title {
+        max-width: 320px;
+        width: 100%;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 140%;
       }
     }
 

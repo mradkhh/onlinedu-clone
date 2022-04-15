@@ -21,31 +21,31 @@ const Popular = () => {
             image={"/Images/card2.png"}
             title={"Маркетинг и все его тонкости. Профессия маркетолога с 0 до эксперта "}
             price={"95 000 сум"}
-            science={"Маркетинг"}
-            rating={4}
-            choise={false}
+            science={"Экономика"}
+            rating={4.9}
+            choise={true}
             />
             <Card
             image={"/Images/card3.png"}
             title={"Маркетинг и все его тонкости. Профессия маркетолога с 0 до эксперта "}
             price={"95 000 сум"}
-            science={"Маркетинг"}
-            rating={4}
+            science={"Менеджмент"}
+            rating={4.6}
             choise={false}
             />
             <Card
             image={"/Images/card4.png"}
             title={"Маркетинг и все его тонкости. Профессия маркетолога с 0 до эксперта "}
             price={"95 000 сум"}
-            science={"Маркетинг"}
-            rating={4}
+            science={"Манавият"}
+            rating={4.6}
             choise={false}
             />
             <Card
             image={"/Images/card5.png"}
             title={"Маркетинг и все его тонкости. Профессия маркетолога с 0 до эксперта "}
             price={"95 000 сум"}
-            science={"Маркетинг"}
+            science={"Иностранные языки"}
             rating={4}
             choise={false}
             />
@@ -53,9 +53,9 @@ const Popular = () => {
             image={"/Images/card6.png"}
             title={"Маркетинг и все его тонкости. Профессия маркетолога с 0 до эксперта "}
             price={"95 000 сум"}
-            science={"Маркетинг"}
+            science={"Политика"}
             rating={4}
-            choise={false}
+            choise={true}
             />
           </div>
           <button className='all_course' data-type='primary'>Смотреть все курсы</button>

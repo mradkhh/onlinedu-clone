@@ -1,0 +1,56 @@
+.professor__section {
+  padding-block: 80px;
+  .professor {
+    &__info {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      &-title {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 40px;
+        margin-bottom: 14px;
+      }
+
+      &-subtitle {
+        max-width: 768px;
+        width: 100%;
+      }
+    }
+
+    &__items {
+      .item {
+        padding: 48px 32px 32px 32px;
+        position: relative;
+        margin-top: 60px;
+        border: 1px solid var(--lightGrayColor);
+        border-radius: 15px;
+        img {
+          position: absolute;
+          z-index: 1234;
+          top: -40px;
+        }
+        h4 {
+          font-weight: 700;
+          font-size: 24px;
+          margin-bottom: 8px;
+        }
+
+        h6 {
+          font-weight: 500;
+          font-size: 16px;
+          color: var(--grayColor);
+          margin-bottom: 16px;
+        }
+
+        p {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 160%;
+        }
+      }
+    }
+  }
+}
