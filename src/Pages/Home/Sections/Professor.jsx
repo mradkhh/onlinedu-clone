@@ -22,12 +22,10 @@ const Professor = () => {
             320: {
               width: 320,
               slidesPerView: 1,
-              spaceBetween: 10
             },
             460: {
               width: 440,
               slidesPerView: 1,
-              spaceBetween: 10,
             },
             576: {
               width: 540,
@@ -62,6 +60,7 @@ const Professor = () => {
           }}
           modules={[Autoplay]}
           loop={true}
+          spaceBetween={20}
           >
           <SwiperSlide style={{
             maxWidth: 600,
