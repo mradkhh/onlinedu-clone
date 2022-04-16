@@ -1,0 +1,26 @@
+#categories__page {
+  .categories__section {
+    .categories {
+      &__title {
+        margin-bottom: 48px;
+      }
+
+      &__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+        padding: 32px 24px;
+        background-color: var(--lightGrayColor);
+        border-radius: 15px;
+        margin-bottom: 48px;
+      }
+
+      .head__item {
+        &-title {
+          margin-bottom: 8px;
+        }
+      }
+    }
+  }
+}
