@@ -467,6 +467,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .grid {
   display: grid;
 }
+.hidden {
+  display: none;
+}
 .w-full {
   width: 100%;
 }
@@ -484,6 +487,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 @media (min-width: 640px) {
 
+  .sm\:block {
+    display: block;
+  }
+
   .sm\:grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
@@ -492,6 +499,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:col-span-full {
     grid-column: 1 / -1;
+  }
+
+  .md\:block {
+    display: block;
+  }
+
+  .md\:flex {
+    display: flex;
   }
 
   .md\:hidden {
@@ -510,6 +525,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:col-auto {
     grid-column: auto;
+  }
+
+  .lg\:block {
+    display: block;
+  }
+
+  .lg\:flex {
+    display: flex;
+  }
+
+  .lg\:hidden {
+    display: none;
   }
 
   .lg\:grid-cols-4 {
