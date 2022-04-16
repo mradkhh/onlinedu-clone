@@ -3,13 +3,7 @@ module.exports = {
     "./src/**/*.{js,jsx,ts, tsx}",
   ],
   theme: {
-    screen: {
-      xl: { max: '1200px' },
-      lg: { max: '991px' },
-      md: { max: '768px' },
-      sm: { max: '576px' },
-      xm: { max: '480px' },
-    },
+
     colors: {
       whiteColor: '#ffffff',
       blackColor: '#000000',
@@ -30,12 +24,11 @@ module.exports = {
     container: {
         padding: {
           DEFAULT: '1rem',
-          xm: '1rem',
-          sm: '2rem',
-          md: '3rem',
-          lg: '4rem',
+          sm: '1rem',
+          md: '1.5rem',
+          lg: '2rem',
           xl: '5rem',
-          '2xl': '6rem',
+          '2xl': '12rem',
         },
         center: true,
     },

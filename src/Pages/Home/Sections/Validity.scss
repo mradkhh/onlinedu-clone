@@ -1,12 +1,11 @@
 .validity__section {
   padding-bottom: 90px;
-  .container {
 
-  }
   .validity {
     background-color: var(--lightGrayColor);
     border-radius: 25px;
     padding-block: 90px;
+    padding-inline: 20px;
     display: flex;
     flex-direction: column;
     margin-inline: auto;

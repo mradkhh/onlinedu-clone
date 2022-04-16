@@ -422,24 +422,24 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .container {
     max-width: 640px;
-    padding-right: 2rem;
-    padding-left: 2rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
   }
 }
 @media (min-width: 768px) {
 
   .container {
     max-width: 768px;
-    padding-right: 3rem;
-    padding-left: 3rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
   }
 }
 @media (min-width: 1024px) {
 
   .container {
     max-width: 1024px;
-    padding-right: 4rem;
-    padding-left: 4rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
   }
 }
 @media (min-width: 1280px) {
@@ -454,8 +454,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .container {
     max-width: 1536px;
-    padding-right: 6rem;
-    padding-left: 6rem;
+    padding-right: 12rem;
+    padding-left: 12rem;
   }
 }
 .visible {
@@ -490,10 +490,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   .sm\:block {
     display: block;
   }
-
-  .sm\:grid-cols-1 {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-  }
 }
 @media (min-width: 768px) {
 
@@ -501,24 +497,12 @@ Ensure the default browser behavior of the `hidden` attribute.
     grid-column: 1 / -1;
   }
 
-  .md\:block {
-    display: block;
-  }
-
-  .md\:flex {
-    display: flex;
-  }
-
-  .md\:hidden {
-    display: none;
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .md\:grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 @media (min-width: 1024px) {
