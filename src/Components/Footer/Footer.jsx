@@ -12,21 +12,21 @@ const Footer = () => {
               <img src="/Images/logo.png" alt="footer logo" />
             </div>
             <div className="footer__item">
-              <h5>Курсы</h5>
+              <h4>Курсы</h4>
               <Link to={"/"}>Категория</Link>
               <Link to={"/"}>Вторая Категория</Link>
               <Link to={"/"}>Третья Категория</Link>
               <Link to={"/"}>Четвертая Категория</Link>
             </div>
             <div className="footer__item">
-              <h5>Мой профиль</h5>
+              <h4>Мой профиль</h4>
               <Link to={"/"}>Аккаунт</Link>
               <Link to={"/"}>Мои курсы</Link>
               <Link to={"/"}>Избранное</Link>
               <Link to={"/"}>Помощь</Link>
             </div>
             <div className="w-full footer__item">
-              <h5>CЛУЖБА ПОДДЕРЖКИ</h5>
+              <h4>CЛУЖБА ПОДДЕРЖКИ</h4>
               <Link to={"/"}>Политика конфиденциальности</Link>
               <Link to={"/"}>Помощь</Link>
               <Link to={"/"}>FAQ</Link>
