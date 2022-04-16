@@ -1,17 +1,18 @@
 .validity__section {
   padding-bottom: 90px;
   .container {
+
+  }
+  .validity {
     background-color: var(--lightGrayColor);
     border-radius: 25px;
     padding-block: 90px;
-  }
-  .validity {
     display: flex;
     flex-direction: column;
     margin-inline: auto;
-    max-width: 800px;
     width: 100%;
     &__title {
+      margin-inline: auto;
       margin-bottom: 14px;
       font-style: normal;
       font-weight: 700;
@@ -23,11 +24,14 @@
     }
 
     &__subtitle {
+      margin-inline: auto;
       text-align: center;
       margin-bottom: 36px;
       font-weight: 500;
       font-size: 18px;
       line-height: 150%;
+      max-width: 768px;
+      width: 100%;
     }
 
     .input__field {
