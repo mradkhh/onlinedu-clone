@@ -9,9 +9,9 @@
   .card-img {
     box-shadow: 0px -100px 75px -16px rgba(34, 60, 80, 0.3) inset;
     overflow: hidden;
-
     position: relative;
     > img {
+      max-width: 370px;
       width: 100%;
       transition: all 500ms ease;
 

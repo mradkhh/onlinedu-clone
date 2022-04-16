@@ -467,19 +467,32 @@ Ensure the default browser behavior of the `hidden` attribute.
 .grid {
   display: grid;
 }
+.w-full {
+  width: 100%;
+}
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
-}
-.flex-wrap {
-  flex-wrap: wrap;
 }
 .gap-6 {
   gap: 1.5rem;
 }
+.gap-\[30px\] {
+  gap: 30px;
+}
 .outline {
   outline-style: solid;
 }
+@media (min-width: 640px) {
+
+  .sm\:grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
 @media (min-width: 768px) {
+
+  .md\:col-span-full {
+    grid-column: 1 / -1;
+  }
 
   .md\:hidden {
     display: none;
@@ -489,17 +502,21 @@ Ensure the default browser behavior of the `hidden` attribute.
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .md\:grid-cols-4 {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 @media (min-width: 1024px) {
 
-  .lg\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .lg\:col-auto {
+    grid-column: auto;
   }
 
   .lg\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }

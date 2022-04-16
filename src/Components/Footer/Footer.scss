@@ -17,6 +17,8 @@
         align-items: flex-start;
         flex-direction: column;
         gap: 22px;
+        max-width: max-content;
+        width: 100%;
         margin-bottom: 60px;
 
         h6 {

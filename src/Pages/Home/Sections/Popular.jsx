@@ -8,7 +8,8 @@ const Popular = () => {
       <div className="container">
         <div className="popular">
           <h2 className="popular__title">Популярные курсы</h2>
-          <div className="row flex-wrap justify-content-between">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px]">
+            <div>
             <Card
             image={"/Images/card1.png"}
             title={"Маркетинг и все его тонкости. Профессия маркетолога с 0 до эксперта "}
@@ -17,6 +18,8 @@ const Popular = () => {
             rating={4.5}
             choise={false}
             />
+            </div>
+            <div>
             <Card
             image={"/Images/card2.png"}
             title={"Маркетинг и все его тонкости. Профессия маркетолога с 0 до эксперта "}
@@ -25,6 +28,8 @@ const Popular = () => {
             rating={4.9}
             choise={true}
             />
+            </div>
+            <div>
             <Card
             image={"/Images/card3.png"}
             title={"Маркетинг и все его тонкости. Профессия маркетолога с 0 до эксперта "}
@@ -33,6 +38,8 @@ const Popular = () => {
             rating={4.6}
             choise={false}
             />
+            </div>
+            <div>
             <Card
             image={"/Images/card4.png"}
             title={"Маркетинг и все его тонкости. Профессия маркетолога с 0 до эксперта "}
@@ -41,6 +48,8 @@ const Popular = () => {
             rating={4.6}
             choise={false}
             />
+            </div>
+            <div>
             <Card
             image={"/Images/card5.png"}
             title={"Маркетинг и все его тонкости. Профессия маркетолога с 0 до эксперта "}
@@ -49,6 +58,8 @@ const Popular = () => {
             rating={4}
             choise={false}
             />
+            </div>
+            <div>
             <Card
             image={"/Images/card6.png"}
             title={"Маркетинг и все его тонкости. Профессия маркетолога с 0 до эксперта "}
@@ -57,6 +68,7 @@ const Popular = () => {
             rating={4}
             choise={true}
             />
+            </div>
           </div>
           <button className='all_course' data-type='primary'>Смотреть все курсы</button>
         </div>

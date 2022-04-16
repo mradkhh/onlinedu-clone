@@ -3,7 +3,6 @@ import './Card.scss'
 
 const Card = ({image, title, price, science, rating, choise}) => {
   return (
-    <div className="col-12 col-md-6 col-lg-4">
       <div className="card">
       <div className="card-img">
         <img src={image} alt="science" />
@@ -26,7 +25,6 @@ const Card = ({image, title, price, science, rating, choise}) => {
           <button data-type={choise ? 'disabled' : 'primary'}>Выбрать</button>
         </div>
       </div>
-    </div>
     </div>
   )
 }
