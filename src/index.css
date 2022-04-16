@@ -430,6 +430,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .container {
     max-width: 768px;
+    padding-right: 3rem;
+    padding-left: 3rem;
   }
 }
 @media (min-width: 1024px) {
@@ -452,6 +454,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .container {
     max-width: 1536px;
+    padding-right: 6rem;
+    padding-left: 6rem;
   }
 }
 .visible {
@@ -460,8 +464,17 @@ Ensure the default browser behavior of the `hidden` attribute.
 .block {
   display: block;
 }
+.grid {
+  display: grid;
+}
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
 .flex-wrap {
   flex-wrap: wrap;
+}
+.gap-6 {
+  gap: 1.5rem;
 }
 .outline {
   outline-style: solid;
@@ -470,5 +483,23 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:hidden {
     display: none;
+  }
+
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1024px) {
+
+  .lg\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }

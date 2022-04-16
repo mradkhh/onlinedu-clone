@@ -4,10 +4,11 @@ module.exports = {
   ],
   theme: {
     screen: {
-      sm: '480px',
-      md: '768px',
-      lg: '976px',
-      xl: '1170px',
+      xl: { max: '1200px' },
+      lg: { max: '991px' },
+      md: { max: '768px' },
+      sm: { max: '576px' },
+      xm: { max: '480px' },
     },
     colors: {
       whiteColor: '#ffffff',
@@ -29,13 +30,18 @@ module.exports = {
     container: {
         padding: {
           DEFAULT: '1rem',
+          xm: '1rem',
           sm: '2rem',
+          md: '3rem',
           lg: '4rem',
           xl: '5rem',
+          '2xl': '6rem',
         },
         center: true,
     },
     extend: {},
   },
-  plugins: [],
+  plugins: [
+
+  ],
 }
