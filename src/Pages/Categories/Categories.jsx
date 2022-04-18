@@ -33,7 +33,7 @@ const Categories = () => {
       <Header/>
       <div className="categories__section">
         <div className="container">
-          <nav className="mt-6 mb-8 rounded-md w-full">
+          <nav className="breadcrumb mt-6 mb-8 rounded-md w-full">
             <ol className="list-reset flex">
               <li><Link to={"/"} className="text-blueColor text-[14px] font-medium hover:text-greenColor">Главная</Link></li>
               <li><span className="text-gray-500 mx-2">></span></li>

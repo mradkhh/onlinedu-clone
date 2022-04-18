@@ -1,0 +1,49 @@
+#course__page {
+
+  .page__title {
+    margin-bottom: 24px;
+  }
+  .sidebar {
+    max-width: 270px;
+    width: 100%;
+    &__cart {
+      padding: 16px 24px;
+      background-color: var(--lightGrayColor);
+      border-radius: 10px;
+      margin-bottom: 24px;
+      &-item {
+        margin-bottom: 8px;
+        &:not(:first-child) {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        span {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-weight: 500;
+          font-size: 14px;
+          color: var(--grayColor);
+
+          svg {
+            width: 16px;
+            height: auto;
+          }
+        }
+
+        h6 {
+          font-weight: 500;
+          font-size: 14px;
+        }
+      }
+
+      button {
+        width: 100%;
+        font-weight: 700;
+        font-size: 1rem;
+      }
+    }
+  }
+}
