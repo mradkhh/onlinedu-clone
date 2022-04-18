@@ -45,9 +45,11 @@ const Categories = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 categories__head">
               <div className="head__item">
                 <label className="head__item-title">Kategoriyalar</label>
-                <Select
-                options={optionsFan}
-                classNamePrefix='select'/>
+                <select className='category-select' name="" id="">
+                  <option value="">Barcha fanlar</option>
+                  <option value="">Tabiiy fanlar</option>
+                  <option value="">Aniq fanlar</option>
+                </select>
               </div>
               <div className="head__item">
                 <label className="head__item-title">Min. davomiyligi</label>
@@ -59,11 +61,16 @@ const Categories = () => {
               </div>
               <div className="head__item">
                 <label className="head__item-title">Tillar</label>
-                <Select
-                options={optionsTil}
-                classNamePrefix='select'/>
+                <select name="" id="">
+                  <option value="">Barcha tillar</option>
+                  <option value="">Uzbek tili</option>
+                  <option value="">Rus tili</option>
+                </select>
               </div>
+              <div className="head__item">
+                <label htmlFor="">dd</label>
               <button className='w-fit' data-type='primary'>Начать поиск</button>
+              </div>
             </div>
 
           </div>

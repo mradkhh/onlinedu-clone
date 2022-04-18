@@ -13,36 +13,31 @@
         border-radius: 15px;
         margin-bottom: 48px;
 
+        &:first-child {
+          max-width: 320px;
+          width: 100%;
+        }
+
         .head__item {
+          display: flex;
+          justify-content: start;
+          align-items: flex-start;
+          flex-direction: column;
+          width: 100%;
           &-title {
             margin-bottom: 8px;
           }
 
-          input {
+          input, select {
             background-color: var(--whiteColor);
             padding: 10px 16px;
+            border-radius: 8px;
           }
 
-          .Select-control .Select-input:focus {
-            outline: none;
+          .category-select {
+            width: 100%;
           }
 
-
-          .select {
-            max-width: 320px;
-
-            &__control {
-              border: none;
-
-              &.--is-focused {
-                  border: none;
-              }
-            }
-
-            &__indicator-separator {
-              display: none;
-            }
-          }
         }
       }
     }
