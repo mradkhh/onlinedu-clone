@@ -1,11 +1,9 @@
 #course__page {
-
   .page__title {
     margin-bottom: 24px;
   }
   .sidebar {
-    max-width: 270px;
-    width: 100%;
+    min-width: 270px;
     &__cart {
       padding: 16px 24px;
       background-color: var(--lightGrayColor);
@@ -13,9 +11,13 @@
       margin-bottom: 24px;
       &-item {
         margin-bottom: 8px;
-        &:not(:first-child) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .rating {
           display: flex;
-          justify-content: space-between;
+          justify-content: center;
           align-items: center;
         }
 
@@ -40,10 +42,58 @@
       }
 
       button {
+        margin-top: 20px;
         width: 100%;
         font-weight: 700;
         font-size: 1rem;
       }
+    }
+
+    &__lesson {
+      &-title {
+        margin-bottom: 16px;
+      }
+
+      &:last-child {
+        margin-bottom: 24px;
+      }
+
+      &-item {
+        display: flex;
+        justify-content: start;
+        align-items: flex-start;
+        gap: 6px;
+        margin-bottom: 12px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 140%;
+        color: var(--grayColor);
+
+        svg {
+          margin-top: 4px;
+          max-width: 16px;
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  .content {
+    &__video {
+      img {
+        width: 100%;
+      }
+    }
+    &__title {
+      margin-block: 30px;
+    }
+
+    &__dics {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 160%;
+      margin-bottom: 32px;
     }
   }
 }

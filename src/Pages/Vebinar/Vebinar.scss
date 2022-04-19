@@ -1,0 +1,14 @@
+#vebinar__page {
+  padding-bottom: 90px;
+  .vebinar {
+    padding-bottom: 50px;
+    &__title {
+      margin-bottom: 32px;
+    }
+
+    &__pagination {
+      margin-inline: auto;
+      width: max-content;
+    }
+  }
+}

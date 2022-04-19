@@ -1,0 +1,67 @@
+.card-personal {
+  max-width: 320px;
+  min-width: 270px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.05);
+  .card-img {
+    overflow: hidden;
+    img {
+      transition: all 600ms ease;
+      width: 100%;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .card-body {
+    padding: 16px;
+    .date {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      gap: 8px;
+      font-weight: 500;
+      font-size: 14px;
+      color: var(--grayColor);
+      margin-bottom: 16px;
+    }
+
+    .name {
+      font-weight: 500;
+      font-size: 14px;
+      margin-bottom: 16px;
+      color: var(--grayColor);
+    }
+
+    .copy {
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+      font-weight: 500;
+      font-size: 14px;
+      background-color: var(--whiteBlueColor);
+      color: var(--blueColor);
+      padding-block: 8px;
+      border-radius: 10px;
+      width: 100%;
+      margin-bottom: 16px;
+    }
+
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+      width: 100%;
+      padding-block: 8px;
+
+      svg {
+        fill: aqua;
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
 #categories__page {
-  .categories__section {
+  .categories {
     padding-bottom: 90px;
     .categories {
       &__title {
@@ -41,5 +41,11 @@
         }
       }
     }
+
+    &__pagination {
+      width: max-content;
+      margin-inline: auto;
+    }
+
   }
 }

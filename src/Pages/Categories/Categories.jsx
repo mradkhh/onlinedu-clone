@@ -29,9 +29,9 @@ const optionsTil = [
 const Categories = () => {
 
   return (
-    <div id="categories__page">
+    <section id="categories__page">
       <Header/>
-      <div className="categories__section">
+      <div className="categories">
         <div className="container">
           <nav className="breadcrumb mt-6 mb-8 rounded-md w-full">
             <ol className="list-reset flex">
@@ -124,11 +124,13 @@ const Categories = () => {
             choise={true}
             />
         </div>
-        <Paginations count={15}/>
+        <div className="categories__pagination">
+         <Paginations count={15}/>
+        </div>
         </div>
       </div>
       <Footer/>
-    </div>
+    </section>
   )
 }
 

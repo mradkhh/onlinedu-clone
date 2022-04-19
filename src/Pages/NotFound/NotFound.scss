@@ -1,0 +1,25 @@
+#no__page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  .no__page-info {
+    h3 {
+      margin-bottom: 16px;
+    }
+    p {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 23px;
+      margin-bottom: 24px;
+    }
+
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+    }
+
+  }
+}

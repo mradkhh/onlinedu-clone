@@ -499,6 +499,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .gap-\[30px\] {
   gap: 30px;
 }
+.gap-7 {
+  gap: 1.75rem;
+}
 .rounded {
   border-radius: 0.25rem;
 }

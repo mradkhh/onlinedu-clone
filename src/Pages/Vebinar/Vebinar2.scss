@@ -1,0 +1,32 @@
+#vebinar2__page {
+  padding-bottom: 90px;
+  .vebinar2 {
+    &__title {
+      margin-bottom: 32px;
+    }
+
+    &__info {
+      display: flex;
+      justify-content: end;
+      align-items: flex-start;
+      gap: 30px;
+
+      @media (max-width: 678px) {
+        flex-direction: column;
+      }
+
+      p {
+        max-width: calc(100% - 400px);
+        width: 100%;
+        font-style: normal;
+        font-weight: 400 !important;
+        font-size: 16px;
+        line-height: 150%;
+
+        @media (max-width: 1024px) {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}

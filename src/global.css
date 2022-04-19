@@ -10,6 +10,9 @@ body {
   --greenActiveColor: #27e0be;
   --greenHoverColor: #1ea088;
   --blueColor: #0d2e69;
+  --lightBlueColor: rgba(32, 55, 95, 0.08);
+  --whiteBlueColor: rgba(32, 55, 95, 0.08);
+  --darkGray: #252A3B;
   --grayColor: #898da6;
   --lighterGrayColor: #d7d7d7;
   --lightGrayColor: #f4f3f3;
