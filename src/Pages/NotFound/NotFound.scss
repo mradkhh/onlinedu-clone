@@ -1,11 +1,15 @@
 #no__page {
   display: flex;
   justify-content: center;
-  align-items: center;
+  place-items: center;
   gap: 60px;
+  width: max-content;
+  margin-inline: auto;
+  padding-block: 200px;
   .no__page-info {
     h3 {
       margin-bottom: 16px;
+      font-family: 'Cera Pro' ,serif;
     }
     p {
       font-weight: 400;

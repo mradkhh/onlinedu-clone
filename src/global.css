@@ -154,6 +154,20 @@ button[data-type="secondary"] {
   color: var(--blueColor);
 }
 
+a[type='button'] {
+  background-color: var(--greenColor);
+  color: var(--whiteColor);
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 12px 24px;
+  border: none;
+  transition: all 200ms ease;
+}
+
+a[type='button']:hover {
+  background-color: var(--greenHoverColor);
+}
+
 
 ::-webkit-scrollbar {
   width: 8px;
