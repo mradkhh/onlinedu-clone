@@ -1,0 +1,33 @@
+#expert__page {
+  padding-bottom: 90px;
+  .expert {
+    &__items {
+      display: flex;
+      justify-content: start;
+      align-items: flex-start;
+      gap: 24px;
+      flex-wrap: wrap;
+
+      @media (max-width: 767.99px) {
+        flex-direction: column;
+      }
+
+      > div {
+        width: 31%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        @media (max-width: 1023.99px) {
+          width: 48%;
+          flex-direction: row;
+        }
+        @media (max-width: 767.99px) {
+          width: 100%;
+        }
+
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.side__menu {
+  max-width: 170px;
+  width: 100%;
+  margin-top: 24px;
+
+  &-item {
+    display: flex;
+    justify-self: start;
+    align-items: center;
+    gap: 8px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--blueColor);
+    margin-bottom: 32px;
+    cursor: pointer;
+
+    &:hover {
+      color:  var(--greenColor);
+
+      svg {
+        path {
+          fill: var(--greenColor)
+        }
+      }
+    }
+  }
+}

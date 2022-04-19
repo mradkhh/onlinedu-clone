@@ -1,0 +1,40 @@
+#faq__page {
+  padding-bottom: 90px;
+  .faq {
+    &__title {
+      margin-bottom: 36px;
+    }
+
+    &__items {
+      max-width: calc(100% - 200px);
+      width: 100%;
+      margin-inline: auto;
+      .ant-collapse {
+        background-color: var(--whiteColor);
+
+        &-item {
+          box-shadow: var(--boxShadow);
+          margin-bottom: 16px;
+          border-radius: 10px;
+          border: none;
+        }
+
+        &-header {
+          font-weight: 500;
+          font-size: 1.125rem;
+          color: var(--blueColor);
+          padding: 24px;
+        }
+
+        &-content {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 150%;
+          color: var(--grayColor);
+          padding-inline: 24px;
+        }
+      }
+    }
+  }
+}

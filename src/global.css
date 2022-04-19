@@ -10,6 +10,7 @@ body {
   --greenActiveColor: #27e0be;
   --greenHoverColor: #1ea088;
   --blueColor: #0d2e69;
+  --bgColor: #F5F5F5;
   --lightBlueColor: rgba(32, 55, 95, 0.08);
   --whiteBlueColor: rgba(32, 55, 95, 0.08);
   --darkGray: #252A3B;
@@ -23,6 +24,7 @@ body {
   --redColor: #eb5757;
   --lightBlueColor: #2f80ed;
   --toastify-color-progress-light: #26caac;
+  --boxShadow: 0px 7.2973px 29.1892px rgba(13, 46, 105, 0.05);
 }
 
 h1 {

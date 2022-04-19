@@ -27,6 +27,10 @@ const Home = () => {
               <li><Link to={"/vebinar"} className="text-blueColor text-[14px] font-medium hover:text-greenColor">Вебинары </Link></li>
               <li><span className="text-gray-500 mx-2">></span></li>
               <li><Link to={"/vebinar2"} className="text-blueColor text-[14px] font-medium hover:text-greenColor">Вебинары 2 </Link></li>
+              <li><span className="text-gray-500 mx-2">></span></li>
+              <li><Link to={"/faq"} className="text-blueColor text-[14px] font-medium hover:text-greenColor">Часто задаваемые вопросы</Link></li>
+              <li><span className="text-gray-500 mx-2">></span></li>
+              <li><Link to={"/expert"} className="text-blueColor text-[14px] font-medium hover:text-greenColor">экспертов</Link></li>
             </ol>
           </nav>
         </div>
