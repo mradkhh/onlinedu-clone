@@ -1,0 +1,210 @@
+$validatSuccesBorder: rgba(1, 202, 152, 0.541);
+$validatSuccesBg: rgba(57, 248, 200, 0.06);
+$validatErrorBorder: rgba(253, 23, 23, 0.342);
+$validatErrorBg:rgba(250, 112, 112, 0.06);
+
+.breadcrumb {
+  margin-top: 25px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  a {
+    color: #0d2e69 !important;
+  }
+
+  a.breadcrumb-item {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+  }
+
+  .active {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    color: #898da6;
+  }
+
+  span {
+    margin: 0 10px;
+    color: #898da6;
+  }
+}
+
+.info {
+  box-sizing: border-box;
+  .info__title {
+    margin-top: 33px;
+    margin-bottom: 24px;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 100%;
+    color: #0d2e69;
+  }
+
+  .info__form {
+    max-width: 770px;
+    width: 100%;
+
+    @media (max-width: 1200px) {
+      max-width: 100%;
+    }
+
+    .title {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 100%;
+      color: #0d2e69;
+      margin-bottom: 24px;
+    }
+
+    .form__field {
+      display: flex;
+      justify-content: start;
+      align-items: start;
+      flex-wrap: nowrap;
+      gap: 30px;
+
+
+      @media (max-width: 768px) {
+        // flex-direction: column;
+        gap: 20px;
+      }
+      @media (max-width: 580px) {
+        flex-direction: column;
+        gap: 0;
+      }
+
+      &-bio {
+        margin-bottom: 32px;
+        h5 {
+          font-size: 12px;
+          line-height: 100%;
+          color: #898da6;
+          margin-bottom: 8px;
+        }
+
+        p {
+          padding: 13px 16px;
+          font-size: 14px;
+          line-height: 160%;
+          color: #0d2e69;
+          background: rgba(137, 141, 166, 0.08);
+          border-radius: 8px;
+        }
+      }
+
+      .file__input-field {
+        span {
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 100%;
+          color: #898da6;
+        }
+        .file__label {
+          width: fit-content;
+          cursor: pointer;
+
+          .file__input {
+            background: rgba(137, 141, 166, 0.06);
+            border-radius: 8px;
+            height: 44px;
+            position: relative;
+            max-width: 120px;
+
+            .fake__input {
+              display: flex;
+              justify-content: start;
+              align-items: flex-start;
+              gap: 7px;
+              position: absolute;
+              top: 14px;
+              left: 15px;
+            }
+
+            svg {
+              width: 16px;
+              height: auto;
+            }
+
+            span {
+              font-weight: 500;
+              font-size: 14px;
+              line-height: 100%;
+              color: #0d2e69;
+            }
+            input {
+              visibility: hidden;
+            }
+          }
+        }
+      }
+      label, .file__input-field {
+        display: flex;
+        justify-content: start;
+        align-items: flex-start;
+        flex-direction: column;
+        max-width: 370px;
+        margin-bottom: 24px;
+        width: 100%;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 100%;
+        color: #898da6;
+
+        span {
+          margin-bottom: 8px;
+        }
+
+        > svg {
+          position: absolute;
+          top: 20px;
+          right: 20px;
+        }
+
+        .select {
+          width: 100%;
+          padding: 0 12px;
+          background: rgba(137, 141, 166, 0.06);
+          border-radius: 8px;
+          // border: 1px solid red;
+          select {
+            width: 100%;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 100%;
+            color: #0d2e69;
+            padding: 12px 4px;
+            background: transparent;
+            border-radius: 8px;
+
+            &:focus {
+              outline: none;
+            }
+          }
+        }
+
+        input {
+          width: 100%;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 100%;
+          color: #0d2e69;
+          padding: 13px 16px;
+          background: rgba(137, 141, 166, 0.06);
+          border-radius: 8px;
+          border: 1px solid hidden;
+        }
+      }
+    }
+    .form__btn {
+      padding: 16px 63px;
+      margin-bottom: 90px;
+
+      @media (max-width: 480px) {
+        padding: 16px 40px;
+      }
+    }
+  }
+}

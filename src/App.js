@@ -9,6 +9,8 @@ import NotFound from './Pages/NotFound/NotFound';
 import Profile from './Pages/Profile/Profile';
 import Vebinar from './Pages/Vebinar/Vebinar';
 import Vebinar2 from './Pages/Vebinar/Vebinar2';
+import Edit from './Pages/Profile/Edit'
+import Stat from './Pages/Stat/Stat';
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
         <Route path='/faq' element={<Faq />} />
         <Route path='/expert' element={<Expert />} />
         <Route path='/profile' element={<Profile />} />
+        <Route path='/edit' element={<Edit />} />
+        <Route path='/stat' element={<Stat />} />
         <Route path='/*' element={<NotFound />} />
       </Routes>
     </BrowserRouter>
