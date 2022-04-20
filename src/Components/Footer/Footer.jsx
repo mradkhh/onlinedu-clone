@@ -29,7 +29,7 @@ const Footer = () => {
               <h4>CЛУЖБА ПОДДЕРЖКИ</h4>
               <Link to={"/"}>Политика конфиденциальности</Link>
               <Link to={"/"}>Помощь</Link>
-              <Link to={"/"}>FAQ</Link>
+              <Link to={"/faq"}>FAQ</Link>
             </div>
           </div>
         </div>

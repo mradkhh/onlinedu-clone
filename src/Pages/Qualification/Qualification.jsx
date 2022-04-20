@@ -23,12 +23,77 @@ const Qualification = () => {
               </ol>
             </nav>
             <h4 className="qualification__title">Квалификация</h4>
-            <div className="qualification__progress">
-              <div className='qualification__title'>
+            <div className="qualification__progress-head">
+              <div className='title'>
                 <h6>Пройдено 84 часов 20 минут (67%)</h6>
                 <h6>Всего 144 часов 35 минут</h6>
               </div>
-              <Progress percent={50} status="active" />
+              <Progress strokeWidth={6} showInfo={false} strokeColor="#26CAAC" percent={67} status="active" />
+            </div>
+            <div className="qualification__progress-items grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="item">
+                <Progress strokeWidth={6} strokeColor="#26CAAC" type="circle" percent={43} width={70} />
+                <div className="info">
+                  <h6 className="title">Политика Узбекистана</h6>
+                  <p>15 часов на обучение</p>
+                </div>
+              </div>
+              <div className="item">
+                <Progress strokeWidth={6} strokeColor="#26CAAC" type="circle" percent={15} width={70} />
+                <div className="info">
+                  <h6 className="title">Политика Узбекистана</h6>
+                  <p>15 часов на обучение</p>
+                </div>
+              </div>
+              <div className="item">
+                <Progress strokeWidth={6} strokeColor="#26CAAC" type="circle" percent={75} width={70} />
+                <div className="info">
+                  <h6 className="title">Политика Узбекистана</h6>
+                  <p>15 часов на обучение</p>
+                </div>
+              </div>
+              <div className="item">
+                <Progress strokeWidth={6} strokeColor="#26CAAC" type="circle" percent={1} width={70} />
+                <div className="info">
+                  <h6 className="title">Политика Узбекистана</h6>
+                  <p>15 часов на обучение</p>
+                </div>
+              </div>
+              <div className="item">
+                <Progress strokeWidth={6} strokeColor="#26CAAC" type="circle" percent={27} width={70} />
+                <div className="info">
+                  <h6 className="title">Политика Узбекистана</h6>
+                  <p>15 часов на обучение</p>
+                </div>
+              </div>
+              <div className="item">
+                <Progress strokeWidth={6} strokeColor="#26CAAC" type="circle" percent={0} width={70} />
+                <div className="info">
+                  <h6 className="title">Политика Узбекистана</h6>
+                  <p>15 часов на обучение</p>
+                </div>
+              </div>
+              <div className="item">
+                <Progress strokeWidth={6} strokeColor="#26CAAC" type="circle" percent={81} width={70} />
+                <div className="info">
+                  <h6 className="title">Политика Узбекистана</h6>
+                  <p>15 часов на обучение</p>
+                </div>
+              </div>
+              <div className="item">
+                <Progress strokeWidth={6} strokeColor="#26CAAC" type="circle" percent={11} width={70} />
+                <div className="info">
+                  <h6 className="title">Политика Узбекистана</h6>
+                  <p>15 часов на обучение</p>
+                </div>
+              </div>
+              <div className="item">
+                <Progress strokeWidth={6} strokeColor="#26CAAC" type="circle" percent={56} width={70} />
+                <div className="info">
+                  <h6 className="title">Политика Узбекистана</h6>
+                  <p>15 часов на обучение</p>
+                </div>
+              </div>
             </div>
         </div>
       </div>

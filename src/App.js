@@ -12,6 +12,7 @@ import Vebinar2 from './Pages/Vebinar/Vebinar2';
 import Edit from './Pages/Profile/Edit'
 import Stat from './Pages/Stat/Stat';
 import Qualification from './Pages/Qualification/Qualification';
+import Drection from './Pages/Drection/Drection';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path='/edit' element={<Edit />} />
         <Route path='/stat' element={<Stat />} />
         <Route path='/qualification' element={<Qualification />} />
+        <Route path='/drection' element={<Drection />} />
         <Route path='/*' element={<NotFound />} />
       </Routes>
     </BrowserRouter>
