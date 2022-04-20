@@ -199,6 +199,13 @@ a[type='button']:hover {
   width: 8px;
   background-color: var(--lightGrayColor);
 }
+::-webkit-scrollbar:horizontal {
+  width: 8px;
+  background-color: var(--lightGrayColor);
+}
 ::-webkit-scrollbar-thumb {
   background-color: var(--greenColor);
+}
+::-webkit-scrollbar-thumb:horizontal {
+  width: 4px;
 }

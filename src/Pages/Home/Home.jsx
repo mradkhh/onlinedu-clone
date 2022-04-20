@@ -17,6 +17,8 @@ const Home = () => {
         <Header/>
         <div className="container">
         <nav className="breadcrumb mt-6 mb-8 rounded-md w-full">
+          <h3>This site is building now. All pages here.
+          </h3>
             <ol className="list-reset flex">
               <li><Link to={"/"} className="text-blueColor text-[14px] font-medium hover:text-greenColor">Главная</Link></li>
               <li><span className="text-gray-500 mx-2">></span></li>
@@ -34,6 +36,9 @@ const Home = () => {
               <li><span className="text-gray-500 mx-2">></span></li>
               <li><Link to={"/profile"} className="text-blueColor text-[14px] font-medium hover:text-greenColor">Мой профиль</Link></li>
             </ol>
+            <h3>Official site:
+            <a href="https://onlinedu.uz/" className="text-blueColor text-[20px] font-medium hover:text-greenColor"> onlinedu.uz</a>
+            </h3>
           </nav>
         </div>
         <Hero/>
