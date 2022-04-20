@@ -1,0 +1,47 @@
+.education {
+  margin-bottom: 24px;
+  &__item {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 16px;
+
+    .item-img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 64px;
+      height: 64px;
+      background-color: var(--lightGrayColor);
+      border-radius: 8px;
+    }
+
+    .item-title {
+      display: flex;
+      justify-content: start;
+      align-items: start;
+      flex-direction: column;
+      gap: 8px;
+      h4 {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 100%;
+      }
+
+      h6 {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 100%;
+        color: var(--grayColor);
+      }
+
+      span {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 100%;
+        color: var(--grayColor);
+      }
+    }
+  }
+}

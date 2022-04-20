@@ -3,5 +3,66 @@
     background-color: var(--bgColor);
     width: 100%;
     padding: 24px 30px;
+
+    &__title {
+      margin-block: 24px;
+    }
+
+    .education__section {
+      background-color: var(--whiteColor);
+      padding: 32px;
+      border-radius: 10px;
+      box-shadow: var(--boxShadow);
+      margin-bottom: 32px;
+
+      .education__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        &-btn {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 12px;
+        }
+      }
+    }
+
+    .diagnostic {
+      padding: 32px;
+      background-color: var(--whiteColor);
+      box-shadow: var(--boxShadow);
+      border-radius: 10px;
+      margin-bottom: 32px;
+      &__title {
+        margin-bottom: 24px;
+      }
+
+      &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+      }
+    }
+
+    .course {
+      max-width: 920px;
+      background-color: var(--whiteColor);
+      border-radius: 10px;
+      padding: 32px;
+
+      &__title {
+        margin-bottom: 24px;
+      }
+
+      &__items {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 30px;
+        overflow-x: scroll;
+      }
+    }
   }
 }

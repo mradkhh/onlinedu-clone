@@ -1,0 +1,90 @@
+.edit__card {
+  background-color: var(--whiteColor);
+  box-shadow: var(--boxShadow);
+  border-radius: 10px;
+  padding: 32px;
+  margin-bottom: 32px;
+
+  .card-header {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 32px;
+
+    .card-img {
+      position: relative;
+      .update-avatar {
+        width: 24px;
+        height: 24px;
+        padding: 4px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        place-items: center;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background-color: var(--grayColor);
+        border: 2px solid var(--whiteColor);
+        border-radius: 50%;
+      }
+    }
+
+    .header-title {
+      margin-right: auto;
+
+      .job {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 8px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        color: var(--grayColor);
+      }
+    }
+
+    .header-option {
+      display: flex;
+      justify-self: center;
+      align-items: center;
+      gap: 24px;
+      .copy {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        padding: 8px 16px;
+        border: 2px solid var(--grayColor);
+        color: var(--blueColor);
+        border-radius: 10px;
+        font-weight: 500;
+        font-size: 16px;
+      }
+
+      .edit-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        padding: 10px 16px;
+      }
+    }
+  }
+
+  .card-body {
+    h4 {
+      margin-bottom: 16px;
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 160%;
+      color: var(--blueColor);
+    }
+  }
+}

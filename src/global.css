@@ -162,9 +162,22 @@ button[data-type='gray'] {
   padding: 12px 16px;
   font-weight: 500;
   font-size: 16px;
+  border-radius: 8px;
 }
 
 button[data-type='gray']:hover {
+  background-color: var(--editHoverColor);
+}
+a[data-type='gray'] {
+  background-color: var(--editColor);
+  color: var(--blueColor);
+  padding: 10px 16px;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+a[data-type='gray']:hover {
   background-color: var(--editHoverColor);
 }
 

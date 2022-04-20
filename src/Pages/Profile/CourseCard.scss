@@ -1,0 +1,61 @@
+.course__card {
+  min-width: 236px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: var(--boxShadow);
+  background-color: var(--whiteColor);
+  overflow: hidden;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  .card-img {
+    overflow: hidden;
+    position: relative;
+    img {
+      width: 100%;
+    }
+    .more {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      gap: 16px;
+      position: absolute;
+      bottom: 12px;
+      left: 12px;
+
+      .science {
+        padding: 6px 9px;
+        background-color: var(--orangeColor);
+        color: var(--whiteColor);
+        border-radius: 6px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 100%;
+      }
+
+      .rating {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 4px;
+        color: var(--yellowColor);
+
+        img {
+          width: 12px;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  .card-body {
+    padding: 9px;
+    h5 {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 140%;
+    }
+  }
+}
