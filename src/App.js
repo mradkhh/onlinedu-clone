@@ -11,6 +11,7 @@ import Vebinar from './Pages/Vebinar/Vebinar';
 import Vebinar2 from './Pages/Vebinar/Vebinar2';
 import Edit from './Pages/Profile/Edit'
 import Stat from './Pages/Stat/Stat';
+import Qualification from './Pages/Qualification/Qualification';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path='/profile' element={<Profile />} />
         <Route path='/edit' element={<Edit />} />
         <Route path='/stat' element={<Stat />} />
+        <Route path='/qualification' element={<Qualification />} />
         <Route path='/*' element={<NotFound />} />
       </Routes>
     </BrowserRouter>

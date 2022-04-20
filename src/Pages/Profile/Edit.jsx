@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Header from '../../Components/Header/Header';
 import Footer from '../../Components/Footer/Footer';
 import './Edit.scss';
+import { Link } from 'react-router-dom';
 
 function Edit() {
   // validat color
@@ -129,17 +130,13 @@ function Edit() {
       <Header/>
     <div className='info__section'>
       <div className='container'>
-        <nav aria-label='breadcrumb'>
-          <ol className='breadcrumb'>
-            <li className='breadcrumb-item'>
-              <a href='#'>Главная</a>
-            </li>
-            <span> &gt; </span>
-            <li className='breadcrumb-item active' aria-current='page'>
-              Дополнительная информация
-            </li>
-          </ol>
-        </nav>
+      <nav className="breadcrumb after:rounded-md w-full">
+        <ol className="list-reset flex">
+          <li><Link to={"/"} className="text-blueColor text-[14px] font-medium hover:text-greenColor">Главная</Link></li>
+          <li><span className="text-gray-500 mx-2">></span></li>
+          <li className="text-grayColor">Мой профиль</li>
+        </ol>
+      </nav>
 
         <div className='info'>
           <h3 className='info__title'>Дополнительная информация</h3>
