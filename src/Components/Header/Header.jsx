@@ -2,9 +2,9 @@ import { Dropdown, Modal } from 'antd'
 import "antd/dist/antd.css"
 import React, { useState } from 'react'
 import InputMask from 'react-input-mask'
+import { Offcanvas } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import { toast } from 'react-toastify'
-
 import styled from 'styled-components'
 import './Header.scss'
 
@@ -36,6 +36,10 @@ const Lang = styled.div`
 
 const Header = () => {
   const [modalVisible, setModalVisible] = useState(false)
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
 
   const menu = (
     <Lang >
@@ -50,6 +54,7 @@ const Header = () => {
 
   return (
     <div className="header__section">
+
       <div className="container">
         <div className="header">
           <Link to={"/"}>
@@ -83,12 +88,25 @@ const Header = () => {
           </svg>
           <span className='hidden sm:block'>Войти</span>
           </button>
-          <button className='block lg:hidden  mobile__btn' data-type='primary'><svg width={16} height={16} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <button
+          onClick={handleShow}
+          className='block lg:hidden  mobile__btn' data-type='primary'><svg width={16} height={16} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M14.0913 14H1.90903C1.40694 14 1 13.5523 1 13C1 12.4477 1.40694 12 1.90903 12H14.091C14.5931 12 15 12.4477 15 13C15 13.5523 14.5934 14 14.0913 14Z" fill="#fff" />
               <path d="M14.0913 9H1.90903C1.40694 9 1 8.55233 1 8C1 7.44767 1.40694 7 1.90903 7H14.091C14.5931 7 15 7.44767 15 8C15.0003 8.55233 14.5934 9 14.0913 9Z" fill="#fff" />
               <path d="M14.0913 4H1.90903C1.40694 4 1 3.55233 1 3C1 2.44767 1.40694 2 1.90903 2H14.091C14.5931 2 15 2.44767 15 3C15 3.55233 14.5934 4 14.0913 4Z" fill="#fff" />
             </svg>
           </button>
+          <Offcanvas show={show} onHide={handleClose}>
+            <Offcanvas.Header closeButton>
+              <button data-type='primary'>Ru</button>
+              <button data-type='primary'>Uz</button>
+            </Offcanvas.Header>
+            <Offcanvas.Body>
+              Some text as placeholder. In real life you can have the elements you
+              have chosen. Like, text, images, lists, etc.
+            </Offcanvas.Body>
+          </Offcanvas>
+
           <Modal
             style={{ top: 100}}
             visible={modalVisible}

@@ -1,8 +1,14 @@
 #payment__page {
+  @media (max-width: 1023px) {
+    background-color: var(--bgColor);
+  }
   .payment {
     background-color: var(--bgColor);
     width: 100%;
     padding: 32px;
+    @media (max-width: 1023px) {
+      padding: 32px 0;
+    }
 
     .breadcrumb {
       margin-bottom: 24px;
@@ -60,6 +66,9 @@
             justify-content: space-between;
             align-items: center;
             gap: 24px;
+            @media (max-width: 500px) {
+              flex-direction: column;
+            }
 
             a {
               display: flex;
@@ -72,9 +81,8 @@
               width: 100%;
               padding: 10px;
 
-              @media (max-width: 500px) {
-                height: 50px;
-              }
+
+
 
               &:active {
                 border: 2px solid var(--greenColor);
