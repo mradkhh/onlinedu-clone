@@ -88,8 +88,11 @@
     }
   }
 
-  > .offcanvas {
-    width: 50% !important;
+  .mobile-lang {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 24px;
   }
 }
 

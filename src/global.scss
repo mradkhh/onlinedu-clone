@@ -227,3 +227,22 @@ a[type='button']:hover {
 ::-webkit-scrollbar-thumb:horizontal {
   width: 4px;
 }
+
+// ant-drawer
+.ant-drawer {
+  &-body {
+    .mobile-lang {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      gap: 16px;
+
+      button {
+        padding: 16px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 100%;
+      }
+    }
+  }
+}

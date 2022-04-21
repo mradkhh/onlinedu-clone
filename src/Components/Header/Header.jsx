@@ -94,15 +94,15 @@ const Header = () => {
             </svg>
           </button>
           <Drawer
-          title="Basic Drawer"
           closable={false}
           placement="left"
           onClose={() => setVisible(false)}
           visible={visible}
         >
-          <p>Some contents...</p>
-          <p>Some contents...</p>
-          <p>Some contents...</p>
+          <div className="mobile-lang">
+            <button data-type='primary'>Ru</button>
+            <button data-type='primary'>Uz</button>
+          </div>
         </Drawer>
           <Modal
             style={{ top: 100}}
