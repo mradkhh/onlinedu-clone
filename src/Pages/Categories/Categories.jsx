@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import Select from 'react-select';
 import Header from '../../Components/Header/Header'
 import Footer from '../../Components/Footer/Footer'
 import Card from '../../Components/Cards/Card';
@@ -13,18 +12,18 @@ import './Categories.scss'
 //   })
 // }
 
-const optionsFan = [
-  { value: 'all', label: 'Barcha kategoriyalar'},
-  { value: 'aniqFan', label: 'Aniq fanlar'},
-  { value: 'tabiyFan', label: 'Tabiiy fanlar'},
-  { value: 'ijtimoiy', label: 'Ijtimoiy fanlar'}
-]
+// const optionsFan = [
+//   { value: 'all', label: 'Barcha kategoriyalar'},
+//   { value: 'aniqFan', label: 'Aniq fanlar'},
+//   { value: 'tabiyFan', label: 'Tabiiy fanlar'},
+//   { value: 'ijtimoiy', label: 'Ijtimoiy fanlar'}
+// ]
 
-const optionsTil = [
-  { value: 'all', label: 'Barcha tillar'},
-  { value: 'uz', label: 'Uzbek tili'},
-  { value: 'ru', label: 'Rus tili'}
-]
+// const optionsTil = [
+//   { value: 'all', label: 'Barcha tillar'},
+//   { value: 'uz', label: 'Uzbek tili'},
+//   { value: 'ru', label: 'Rus tili'}
+// ]
 
 const Categories = () => {
 

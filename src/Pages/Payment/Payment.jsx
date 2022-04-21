@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom'
+import Select from 'react-select'
 import Footer from '../../Components/Footer/Footer'
 import Header from '../../Components/Header/Header'
 import SideMenu from '../../Components/SideMenu/SideMenu'
-import Select from 'react-select'
 import './Payment.scss'
 
-const Stat = () => {
+const Payment = () => {
   return (
     <>
     <Header/>
@@ -33,13 +33,53 @@ const Stat = () => {
             <h4 className="payment__title">Оплата</h4>
             <div className="payment__content">
               <div className="payment__content-select">
-                <h6>Выберите категорию для переквалификации:</h6>
-                <div className="select">
-                Категория
-                <Select/>
+                <div className="payment__category-select">
+                  <h6>Выберите категорию для переквалификации:</h6>
+                  <div className="select">
+                  <p>Категория</p>
+                  <Select/>
+                  </div>
+                </div>
+                <div className="payment__way-select">
+                  <h6 className='title'>Выберите способ оплаты:</h6>
+                  <div className="link">
+                    <a href="https://my.click.uz/auth">
+                      <img src="/Images/clickuz.png" alt="clickUz" />
+                    </a>
+                    <a href="https://payme.uz/home/main">
+                      <img src="/Images/payme.png" alt="payme" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="payment__content-total">
+                <div className="payment__total">
+                  <h6 className='payment__total-title'>Итого:</h6>
+                  <div className="payment__total-item">
+                    <span>Категория</span>
+                    <span>Маркетинг</span>
+                  </div>
+                  <div className="payment__total-item">
+                    <span>Количество часов</span>
+                    <span>500 часов</span>
+                  </div>
+                  <div className="payment__total-item">
+                    <span>Количество курсов</span>
+                    <span>8</span>
+                  </div>
+                  <div className="payment__total-item">
+                    <span>Дата завершения</span>
+                    <span>12.10.2021</span>
+                  </div>
+                  <div className="dashed"></div>
+                  <div className="payment__total-buy">
+                    <h5>Итого к оплате:</h5>
+                    <h6 className="price">154 500 сум</h6>
+                  </div>
                 </div>
               </div>
             </div>
+            <button data-type='primary' className='buy-btn'>Оплатить</button>
         </div>
       </div>
     </div>
@@ -48,4 +88,4 @@ const Stat = () => {
   )
 }
 
-export default Stat
+export default Payment
