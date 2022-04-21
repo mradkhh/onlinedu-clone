@@ -1,25 +1,25 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 import './App.css';
 import Categories from './Pages/Categories/Categories';
 import Course from './Pages/Course/Course';
+import Drection from './Pages/Drection/Drection';
 import Expert from './Pages/Expert/Expert';
 import Faq from './Pages/Faq/Faq';
-import {ToastContainer} from 'react-toastify'
 import Home from './Pages/Home/Home';
 import NotFound from './Pages/NotFound/NotFound';
+import Payment from './Pages/Payment/Payment';
+import Edit from './Pages/Profile/Edit';
 import Profile from './Pages/Profile/Profile';
+import Qualification from './Pages/Qualification/Qualification';
+import Stat from './Pages/Stat/Stat';
 import Vebinar from './Pages/Vebinar/Vebinar';
 import Vebinar2 from './Pages/Vebinar/Vebinar2';
-import Edit from './Pages/Profile/Edit'
-import Stat from './Pages/Stat/Stat';
-import Qualification from './Pages/Qualification/Qualification';
-import Drection from './Pages/Drection/Drection';
-import Payment from './Pages/Payment/Payment';
 
 function App() {
   return (
     <BrowserRouter>
-    <ToastContainer/>
+      <ToastContainer />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/categories' element={<Categories />} />

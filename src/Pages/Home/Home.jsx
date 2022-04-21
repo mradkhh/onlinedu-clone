@@ -30,6 +30,7 @@ const Home = () => {
               <li><Link to={"/stat"} className="text-blueColor text-[14px] font-medium hover:text-greenColor">Stat</Link></li>
               <li><Link to={"/qualification"} className="text-blueColor text-[14px] font-medium hover:text-greenColor">Qualification</Link></li>
               <li><Link to={"/drection"} className="text-blueColor text-[14px] font-medium hover:text-greenColor">Drection</Link></li>
+              <li><Link to={"/payment"} className="text-blueColor text-[14px] font-medium hover:text-greenColor">Payment</Link></li>
             </ol>
             <h3>Official site:
             <a href="https://onlinedu.uz/" className="text-blueColor text-[20px] font-medium hover:text-greenColor"> onlinedu.uz</a>
