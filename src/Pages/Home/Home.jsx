@@ -10,7 +10,6 @@ import Popular from './Sections/Popular'
 import Vebinar from './Sections/Vebinar'
 import Professor from './Sections/Professor'
 import Footer from '../../Components/Footer/Footer'
-import Edit from '../Profile/Edit'
 
 const Home = () => {
   return (

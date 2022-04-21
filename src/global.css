@@ -1,7 +1,10 @@
 body {
   font-family: 'Cera Pro', serif !important;
 }
-
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
 /* Typography */
 :root {
   --whiteColor: #ffffff;
@@ -26,6 +29,21 @@ body {
   --lightBlueColor: #2f80ed;
   --toastify-color-progress-light: #26caac;
   --boxShadow: 0px 7.2973px 29.1892px rgba(13, 46, 105, 0.05);
+}
+
+.breadcrumb ol {
+  height: min-content;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 6px;
+}
+
+.breadcrumb ol li > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-end;
 }
 
 h1 {

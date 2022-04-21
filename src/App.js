@@ -4,6 +4,7 @@ import Categories from './Pages/Categories/Categories';
 import Course from './Pages/Course/Course';
 import Expert from './Pages/Expert/Expert';
 import Faq from './Pages/Faq/Faq';
+import {ToastContainer} from 'react-toastify'
 import Home from './Pages/Home/Home';
 import NotFound from './Pages/NotFound/NotFound';
 import Profile from './Pages/Profile/Profile';
@@ -13,10 +14,12 @@ import Edit from './Pages/Profile/Edit'
 import Stat from './Pages/Stat/Stat';
 import Qualification from './Pages/Qualification/Qualification';
 import Drection from './Pages/Drection/Drection';
+import Payment from './Pages/Payment/Payment';
 
 function App() {
   return (
     <BrowserRouter>
+    <ToastContainer/>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/categories' element={<Categories />} />
@@ -30,6 +33,7 @@ function App() {
         <Route path='/stat' element={<Stat />} />
         <Route path='/qualification' element={<Qualification />} />
         <Route path='/drection' element={<Drection />} />
+        <Route path='/payment' element={<Payment />} />
         <Route path='/*' element={<NotFound />} />
       </Routes>
     </BrowserRouter>

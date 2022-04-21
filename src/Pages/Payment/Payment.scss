@@ -1,0 +1,11 @@
+#payment__page {
+  .payment {
+    background-color: var(--bgColor);
+    width: 100%;
+    padding: 32px;
+
+    .breadcrumb {
+      margin-bottom: 24px;
+    }
+  }
+}

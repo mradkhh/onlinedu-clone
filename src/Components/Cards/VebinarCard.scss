@@ -79,6 +79,14 @@
         color: var(--blueColor);
         font-size: 1rem;
         font-weight: 500;
+        .copied {
+          display: none;
+        }
+        &:active {
+          .copied {
+            display: inline-block;
+          }
+        }
         @media (max-width: 400px) {
           font-size: 14px;
         }

@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import App from "./App";
 import "./index.css";
 import "./global.css"
-
+import 'react-toastify/dist/ReactToastify.css';
 const container = document.getElementById("root");
 const root = createRoot(container);
 root.render(<App />);
