@@ -19,21 +19,16 @@ const Professor = () => {
           <Swiper
            breakpoints={{
             // when window width is >= 640px
-            "@0.00": {
-              slidesPerView: 1,
-            },
-            "@0.75": {
-              slidesPerView: 1,
-            },
-            "@1.00": {
-              slidesPerView: 2,
-              spaceBetween: 10
-            },
-            "@1.50": {
-              slidesPerView: 3,
-              spaceBetween: 30
-            }
-
+              // when window width is >= 768px
+              320: {
+                slidesPerView: 1,
+              },
+              678: {
+                slidesPerView: 2,
+              },
+              1023: {
+                slidesPerView: 3,
+              }
           }}
             autoplay={{
               delay: 3000,
@@ -41,6 +36,7 @@ const Professor = () => {
           }}
           modules={[Autoplay]}
           loop={true}
+          spaceBetween={30}
           >
           <SwiperSlide style={{
             maxWidth: 600,
