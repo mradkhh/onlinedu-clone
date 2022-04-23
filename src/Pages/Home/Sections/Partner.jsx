@@ -16,26 +16,17 @@ const Partner = () => {
                   <div className="partner__link">
                   <Swiper
                       breakpoints={{
-                        // when window width is >= 640px
-                        320: {
-                          width: 320,
-                          slidesPerView: 1,
-                        },
-                        576: {
-                          width: 540,
-                          slidesPerView: 2,
-                        },
                         // when window width is >= 768px
                         768: {
-                          width: 740,
-                          slidesPerView: 3,
+                          width: 768,
+                          slidesPerView: 2,
                         },
                         991: {
-                          width: 960,
+                          width: 991,
                           slidesPerView: 4,
                         },
                         1200: {
-                          width: 1140,
+                          width: 1200,
                           slidesPerView: 4,
                         },
                         1400: {
@@ -51,7 +42,7 @@ const Partner = () => {
                     tag={'div'}
                     modules={[Autoplay]}
                     loop={true}
-                    slidesPerView={5}
+                    slidesPerView={1}
                     spaceBetween={30}
                     >
                     <SwiperSlide>

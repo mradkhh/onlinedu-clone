@@ -19,12 +19,9 @@
     }
 
     &__link {
+      width: 100%;
       img {
         width: 100%;
-
-        @media (max-width: 1300px) {
-          max-width: 200px;
-        }
       }
     }
   }
