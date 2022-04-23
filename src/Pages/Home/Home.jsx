@@ -15,7 +15,7 @@ const Home = () => {
   return (
     <>
         <Header/>
-        {/* <div className="container">
+        <div className="container">
           <h6>This site is building now. All pages here.</h6>
             <ol className="list-reset">
               <li><Link to={"/"} className="text-blueColor text-[14px] font-medium hover:text-greenColor">Главная</Link></li>
@@ -35,7 +35,7 @@ const Home = () => {
             <h3>Official site:
             <a href="https://onlinedu.uz/" className="text-blueColor text-[20px] font-medium hover:text-greenColor"> onlinedu.uz</a>
             </h3>
-        </div> */}
+        </div>
         <Hero/>
         <Partner/>
         <Comments/>

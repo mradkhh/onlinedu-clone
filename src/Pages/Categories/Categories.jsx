@@ -3,6 +3,7 @@ import Header from '../../Components/Header/Header'
 import Footer from '../../Components/Footer/Footer'
 import Card from '../../Components/Cards/Card';
 import Paginations from '../../Components/Paginations/Paginations'
+import { Select, Input } from 'antd';
 import './Categories.scss'
 
 // const customStyles =  {
@@ -27,10 +28,11 @@ import './Categories.scss'
 
 const Categories = () => {
 
+  const { Option } = Select;
   return (
     <section id="categories__page">
       <Header/>
-      <div className="categories">
+        <div className='categories__wrapper'>
         <div className="container">
           <nav className="breadcrumb mt-6 mb-8 rounded-md w-full">
             <ol className="list-reset flex">
@@ -41,34 +43,34 @@ const Categories = () => {
           </nav>
           <div className="categories">
             <h3 className='categories__title'>Категории курсов</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 categories__head">
+            <div className="categories__head">
               <div className="head__item">
                 <label className="head__item-title">Kategoriyalar</label>
-                <select className='category-select' name="" id="">
-                  <option value="">Barcha fanlar</option>
-                  <option value="">Tabiiy fanlar</option>
-                  <option value="">Aniq fanlar</option>
-                </select>
+                <Select defaultValue="all" style={{width: '100%'}} >
+                  <Option value="all">Barcha kategoriyalar</Option>
+                  <Option value="tabiiy">Tabiiy fanlar</Option>
+                  <Option value="aniq">Aniq fanlar</Option>
+                  <Option value="ijtimoiy">Ijtimoiy fanlar</Option>
+                </Select>
               </div>
               <div className="head__item">
                 <label className="head__item-title">Min. davomiyligi</label>
-                <input type="text" />
+                <Input placeholder="Min. davomiyligi" />
               </div>
               <div className="head__item">
               <label className="head__item-title">Min. davomiyligi</label>
-                <input type="text" />
+              <Input placeholder="Min. davomiyligi" />
               </div>
               <div className="head__item">
                 <label className="head__item-title">Tillar</label>
-                <select name="" id="">
-                  <option value="">Barcha tillar</option>
-                  <option value="">Uzbek tili</option>
-                  <option value="">Rus tili</option>
-                </select>
+                <Select defaultValue="all" style={{width: '100%'}} >
+                  <Option value="all">Barcha tillar</Option>
+                  <Option value="uz">Uzbek tili</Option>
+                  <Option value="ru">Rus tili</Option>
+                </Select>
               </div>
               <div className="head__item">
-                <label htmlFor="">dd</label>
-              <button className='w-fit' data-type='primary'>Начать поиск</button>
+              <button className='category-btn' data-type='primary'>Начать поиск</button>
               </div>
             </div>
 
@@ -124,10 +126,10 @@ const Categories = () => {
             />
         </div>
         <div className="categories__pagination">
-         <Paginations count={15}/>
+         <Paginations count={3}/>
         </div>
         </div>
-      </div>
+        </div>
       <Footer/>
     </section>
   )

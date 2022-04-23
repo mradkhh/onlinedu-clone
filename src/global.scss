@@ -12,7 +12,7 @@ body {
   --whiteColor: #ffffff;
   --blackColor: #000000;
   --greenColor: #26caac;
-  --greenActiveColor: #27e0be;
+  --greenActiveColor: #27efcb;
   --greenHoverColor: #1ea088;
   --blueColor: #0d2e69;
   --bgColor: #f5f5f5;
@@ -176,6 +176,10 @@ button[data-type='outline'] {
   background-color: var(--whiteColor);
   border: 1px solid var(--greenColor);
   color: var(--greenColor);
+  &:active {
+    background-color: var(--greenActiveColor);
+    color: var(--whiteColor);
+  }
 }
 button[data-type='outline']:hover {
   background-color: var(--greenColor);
@@ -300,5 +304,17 @@ a[type='button']:hover {
       padding: 10px 12px;
       font-size: 16px;
     }
+  }
+}
+
+.ant-select {
+
+  &-selector {
+    width: 100%;
+    height: auto !important;
+    padding: 6px 16px !important;
+    border: none !important;
+    border-radius: 10px !important;
+    outline: var(--greenColor) !important;
   }
 }

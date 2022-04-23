@@ -9,8 +9,8 @@ const Hero = () => {
           <div className="hero__info">
             <h1 className='hero__info-title'>«Uzluksiz kasbiy ta’lim» elektron platformasi</h1>
             <p className='hero__info-subtitle'>Malaka oshirish uchun kurslar endi onlayn. <br />
-Qulayliklardan foydalaning va vaqtingizni tejang.
-</p>
+                Qulayliklardan foydalaning va vaqtingizni tejang.
+            </p>
             <Link to="/hero" className="hero__info-btn" data-type='primary'>Malaka oshirishni boshlash</Link>
           </div>
           <div className="hero__img">

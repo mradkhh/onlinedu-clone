@@ -52,7 +52,6 @@
 
   .card__body {
     padding: 16px 16px 24px 16px;
-    z-index: 123;
 
     &-title {
       max-width: 338px;
@@ -79,7 +78,8 @@
       button {
         font-style: normal;
         font-weight: 700;
-        font-size: 18px;
+        padding: 9px 24px;
+        font-size: 1rem;
       }
     }
   }

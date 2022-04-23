@@ -20,7 +20,7 @@ const Course = () => {
       </nav>
       <h3 className="page__title">STesting. PISA tadqiqotlarida matematik savodxonlik</h3>
       <div className="course__section flex gap-7">
-      <aside className="sidebar">
+      <aside className="sidebar hidden lg:block">
         <div className="sidebar__cart">
           <div className="sidebar__cart-item rating flex">
             <span>Reyting:</span>
@@ -133,14 +133,15 @@ const Course = () => {
       </aside>
       <main className="content">
         <div className="content__video">
-        <img src="/Images/video-img.jpg" alt="video" />
+          <video  width="100%" controls>
+            <source src="/Videos/video1.mp4" />
+          </video>
         </div>
         <h3 className="content__title">О чем этот курс?</h3>
         <p className="content__dics">
         Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке.Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке.Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке.Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке.Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке.
         </p>
         <Chat/>
-
       </main>
       </div>
       </div>

@@ -81,9 +81,13 @@
 
   .content {
     &__video {
-      img {
-        width: 100%;
+      border-radius: 25px;
+      overflow: hidden;
+
+      video {
+        object-fit: contain;
       }
+
     }
     &__title {
       margin-block: 30px;
