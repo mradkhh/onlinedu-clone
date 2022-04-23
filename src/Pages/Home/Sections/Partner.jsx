@@ -11,7 +11,7 @@ const Partner = () => {
           <div className="container">
               <div className="partner">
                   <div className="partner__info">
-                      <h3 className="partner__info-title"> 5000+ директоров по всему Узбекистану используют наш сервис для улучшения своих знаний</h3>
+                    <h3 className='partner__info-title'><span>&#123;</span> 310364+ xalq ta'limi xodimlari <span>&#125;</span> butun O'zbekiston bo'yicha onlayn tarzda malaka oshirishmoqda</h3>
                   </div>
                   <div className="partner__link">
                   <Swiper
@@ -37,6 +37,10 @@ const Partner = () => {
                         1200: {
                           width: 1140,
                           slidesPerView: 4,
+                        },
+                        1680: {
+                          width: 1680,
+                          slidesPerView: 5,
                         }
                       }}
                      autoplay={{
@@ -46,8 +50,8 @@ const Partner = () => {
                     tag={'div'}
                     modules={[Autoplay]}
                     loop={true}
-                    slidesPerView={4}
-                    spaceBetween={10}
+                    slidesPerView={5}
+                    spaceBetween={30}
                     >
                     <SwiperSlide>
                         <img src="/Images/partner1.png" alt="partner" />

@@ -7,21 +7,23 @@ const Popular = () => {
     <div className="popular__section">
       <div className="container">
         <div className="popular">
-          <h2 className="popular__title">Популярные курсы</h2>
+          <h2 className="popular__title">Ommabop kurslar</h2>
+          <p className='popular__subtitle'>Ushbu kurslar bepul va pullik tarzda tavsiya etiladi. <br />
+Tanlov tinglovchining ixtiyorida bo’lib, tavsiya etilayotgan kurslarda o’qish majburiy emas</p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px]">
             <Card
             image={"/Images/card1.png"}
-            title={"Маркетинг и все его тонкости. Профессия маркетолога с 0 до эксперта "}
+            title={"Milliy o'quv dasturi"}
             price={"95 000 сум"}
-            science={"Маркетинг"}
+            science={"Milliy o'quv dasturi"}
             rating={4.5}
             choise={false}
             />
             <Card
             image={"/Images/card2.png"}
-            title={"Маркетинг и все его тонкости. Профессия маркетолога с 0 до эксперта "}
+            title={"Ijtimoiy fanlar"}
             price={"95 000 сум"}
-            science={"Экономика"}
+            science={"Ijtimoiy fanlar"}
             rating={4.9}
             choise={true}
             />
@@ -57,8 +59,10 @@ const Popular = () => {
             rating={4}
             choise={true}
             />
-          <button className='all_course' data-type='primary'>Смотреть все курсы</button>
         </div>
+            <div className="more">
+          <button className='all_course' data-type='primary'>Barcha kurslarni ko'rish</button>
+            </div>
       </div>
     </div>
   </div>

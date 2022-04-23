@@ -12,8 +12,8 @@ const Comments = () => {
           <div className="container">
               <div className="comments">
                   <div className="comments__info">
-                      <h2>Отзывы международных экспертов</h2>
-                      <p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке.</p>
+                      <h2>Xalqaro ekspertlarning fikrlari</h2>
+                      <p>«Uzluksiz kasbiy ta’lim» elektron platformasi faoliyati va imkoniyatlarini o'rgangan ta'lim sohasidagi xalqaro ekspertlarning fikrlari bilan tanishing.</p>
                   </div>
                   <div className="comments__items">
                   <Swiper

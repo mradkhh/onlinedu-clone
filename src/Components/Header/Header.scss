@@ -30,6 +30,7 @@
     &__info-btn {
       font-weight: 500;
       font-size: 16px;
+      padding: 11px 15px;
       line-height: 100%;
     }
 
@@ -39,8 +40,8 @@
       input {
         width: 100%;
         border-radius: 8px;
-        padding-block: 12px;
-        padding-left: 48px;
+        padding-block: 11px;
+        padding-left: 50px;
         border: none;
         font-style: normal;
         font-weight: 500;
@@ -73,18 +74,19 @@
     .sign {
       display: flex;
       justify-content: center;
+      padding: 11px 15px;
       align-items: center;
       margin-left: auto;
       font-weight: 500;
       font-size: 16px;
-      line-height: 100%;
+      line-height: 18px;
       @media (max-width: 640px) {
-        padding: 12px;
+        padding: 11px;
       }
     }
 
     .mobile__btn {
-      padding: 12px;
+      padding: 11px;
     }
   }
 

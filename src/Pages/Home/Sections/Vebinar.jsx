@@ -6,8 +6,8 @@ const Vebinar = () => {
     <div className="vebinar__section">
       <div className="container">
         <div className="vebinar">
-          <h2 className="vebinar__title">Присоединяйтесь к вебинарам по определенному курсу</h2>
-          <p className="vebinar__subtitle">Участвуйте в вебинарах, делитесь опытом и задавайте вопросы. Все это возможно в отдельных группах, которые доступны при прохождении каждого курса!</p>
+          <h1 className="vebinar__title">Mutaxassislar tomonidan o'tkaziladigan vebinarga qo'shiling</h1>
+          <p className="vebinar__subtitle">Vebinarlarga qatnashib, yangi bilimlar orttiring, tajribangiz bilan ulashing, savol bering va javoblar oling!</p>
           <div className="vebinar__avatars">
             <div className="vebinar__avatars-items">
               <img src="/Images/avatar3.png" alt="avatar" />
@@ -15,9 +15,10 @@ const Vebinar = () => {
               <img src="/Images/avatar2.png" alt="avatar" />
               <div className="circle">+120</div>
             </div>
-            <h4 className="vebinar__avatars-title">человек уже стали участниками групп по своим направлениям</h4>
+            <h4 className="vebinar__avatars-title">foydalanuvchi barcha yo'nalishlar bo'yicha
+vebinarlarga qo'shilishdi.</h4>
           </div>
-          <button data-type='primary'>Присоединиться</button>
+          <button data-type='primary'>Qo'shish</button>
         </div>
       </div>
     </div>

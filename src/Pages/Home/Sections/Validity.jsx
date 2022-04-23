@@ -6,11 +6,12 @@ const Validity = () => {
     <div className="validity__section">
       <div className="container">
         <div className="validity">
-          <h2 className="validity__title">Проверьте свой сертификат на действительность</h2>
-          <p className="validity__subtitle">Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке.</p>
+          <h2 className="validity__title">Sertifikatni haqiqiylikka tekshiring</h2>
+          <p className="validity__subtitle">Ushbu platforma orqali ish beruvchilar ham, sertifikat egalari ham
+sertifikatning haqiqiyligini tekshirishlari mumkin.</p>
           <div className="input__field">
             <input type="text" placeholder='Введите номер вашего сертификата'/>
-            <button className='validity-btn' data-type='primary'>Проверить сертификат</button>
+            <button className='validity-btn' data-type='primary'>Sertifikatni tekshirish</button>
           </div>
         </div>
       </div>

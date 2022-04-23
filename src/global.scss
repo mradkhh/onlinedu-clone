@@ -1,5 +1,7 @@
 body {
-  font-family: 'Cera Pro', serif !important;
+  font-family: 'Cera Pro' !important;
+  margin: 0 !important;
+  background-color: #fff;
 }
 ::-webkit-scrollbar {
   width: 8px;
@@ -49,7 +51,8 @@ body {
 h1 {
   font-style: normal;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 2.25rem;
+  line-height: 1.5;
   color: var(--blueColor);
 }
 
@@ -60,9 +63,10 @@ h2 {
 }
 
 h3 {
-  font-weight: 700;
-  font-size: 28px;
+  font-size: 1.5rem;
   color: var(--blueColor);
+  line-height: 1.5;
+  font-weight: 500;
 }
 
 h4 {
@@ -86,7 +90,7 @@ h6 {
 
 p {
   font-weight: 400;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 150%;
   color: var(--grayColor);
 }
@@ -139,19 +143,35 @@ input[type='checkbox']:checked::before {
 
 button {
   cursor: pointer;
-  border-radius: 8px;
-  padding: 12px 24px;
   border: none;
   transition: all 200ms ease;
+  display: inline-block;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  padding: 15px 24px;
+  font-size: 1.125rem;
+  line-height: 18px;
+  border-radius: 8px;
 }
 
 button[data-type='primary'] {
   background-color: var(--greenColor);
   color: var(--whiteColor);
+  &:hover {
+    background-color: var(--greenHoverColor);
+  }
 }
-button[data-type='primary']:hover {
-  background-color: var(--greenHoverColor);
+a[data-type='primary'] {
+  background-color: var(--greenColor) !important;
+  color: var(--whiteColor) !important;
+  &:hover {
+    background-color: var(--greenHoverColor);
+  }
 }
+
 button[data-type='outline'] {
   background-color: var(--whiteColor);
   border: 1px solid var(--greenColor);
@@ -214,11 +234,11 @@ a[type='button']:hover {
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 4px;
   background-color: var(--lightGrayColor);
 }
 ::-webkit-scrollbar:horizontal {
-  width: 8px;
+  width: 4px;
   background-color: var(--lightGrayColor);
 }
 ::-webkit-scrollbar-thumb {

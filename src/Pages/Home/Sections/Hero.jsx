@@ -1,4 +1,4 @@
-import React from 'react'
+import { Link } from 'react-router-dom'
 import './Hero.scss'
 
 const Hero = () => {
@@ -7,9 +7,11 @@ const Hero = () => {
       <div className="container">
         <div className="hero">
           <div className="hero__info">
-            <h1 className='hero__info-title'>Улучшайте свои знания и практикуйте навыки</h1>
-            <p className='hero__info-subtitle'>Лучшие онлайн-курсы, собранные в одном месте, помогут Вам сконцентрироваться на изучении материала</p>
-            <button className="hero__info-btn" data-type='primary'>Начаь квалификацию</button>
+            <h1 className='hero__info-title'>«Uzluksiz kasbiy ta’lim» elektron platformasi</h1>
+            <p className='hero__info-subtitle'>Malaka oshirish uchun kurslar endi onlayn. <br />
+Qulayliklardan foydalaning va vaqtingizni tejang.
+</p>
+            <Link to="/hero" className="hero__info-btn" data-type='primary'>Malaka oshirishni boshlash</Link>
           </div>
           <div className="hero__img">
             <img src="/Images/hero.png" alt="" />

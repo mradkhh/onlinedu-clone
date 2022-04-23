@@ -45,6 +45,10 @@
           line-height: 150%;
           max-width: 270px;
           width: 100%;
+
+          @media (max-width: 768px) {
+            max-width: max-content;
+          }
         }
       }
     }

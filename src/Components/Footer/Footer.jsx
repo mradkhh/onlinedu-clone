@@ -13,10 +13,10 @@ const Footer = () => {
             </div>
             <div className="footer__item">
               <h4>Курсы</h4>
-              <Link to={"/"}>Категория</Link>
-              <Link to={"/"}>Вторая Категория</Link>
-              <Link to={"/"}>Третья Категория</Link>
-              <Link to={"/"}>Четвертая Категория</Link>
+              <Link to={"/"}>Aniq fanlar</Link>
+              <Link to={"/"}>Tabiiy fanlar</Link>
+              <Link to={"/"}>Xorijiy tillar</Link>
+              <Link to={"/"}>PISA</Link>
             </div>
             <div className="footer__item">
               <h4>Мой профиль</h4>

@@ -12,8 +12,8 @@ const Professor = () => {
       <div className="container">
         <div className="professor">
           <div className="professor__info">
-            <h2 className="professor__info-title">Отзывы международных экспертов</h2>
-            <p className="professor__info-subtitle">Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке.</p>
+            <h2 className="professor__info-title">Bizning mutaxassislar</h2>
+            <p className="professor__info-subtitle">Yetakchi mutaxassislarimiz tomonidan tayyorlangan kurslar sizga kerakli barcha bilimlarni berib, kasbiy rivojlanishingizga yordam beradi.</p>
           </div>
           <div className="professor__items">
           <Swiper
@@ -87,7 +87,7 @@ const Professor = () => {
           </SwiperSlide>
           </Swiper>
           </div>
-        <button className='more' data-type='primary'>Посмотреть всех</button>
+        <button className='more' data-type='primary'>Barchasini ko'rish</button>
         </div>
       </div>
     </div>

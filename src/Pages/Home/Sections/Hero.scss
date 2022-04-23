@@ -1,11 +1,15 @@
 .hero__section {
   .hero {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    gap: 95px;
+    padding-left: 80px;
+    @media (max-width: 1200px) {
+      padding: 0;
+    }
     @media (max-width: 1024px) {
       flex-direction: column;
+      align-items: start;
       gap: 20px;
     }
     &__info {
@@ -17,18 +21,37 @@
       }
 
       &-subtitle {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.4;
         margin-bottom: 16px;
       }
 
       &-btn {
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 100%;
+        display: inline-block;
+        font-weight: bold;
+        text-align: center;
+        vertical-align: middle;
+        cursor: pointer;
+        user-select: none;
+        border: 1px solid transparent;
+        padding: 15px 24px;
+        font-size: 1.125rem;
+        line-height: 18px;
+        border-radius: 8px
       }
     }
 
     &__img {
       margin-top: 54px;
+
+      img {
+        max-width: 550px;
+        width: 100%;
+        @media (max-width: 1024px) {
+          max-width: max-content;
+        }
+      }
       @media (max-width: 990.99px) {
         margin-top: 0;
       }

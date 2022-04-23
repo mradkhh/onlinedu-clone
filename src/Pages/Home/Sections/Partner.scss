@@ -11,12 +11,15 @@
       &-title {
         max-width: 737px;
         width: 100%;
+
+        span {
+          color: var(--greenColor);
+        }
       }
     }
 
     &__link {
       img {
-        max-width: 250px;
         width: 100%;
 
         @media (max-width: 1300px) {

@@ -7,14 +7,22 @@
     flex-direction: column;
     &__title {
       text-align: center;
-      margin-bottom: 38px;
+      margin-bottom: 20px;
     }
 
-    .all_course {
-      margin-top: 60px;
-      font-style: normal;
-      font-weight: 700;
-      font-size: 18px;
+    &__subtitle {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .more {
+      .all_course {
+        margin-inline: auto;
+        margin-top: 20px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+      }
     }
   }
 }
