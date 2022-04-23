@@ -17,8 +17,8 @@ const Partner = () => {
                   <Swiper
                       breakpoints={{
                         // when window width is >= 768px
-                        768: {
-                          width: 768,
+                        576: {
+                          width: 576,
                           slidesPerView: 2,
                         },
                         991: {
