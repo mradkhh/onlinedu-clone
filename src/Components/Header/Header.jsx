@@ -94,15 +94,34 @@ const Header = () => {
             </svg>
           </button>
           <Drawer
+          className='lg:hidden'
+          footer={
+            <button
+            onClick={handleToasty}
+            className='header__info-btn' data-type='outline'>Yo'riqnoma</button>
+          }
+          title={
+            <div className="mobile-lang">
+              <button data-type='outline'>Ru</button>
+              <button data-type='primary'>Uz</button>
+            </div>
+          }
           closable={false}
           placement="left"
           onClose={() => setVisible(false)}
           visible={visible}
         >
-          <div className="mobile-lang">
-            <button data-type='primary'>Ru</button>
-            <button data-type='primary'>Uz</button>
-          </div>
+
+          <nav className="mobile-nav">
+            <ul>
+              <li><Link to="/">Aniq fanlar</Link></li>
+              <li><Link to="/">Tabiiy fanlar</Link></li>
+              <li><Link to="/">Xorijiy tillar</Link></li>
+              <li><Link to="/">PISA</Link></li>
+              <li><Link to="/">Ijtimoiy fanlar</Link></li>
+              <li><Link to="/">Milliy o'quv dasturi</Link></li>
+            </ul>
+          </nav>
         </Drawer>
           <Modal
             style={{ top: 100}}
