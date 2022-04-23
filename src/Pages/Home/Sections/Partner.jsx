@@ -38,9 +38,10 @@ const Partner = () => {
                           width: 1140,
                           slidesPerView: 4,
                         },
-                        1680: {
-                          width: 1680,
+                        1400: {
+                          width: 1400,
                           slidesPerView: 5,
+                          spaceBetween: 24
                         }
                       }}
                      autoplay={{
