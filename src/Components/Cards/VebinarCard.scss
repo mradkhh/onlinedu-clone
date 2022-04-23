@@ -22,12 +22,12 @@
       position: absolute;
       bottom: 16px;
       left: 16px;
-      padding: 9px 12px;
+      padding: 8px 12px;
       background-color: var(--whiteColor);
       border-radius: 10px;
       color: var(--grayColor);
       font-weight: 500;
-      font-size: 14px;
+      font-size: 12px;
     }
   }
 
@@ -69,6 +69,9 @@
         color: var(--grayColor);
         font-weight: 500;
         font-size: 1rem;
+        :active {
+          transform: scale(1.1);
+        }
         @media (max-width: 400px) {
           font-size: 14px;
         }
@@ -81,11 +84,6 @@
         font-weight: 500;
         .copied {
           display: none;
-        }
-        &:active {
-          .copied {
-            display: inline-block;
-          }
         }
         @media (max-width: 400px) {
           font-size: 14px;

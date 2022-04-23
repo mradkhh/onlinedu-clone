@@ -55,7 +55,7 @@ const Vebinar = () => {
             </div>
           </div>
           <div className="vebinar__pagination">
-            <Paginations count={5}/>
+            <Paginations count={3}/>
           </div>
           </div>
         </section>
