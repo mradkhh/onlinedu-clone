@@ -17,22 +17,20 @@ const Partner = () => {
                   <Swiper
                       breakpoints={{
                         // when window width is >= 768px
-                        576: {
-                          width: 576,
+                        320: {
+                          slidesPerView: 1,
+                        },
+                        480: {
                           slidesPerView: 2,
                         },
-                        991: {
-                          width: 991,
-                          slidesPerView: 4,
+                        640: {
+                          slidesPerView: 3,
                         },
-                        1200: {
-                          width: 1200,
+                        1023: {
                           slidesPerView: 4,
                         },
                         1400: {
-                          width: 1400,
                           slidesPerView: 5,
-                          spaceBetween: 24
                         }
                       }}
                      autoplay={{
