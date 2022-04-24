@@ -331,3 +331,10 @@ a[type='button']:hover {
     }
   }
 }
+.sidebar-btn {
+  padding: 12px !important;
+  margin-right: 8px;
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}

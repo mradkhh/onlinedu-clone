@@ -10,6 +10,9 @@
     align-items: center;
     gap: 20px;
     padding-block: 16px;
+    @media (max-width: 1023px) {
+      gap: 12px;
+    }
     @media (max-width: 575.99px) {
       padding-block: 16px;
     }

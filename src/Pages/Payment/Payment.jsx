@@ -17,7 +17,7 @@ const Payment = () => {
     <div id="payment__page">
       <div className="container flex">
         <SideMenu/>
-        <div className="payment">
+        <section className="payment">
           <nav className="breadcrumb after:rounded-md w-full">
               <ol className="list-reset">
                 <li><Link to={"/"} className="text-blueColor text-[14px] font-medium hover:text-greenColor">Главная</Link></li>
@@ -90,7 +90,7 @@ const Payment = () => {
               </div>
             </div>
             <button data-type='primary' className='buy-btn'>Оплатить</button>
-        </div>
+        </section>
       </div>
     </div>
     <Footer/>

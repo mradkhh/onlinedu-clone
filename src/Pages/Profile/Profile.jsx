@@ -1,13 +1,18 @@
+import { Drawer } from 'antd'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import EditCard from '../../Components/Cards/Profile/EditCard'
 import Footer from '../../Components/Footer/Footer'
 import Header from '../../Components/Header/Header'
+import MobileSideMenu from '../../Components/SideMenu/MobileSideMenu'
 import SideMenu from '../../Components/SideMenu/SideMenu'
-import EditCard from '../../Components/Cards/Profile/EditCard'
 import Education from './Education'
-import CourseCard from './CourseCard'
+// import CourseCard from './CourseCard'
 import './Profile.scss'
 
 const Profile = () => {
+  const [visibleSidebar,setVisibleSidebar] = useState(false)
+
   return (
     <>
       <Header/>
@@ -15,14 +20,30 @@ const Profile = () => {
         <div className="container flex">
           <SideMenu/>
           <section className="profile">
-          <nav className="breadcrumb after:rounded-md w-full">
+          <nav className="breadcrumb after:rounded-md">
             <ol className="list-reset flex">
+              <button onClick={()=> setVisibleSidebar(!visibleSidebar)} className='sidebar-btn' data-type='gray'>
+                <svg width={16} height={16} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.0913 14H1.90903C1.40694 14 1 13.5523 1 13C1 12.4477 1.40694 12 1.90903 12H14.091C14.5931 12 15 12.4477 15 13C15 13.5523 14.5934 14 14.0913 14Z" fill="#fff" />
+                  <path d="M14.0913 9H1.90903C1.40694 9 1 8.55233 1 8C1 7.44767 1.40694 7 1.90903 7H14.091C14.5931 7 15 7.44767 15 8C15.0003 8.55233 14.5934 9 14.0913 9Z" fill="#fff" />
+                  <path d="M14.0913 4H1.90903C1.40694 4 1 3.55233 1 3C1 2.44767 1.40694 2 1.90903 2H14.091C14.5931 2 15 2.44767 15 3C15 3.55233 14.5934 4 14.0913 4Z" fill="#fff" />
+                </svg>
+
+              </button>
               <li><Link to={"/"} className="text-blueColor text-[14px] font-medium hover:text-greenColor">Asosiy</Link></li>
               <li><span className="text-gray-500 mx-2">></span></li>
               <li className="text-grayColor">Mening profilim</li>
             </ol>
           </nav>
           <h4 className='profile__title'>Mening profilim</h4>
+          <Drawer
+            placement="left"
+            closable={false}
+            onClose={() => setVisibleSidebar(false)}
+            visible={visibleSidebar}
+          >
+            <MobileSideMenu/>
+          </Drawer>
           <EditCard
           image="Images/side-menu/profil.png"
           bio="По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст. В отличии от lorem ipsum, текст рыба на русском языке наполнит любой макет непонятным смыслом и придаст неповторимый колорит советских времен."
@@ -68,7 +89,7 @@ const Profile = () => {
             specialty="Навоинская область, Высоковольтный район, 145 школа"
             name="Учитель Русского языка и литературы"/>
           </div>
-          <div className="course">
+          {/* <div className="course">
             <h4 className="course__title">Пройденные курсы</h4>
             <div className="course__items">
             <CourseCard
@@ -97,7 +118,7 @@ const Profile = () => {
             science="Маркетинг"
             title="Маркетинг и все его тонкости. Профессия маркетолога с 0 до эксперта "/>
             </div>
-          </div>
+          </div> */}
           </section>
         </div>
       </section>

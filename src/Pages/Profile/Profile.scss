@@ -3,9 +3,10 @@
     background-color: var(--bgColor);
   }
   .profile {
+    position: relative;
     background-color: var(--bgColor);
     width: 100%;
-    padding: 24px 30px;
+    padding: 32px;
     @media (max-width: 1023px) {
       padding-inline: 0;
     }
@@ -41,10 +42,7 @@
       background-color: var(--whiteColor);
       box-shadow: var(--boxShadow);
       border-radius: 10px;
-      margin-bottom: 32px;
-      &__title {
-        margin-bottom: 24px;
-      }
+      margin-bottom: 24px;
 
       &__body {
         display: flex;
