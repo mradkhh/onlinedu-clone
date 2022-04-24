@@ -8,49 +8,58 @@
 
   .card-head {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 24px;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
     margin-bottom: 32px;
     @media (max-width: 640px) {
       flex-wrap: wrap;
      }
 
-    .card-img {
-      min-width: 80px;
-      width: 100px;
-      img {
+     .info {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 24px;
+      .card-img {
         min-width: 80px;
         width: 100px;
-        height: auto;
-      }
-    }
-
-    .head-title {
-      margin-right: auto;
-
-      h2 {
-        @media (max-width: 768px) {
-        font-size: 24px;
-        font-weight: 500;
-       }
-     }
-
-      .job {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 8px;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 16px;
-        color: var(--grayColor);
-        svg {
-          width: 18px;
+        img {
+          min-width: 80px;
+          width: 100px;
           height: auto;
         }
       }
-    }
+
+      .head-title {
+        margin-right: auto;
+
+        h2 {
+          @media (max-width: 768px) {
+          font-size: 24px;
+          font-weight: 500;
+         }
+       }
+
+        .job {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          gap: 8px;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          color: var(--grayColor);
+          svg {
+            width: 18px;
+            height: auto;
+          }
+        }
+      }
+     }
+
+
 
     .head-option {
       display: flex;
