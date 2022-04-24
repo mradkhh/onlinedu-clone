@@ -1,6 +1,10 @@
 #expert__page {
   padding-bottom: 90px;
   .expert {
+    &__title {
+      font-size: 22px;
+      font-weight: 700;
+    }
     &__items {
       display: flex;
       justify-content: start;
@@ -26,7 +30,6 @@
         @media (max-width: 767.99px) {
           width: 100%;
         }
-
       }
     }
   }

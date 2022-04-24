@@ -16,6 +16,7 @@ body {
   --greenHoverColor: #1ea088;
   --blueColor: #0d2e69;
   --bgColor: #f5f5f5;
+  --footerColor: rgba(137, 141, 166, 0.06);
   --editColor: rgba(13, 46, 105, 0.15);
   --editHoverColor: rgba(13, 47, 105, 0.174);
   --whiteBlueColor: rgba(32, 55, 95, 0.08);
@@ -151,7 +152,7 @@ button {
   vertical-align: middle;
   cursor: pointer;
   user-select: none;
-  padding: 15px 24px;
+  padding: 9px 24px;
   font-size: 1.125rem;
   line-height: 18px;
   border-radius: 8px;
@@ -309,12 +310,24 @@ a[type='button']:hover {
 
 .ant-select {
 
+  &-focused {
+    box-shadow: none !important;
+    border: none !important;
+  }
+
   &-selector {
+    background-color: var(--bgColor) !important;
     width: 100%;
     height: auto !important;
     padding: 6px 16px !important;
-    border: none !important;
     border-radius: 10px !important;
-    outline: var(--greenColor) !important;
+    border: none !important;
+  }
+  border: none;
+
+  &-selection-search {
+    input {
+    outline: none !important;
+    }
   }
 }

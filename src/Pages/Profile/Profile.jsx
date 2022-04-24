@@ -17,19 +17,17 @@ const Profile = () => {
           <section className="profile">
           <nav className="breadcrumb after:rounded-md w-full">
             <ol className="list-reset flex">
-              <li><Link to={"/"} className="text-blueColor text-[14px] font-medium hover:text-greenColor">Главная</Link></li>
+              <li><Link to={"/"} className="text-blueColor text-[14px] font-medium hover:text-greenColor">Asosiy</Link></li>
               <li><span className="text-gray-500 mx-2">></span></li>
-              <li><Link to={"/"} className="text-blueColor text-[14px] font-medium hover:text-greenColor">Мой аккаунт</Link></li>
-              <li><span className="text-gray-500 mx-2">></span></li>
-              <li className="text-grayColor">Мой профиль</li>
+              <li className="text-grayColor">Mening profilim</li>
             </ol>
           </nav>
-          <h4 className='profile__title'>Мой профиль</h4>
+          <h4 className='profile__title'>Mening profilim</h4>
           <EditCard
           image="Images/side-menu/profil.png"
           bio="По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст. В отличии от lorem ipsum, текст рыба на русском языке наполнит любой макет непонятным смыслом и придаст неповторимый колорит советских времен."
           job="Методист"
-          name="Бахромов Азизбек"/>
+          name="Bahromov Azizbek"/>
           <div className="education__section">
             <div className="education__head">
               <h4 className='education__head-title'>Образование</h4>
@@ -69,13 +67,6 @@ const Profile = () => {
             date="2012 - 2016 • 4 года 2 месяцев"
             specialty="Навоинская область, Высоковольтный район, 145 школа"
             name="Учитель Русского языка и литературы"/>
-          </div>
-          <div className="diagnostic">
-            <h4 className="diagnostic__title">Результаты диагностики</h4>
-            <div className="diagnostic__body">
-              <img src="/Images/diagram1.png" alt="diagram" />
-              <img src="/Images/diagram2.png" alt="diagram" />
-            </div>
           </div>
           <div className="course">
             <h4 className="course__title">Пройденные курсы</h4>

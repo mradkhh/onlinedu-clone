@@ -1,11 +1,16 @@
 import { Link } from 'react-router-dom'
-import Select from 'react-select'
+import { useState } from 'react'
 import Footer from '../../Components/Footer/Footer'
 import Header from '../../Components/Header/Header'
 import SideMenu from '../../Components/SideMenu/SideMenu'
+import { Select } from 'antd';
 import './Payment.scss'
 
 const Payment = () => {
+  const { Option } = Select;
+  const defaultValue = "Marketing"
+  const [valueType, setValueType] = useState(defaultValue)
+
   return (
     <>
     <Header/>
@@ -37,7 +42,12 @@ const Payment = () => {
                   <h6>Выберите категорию для переквалификации:</h6>
                   <div className="select">
                   <p>Категория</p>
-                  <Select/>
+                  <Select onChange={(value) => setValueType(value)} defaultValue={defaultValue} style={{width: '100%'}} >
+                    <Option value="Marketing">Marketing</Option>
+                    <Option value="Grafik dizayn">Grafik dizayn</Option>
+                    <Option value="Dasturlash">Dasturlash</Option>
+                    <Option value="Videografiya">Videografiya</Option>
+                </Select>
                   </div>
                 </div>
                 <div className="payment__way-select">
@@ -57,7 +67,7 @@ const Payment = () => {
                   <h6 className='payment__total-title'>Итого:</h6>
                   <div className="payment__total-item">
                     <span>Категория</span>
-                    <span>Маркетинг</span>
+                    <span>{valueType}</span>
                   </div>
                   <div className="payment__total-item">
                     <span>Количество часов</span>

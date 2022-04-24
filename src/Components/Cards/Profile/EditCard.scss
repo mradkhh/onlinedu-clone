@@ -1,38 +1,40 @@
 .edit__card {
+  width: 100%;
   background-color: var(--whiteColor);
   box-shadow: var(--boxShadow);
   border-radius: 10px;
-  padding: 32px;
+  padding: 24px;
   margin-bottom: 32px;
 
-  .card-header {
+  .card-head {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     gap: 24px;
     margin-bottom: 32px;
+    @media (max-width: 640px) {
+      flex-wrap: wrap;
+     }
 
     .card-img {
-      position: relative;
-      .update-avatar {
-        width: 24px;
-        height: 24px;
-        padding: 4px;
-        cursor: pointer;
-        display: flex;
-        justify-content: center;
-        place-items: center;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        background-color: var(--grayColor);
-        border: 2px solid var(--whiteColor);
-        border-radius: 50%;
+      min-width: 80px;
+      width: 100px;
+      img {
+        min-width: 80px;
+        width: 100px;
+        height: auto;
       }
     }
 
-    .header-title {
+    .head-title {
       margin-right: auto;
+
+      h2 {
+        @media (max-width: 768px) {
+        font-size: 24px;
+        font-weight: 500;
+       }
+     }
 
       .job {
         display: flex;
@@ -43,39 +45,36 @@
         font-weight: 500;
         font-size: 16px;
         color: var(--grayColor);
+        svg {
+          width: 18px;
+          height: auto;
+        }
       }
     }
 
-    .header-option {
+    .head-option {
       display: flex;
       justify-self: center;
       align-items: center;
-      gap: 24px;
-      .copy {
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 12px;
-        padding: 8px 16px;
-        border: 2px solid var(--grayColor);
-        color: var(--blueColor);
-        border-radius: 10px;
-        font-weight: 500;
-        font-size: 16px;
-      }
-
+      gap: 12px;
+      @media (max-width: 639px) {
+        width: 100%;
+       }
       .edit-btn {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 12px;
-        padding: 10px 16px;
+        gap: 8px;
+        padding: 9px 15px;
+        @media (max-width: 639px) {
+          width: 100%;
+         }
       }
     }
   }
 
   .card-body {
+    padding: 0;
     h4 {
       margin-bottom: 16px;
     }

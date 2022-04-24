@@ -1,8 +1,14 @@
 #profile__page {
+  @media (max-width: 1023px) {
+    background-color: var(--bgColor);
+  }
   .profile {
     background-color: var(--bgColor);
     width: 100%;
     padding: 24px 30px;
+    @media (max-width: 1023px) {
+      padding-inline: 0;
+    }
 
     &__title {
       margin-block: 24px;
@@ -10,7 +16,7 @@
 
     .education__section {
       background-color: var(--whiteColor);
-      padding: 32px;
+      padding: 24px;
       border-radius: 10px;
       box-shadow: var(--boxShadow);
       margin-bottom: 32px;
@@ -24,13 +30,14 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          gap: 12px;
+          gap: 8px;
+          padding: 9px 15px;
         }
       }
     }
 
     .diagnostic {
-      padding: 32px;
+      padding: 24px;
       background-color: var(--whiteColor);
       box-shadow: var(--boxShadow);
       border-radius: 10px;
@@ -48,9 +55,10 @@
 
     .course {
       max-width: 920px;
+      width: 100%;
       background-color: var(--whiteColor);
       border-radius: 10px;
-      padding: 32px;
+      padding: 24px;
 
       &__title {
         margin-bottom: 24px;

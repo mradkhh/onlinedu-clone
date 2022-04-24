@@ -16,7 +16,7 @@ const Vebinar2 = () => {
           <li><span className="text-gray-500 mx-2">></span></li>
           <li><Link to={"/vebinar"} className="text-blueColor text-[14px] font-medium hover:text-greenColor">Вебинары</Link></li>
           <li><span className="text-gray-500 mx-2">></span></li>
-          <li className="text-grayColor">Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько</li>
+          <li className="text-grayColor">вебмастеру</li>
         </ol>
       </nav>
         <div className="vebinar2">

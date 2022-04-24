@@ -2,6 +2,8 @@
   padding-bottom: 90px;
   .faq {
     &__title {
+      font-size: 22px;
+      font-weight: 700;
       margin-bottom: 36px;
     }
 
@@ -9,6 +11,9 @@
       max-width: calc(100% - 200px);
       width: 100%;
       margin-inline: auto;
+      @media (max-width: 1200px) {
+        max-width: 100%;
+      }
       .ant-collapse {
         background-color: var(--whiteColor);
 
@@ -24,6 +29,7 @@
           font-size: 1.125rem;
           color: var(--blueColor);
           padding: 24px;
+          padding-right: 32px;
         }
 
         &-content {

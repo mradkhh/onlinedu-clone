@@ -22,7 +22,7 @@ const Stat = () => {
               </ol>
             </nav>
             <h4 className="stat__title">Статистика</h4>
-            <div className="stat__info grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            <div className="stat__info grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="stat__info-item">
                 <h3 className="title">144 часов</h3>
                 <p>Всего часов на обучение</p>
