@@ -5,7 +5,7 @@ const Vebinar = () => {
   return (
     <div className="vebinar__section">
       <div className="container">
-        <div className="vebinar">
+        <div data-aos='fade-right' className="vebinar">
           <h1 className="vebinar__title">Mutaxassislar tomonidan o'tkaziladigan vebinarga qo'shiling</h1>
           <p className="vebinar__subtitle">Vebinarlarga qatnashib, yangi bilimlar orttiring, tajribangiz bilan ulashing, savol bering va javoblar oling!</p>
           <div className="vebinar__avatars">
