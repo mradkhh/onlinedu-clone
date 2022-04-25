@@ -338,3 +338,17 @@ a[type='button']:hover {
     display: none;
   }
 }
+
+.mobile-drawer {
+  z-index: 12px;
+  &.ant-drawer-left {
+    top: 78px;
+    @media (max-width: 400px) {
+      top: 70px;
+    }
+  }
+
+  .ant-drawer-content-wrapper {
+    box-shadow: none !important;
+  }
+}

@@ -28,7 +28,15 @@ const Profile = () => {
                   <path d="M14.0913 9H1.90903C1.40694 9 1 8.55233 1 8C1 7.44767 1.40694 7 1.90903 7H14.091C14.5931 7 15 7.44767 15 8C15.0003 8.55233 14.5934 9 14.0913 9Z" fill="#fff" />
                   <path d="M14.0913 4H1.90903C1.40694 4 1 3.55233 1 3C1 2.44767 1.40694 2 1.90903 2H14.091C14.5931 2 15 2.44767 15 3C15 3.55233 14.5934 4 14.0913 4Z" fill="#fff" />
                 </svg>
-
+                <Drawer
+                  className='mobile-drawer'
+                    placement="left"
+                    closable={false}
+                    onClose={() => setVisibleSidebar(false)}
+                    visible={visibleSidebar}
+                  >
+                    <MobileSideMenu/>
+                  </Drawer>
               </button>
               <li><Link to={"/"} className="text-blueColor text-[14px] font-medium hover:text-greenColor">Asosiy</Link></li>
               <li><span className="text-gray-500 mx-2">></span></li>
@@ -36,14 +44,7 @@ const Profile = () => {
             </ol>
           </nav>
           <h4 className='profile__title'>Mening profilim</h4>
-          <Drawer
-            placement="left"
-            closable={false}
-            onClose={() => setVisibleSidebar(false)}
-            visible={visibleSidebar}
-          >
-            <MobileSideMenu/>
-          </Drawer>
+
           <EditCard
           image="Images/side-menu/profil.png"
           bio="По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст. В отличии от lorem ipsum, текст рыба на русском языке наполнит любой макет непонятным смыслом и придаст неповторимый колорит советских времен."

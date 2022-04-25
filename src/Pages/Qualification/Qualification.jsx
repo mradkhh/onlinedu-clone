@@ -1,11 +1,16 @@
-import { Link } from 'react-router-dom'
-import Footer from '../../Components/Footer/Footer'
-import Header from '../../Components/Header/Header'
-import SideMenu from '../../Components/SideMenu/SideMenu'
-import { Progress } from 'antd';
-import './Qualification.scss'
+import { Drawer, Progress } from 'antd';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import Footer from '../../Components/Footer/Footer';
+import Header from '../../Components/Header/Header';
+import MobileSideMenu from '../../Components/SideMenu/MobileSideMenu';
+import SideMenu from '../../Components/SideMenu/SideMenu';
+import './Qualification.scss';
+
 
 const Qualification = () => {
+  const [visibleSidebar,setVisibleSidebar] = useState(false)
+
   return (
     <>
     <Header/>
@@ -15,6 +20,22 @@ const Qualification = () => {
         <div className="qualification">
           <nav className="breadcrumb after:rounded-md w-full">
               <ol className="list-reset flex">
+                <button onClick={()=> setVisibleSidebar(!visibleSidebar)} className='sidebar-btn' data-type='gray'>
+                    <svg width={16} height={16} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M14.0913 14H1.90903C1.40694 14 1 13.5523 1 13C1 12.4477 1.40694 12 1.90903 12H14.091C14.5931 12 15 12.4477 15 13C15 13.5523 14.5934 14 14.0913 14Z" fill="#fff" />
+                      <path d="M14.0913 9H1.90903C1.40694 9 1 8.55233 1 8C1 7.44767 1.40694 7 1.90903 7H14.091C14.5931 7 15 7.44767 15 8C15.0003 8.55233 14.5934 9 14.0913 9Z" fill="#fff" />
+                      <path d="M14.0913 4H1.90903C1.40694 4 1 3.55233 1 3C1 2.44767 1.40694 2 1.90903 2H14.091C14.5931 2 15 2.44767 15 3C15 3.55233 14.5934 4 14.0913 4Z" fill="#fff" />
+                    </svg>
+                    <Drawer
+                      className='mobile-drawer'
+                        placement="left"
+                        closable={false}
+                        onClose={() => setVisibleSidebar(false)}
+                        visible={visibleSidebar}
+                      >
+                        <MobileSideMenu/>
+                      </Drawer>
+                  </button>
                 <li><Link to={"/"} className="text-blueColor text-[14px] font-medium hover:text-greenColor">Главная</Link></li>
                 <li><span className="text-gray-500 mx-2">></span></li>
                 <li><Link to={"/myaccount"} className="text-blueColor text-[14px] font-medium hover:text-greenColor">Мой аккаунт</Link></li>
