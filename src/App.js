@@ -23,7 +23,8 @@ function App() {
   useEffect(() => {
     AOS.init({
       delay: 200,
-      duration: 1500,
+      debounceDelay: 50,
+      duration: 1000,
       disableMutationObserver: false
     })
   }, [])

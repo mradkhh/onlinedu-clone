@@ -3,7 +3,7 @@ import './Validity.scss'
 
 const Validity = () => {
   return (
-    <div className="validity__section">
+    <div data-aos='zoom-in' className="validity__section">
       <div className="container">
         <div className="validity">
           <h2 className="validity__title">Sertifikatni haqiqiylikka tekshiring</h2>
