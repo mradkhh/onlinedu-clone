@@ -22,7 +22,7 @@ import Vebinar2 from './Pages/Vebinar/Vebinar2';
 function App() {
   useEffect(() => {
     AOS.init({
-      duration: 2000
+      duration: 1500
     })
   }, [])
   return (

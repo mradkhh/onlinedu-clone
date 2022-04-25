@@ -52,7 +52,7 @@ const Header = () => {
   return (
     <div className="header__section">
       <div className="container">
-        <div data-aos='fade-down' className="header">
+        <div data-aos-once="true" data-aos='fade-down' className="header">
           <Link to={"/"}>
           <div className="header__logo">
             <img src="/Images/logo.png" alt="logo" />
