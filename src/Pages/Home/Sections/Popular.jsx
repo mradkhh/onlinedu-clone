@@ -4,7 +4,6 @@ import Card from '../../../Components/Cards/Card'
 import './Popular.scss'
 
 const Popular = () => {
-
   const [course, setCourses] = useState([])
 
   useEffect(()=> {
@@ -26,6 +25,7 @@ Tanlov tinglovchining ixtiyorida bo’lib, tavsiya etilayotgan kurslarda o’qis
             {
               course.map((item, index) =>
                 <Card
+                key={index}
                 aos='flip-left'
                 image={'https://api.onlinedu.uz/storage/' + item?.image}
                 title={item?.name}

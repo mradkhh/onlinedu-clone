@@ -36,7 +36,7 @@ const Footer = () => {
       </div>
       <hr />
       <div className="container">
-        <div data-aos="fade-down" className="copyright">
+        <div className="copyright">
           <p className="title">
           © 2021-2022 Copyright. <span>Barcha huquqlar himoyalangan.</span>
           </p>

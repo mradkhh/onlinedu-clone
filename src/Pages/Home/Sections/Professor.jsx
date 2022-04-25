@@ -13,7 +13,7 @@ const Professor = () => {
         <div className="professor">
           <div className="professor__info">
             <h2  data-aos='fade-down' className="professor__info-title">Bizning mutaxassislar</h2>
-            <p data-aos-duration="1000" data-aos='fade-down' className="professor__info-subtitle">Yetakchi mutaxassislarimiz tomonidan tayyorlangan kurslar sizga kerakli barcha bilimlarni berib, kasbiy rivojlanishingizga yordam beradi.</p>
+            <p data-aos='fade-down' className="professor__info-subtitle">Yetakchi mutaxassislarimiz tomonidan tayyorlangan kurslar sizga kerakli barcha bilimlarni berib, kasbiy rivojlanishingizga yordam beradi.</p>
           </div>
           <div className="professor__items">
           <Swiper
@@ -42,7 +42,7 @@ const Professor = () => {
             maxWidth: 600,
             width: '100%'
           }}>
-            <div className="item">
+            <div data-aos='zoom-in' className="item">
               <img src="/Images/professor1.png" alt="professor" />
               <h4>Мурад Аскаров</h4>
               <h6>Маркетинг специалист</h6>
@@ -50,7 +50,7 @@ const Professor = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="item">
+            <div data-aos='zoom-in' className="item">
               <img src="/Images/professor2.png" alt="professor" />
               <h4>Александр Крюков</h4>
               <h6>Маркетинг специалист</h6>
@@ -58,7 +58,7 @@ const Professor = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="item">
+            <div data-aos='zoom-in' className="item">
               <img src="/Images/professor3.png" alt="professor" />
               <h4>Мурад Аскаров</h4>
               <h6>Маркетинг специалист</h6>
@@ -66,7 +66,7 @@ const Professor = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="item">
+            <div data-aos='zoom-in' className="item">
               <img src="/Images/professor3.png" alt="professor" />
               <h4>Мурад Аскаров</h4>
               <h6>Маркетинг специалист</h6>
@@ -74,7 +74,7 @@ const Professor = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="item">
+            <div data-aos='zoom-in' className="item">
               <img src="/Images/professor3.png" alt="professor" />
               <h4>Мурад Аскаров</h4>
               <h6>Маркетинг специалист</h6>
@@ -83,7 +83,7 @@ const Professor = () => {
           </SwiperSlide>
           </Swiper>
           </div>
-        <button className='more' data-type='primary'>Barchasini ko'rish</button>
+        <button data-aos='fade-up' className='more' data-type='primary'>Barchasini ko'rish</button>
         </div>
       </div>
     </div>
