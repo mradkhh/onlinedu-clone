@@ -80,10 +80,13 @@
   }
 
   .content {
+    width: 100%;
     &__video {
       border-radius: 25px;
       overflow: hidden;
-
+      @media (max-width: 640px) {
+        border-radius: 12px;
+      }
       video {
         object-fit: contain;
       }

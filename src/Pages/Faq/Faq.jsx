@@ -1,6 +1,6 @@
+import { Collapse } from 'antd'
 import React from 'react'
 import { Link } from 'react-router-dom'
-import {Collapse } from 'antd'
 import Footer from '../../Components/Footer/Footer'
 import Header from '../../Components/Header/Header'
 import './Faq.scss'
@@ -24,9 +24,9 @@ const Faq = () => {
               <h3 className="faq__title">Ko'p so'raladigan savollar</h3>
               <div className="faq__items">
               <Collapse
+                accordion
                 expandIcon={({isActive}) => isActive ? <img src="/Images/arrow-up.png" alt='arrow'/> : <img src='/Images/arrow-down.png' alt='arrow'/>}
                 bordered={false}
-                defaultActiveKey={['1']}
                 expandIconPosition='right'>
                 <Panel
                 header="1. Uzluksiz kasbiy ta'lim elektron platformasi haqida batafsil ma'lumot"

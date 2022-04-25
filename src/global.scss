@@ -186,6 +186,20 @@ button[data-type='outline']:hover {
   background-color: var(--greenColor);
   color: var(--whiteColor);
 }
+a[data-type='outline'] {
+  background-color: var(--whiteColor);
+  border: 1px solid var(--greenColor);
+  border-radius: 8px;
+  color: var(--greenColor);
+  &:active {
+    background-color: var(--greenActiveColor);
+    color: var(--whiteColor);
+  }
+}
+a[data-type='outline']:hover {
+  background-color: var(--greenColor);
+  color: var(--whiteColor);
+}
 button[data-type='disabled'] {
   background-color: var(--lighterGrayColor);
   color: var(--whiteColor);

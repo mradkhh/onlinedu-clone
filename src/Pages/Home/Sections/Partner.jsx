@@ -10,7 +10,7 @@ const Partner = () => {
       <div className="partner__section">
           <div className="container">
               <div className="partner">
-                  <div className="partner__info">
+                  <div data-aos="fade-down" className="partner__info">
                     <h3 className='partner__info-title'><span>&#123;</span> 310364+ xalq ta'limi xodimlari <span>&#125;</span> butun O'zbekiston bo'yicha onlayn tarzda malaka oshirishmoqda</h3>
                   </div>
                   <div className="partner__link">
@@ -44,16 +44,16 @@ const Partner = () => {
                     spaceBetween={30}
                     >
                     <SwiperSlide>
-                        <img src="/Images/partner1.png" alt="partner" />
+                        <img data-aos="fade-left" src="/Images/partner1.png" alt="partner" />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img src="/Images/partner2.png" alt="partner" />
+                        <img data-aos="fade-left" src="/Images/partner2.png" alt="partner" />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img src="/Images/partner3.png" alt="partner" />
+                        <img data-aos="fade-left" src="/Images/partner3.png" alt="partner" />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img src="/Images/partner4.png" alt="partner" />
+                        <img data-aos="fade-left" src="/Images/partner4.png" alt="partner" />
                     </SwiperSlide>
 
                     </Swiper>

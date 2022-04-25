@@ -50,8 +50,7 @@ const Header = () => {
   }
 
   return (
-    <div className="header__section">
-
+    <div data-aos='fade-down' className="header__section">
       <div className="container">
         <div className="header">
           <Link to={"/"}>
@@ -59,9 +58,9 @@ const Header = () => {
             <img src="/Images/logo.png" alt="logo" />
           </div>
           </Link>
-          <button
-          onClick={handleToasty}
-          className='hidden lg:block header__info-btn' data-type='outline'>Yo'riqnoma</button>
+          <Link
+          to="/faq"
+          className='hidden lg:block header__info-btn' data-type='outline'>Yo'riqnoma</Link>
 
           <div className="hidden lg:flex input__field">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">

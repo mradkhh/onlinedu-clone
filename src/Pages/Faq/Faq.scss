@@ -5,6 +5,10 @@
       font-size: 22px;
       font-weight: 700;
       margin-bottom: 36px;
+      margin-left: 100px;
+      @media (max-width: 1200px) {
+        margin-left: 0;
+      }
     }
 
     &__items {

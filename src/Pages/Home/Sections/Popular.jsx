@@ -13,7 +13,7 @@ Tanlov tinglovchining ixtiyorida bo’lib, tavsiya etilayotgan kurslarda o’qis
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px]">
             <Card
             image={"/Images/card1.png"}
-            title={"Milliy o'quv dasturi"}
+            title={"Маркетинг и все его тонкости. Профессия маркетолога с 0 до эксперта"}
             price={"95 000 сум"}
             science={"Milliy o'quv dasturi"}
             rating={4.5}
@@ -21,7 +21,7 @@ Tanlov tinglovchining ixtiyorida bo’lib, tavsiya etilayotgan kurslarda o’qis
             />
             <Card
             image={"/Images/card2.png"}
-            title={"Ijtimoiy fanlar"}
+            title={"Маркетинг и все его тонкости. Профессия маркетолога с 0 до эксперта"}
             price={"95 000 сум"}
             science={"Ijtimoiy fanlar"}
             rating={4.9}

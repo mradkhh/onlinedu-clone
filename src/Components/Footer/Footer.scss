@@ -42,4 +42,22 @@
       }
     }
   }
+
+  hr {
+    color: var(--grayColor);
+  }
+
+  .copyright {
+    text-align: center;
+    padding-block: 32px;
+    .title {
+      font-weight: 400;
+      font-size: 1rem;
+
+      span {
+        color: var(--greenColor);
+        cursor: pointer;
+      }
+    }
+  }
 }
