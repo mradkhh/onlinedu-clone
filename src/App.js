@@ -1,3 +1,5 @@
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
@@ -16,8 +18,6 @@ import Qualification from './Pages/Qualification/Qualification';
 import Stat from './Pages/Stat/Stat';
 import Vebinar from './Pages/Vebinar/Vebinar';
 import Vebinar2 from './Pages/Vebinar/Vebinar2';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 
 function App() {
   useEffect(() => {

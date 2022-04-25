@@ -11,7 +11,7 @@ const Comments = () => {
      <div className="comments__section">
           <div className="container">
               <div className="comments">
-                  <div className="comments__info">
+                  <div data-aos='fade-down' className="comments__info">
                       <h2>Xalqaro ekspertlarning fikrlari</h2>
                       <p>«Uzluksiz kasbiy ta’lim» elektron platformasi faoliyati va imkoniyatlarini o'rgangan ta'lim sohasidagi xalqaro ekspertlarning fikrlari bilan tanishing.</p>
                   </div>

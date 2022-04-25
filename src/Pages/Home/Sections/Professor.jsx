@@ -11,7 +11,7 @@ const Professor = () => {
     <div className="professor__section">
       <div className="container">
         <div className="professor">
-          <div className="professor__info">
+          <div data-aos='fade-down' className="professor__info">
             <h2 className="professor__info-title">Bizning mutaxassislar</h2>
             <p className="professor__info-subtitle">Yetakchi mutaxassislarimiz tomonidan tayyorlangan kurslar sizga kerakli barcha bilimlarni berib, kasbiy rivojlanishingizga yordam beradi.</p>
           </div>

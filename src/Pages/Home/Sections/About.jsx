@@ -6,7 +6,7 @@ const About = () => {
     <div className="about__section">
       <div className="container">
         <div className="about">
-          <div className="about__info">
+          <div data-aos='fade-down' className="about__info">
             <h2 className="about__info-title">Siz uchun yaratilgan qulayliklar</h2>
             <p className="about__info-subtitle">Platformamiz yuqori texnologiyalar zamonida taqdim qilinayotgan imkoniyatlardan unumli foydalanishga va vaqtingizni tejashga, o'zingizga qulay vaqtda malaka oshirishingizga yordam beradi.</p>
           </div>

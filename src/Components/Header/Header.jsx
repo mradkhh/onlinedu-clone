@@ -50,9 +50,9 @@ const Header = () => {
   }
 
   return (
-    <div data-aos='fade-down' className="header__section">
+    <div className="header__section">
       <div className="container">
-        <div className="header">
+        <div data-aos='fade-down' className="header">
           <Link to={"/"}>
           <div className="header__logo">
             <img src="/Images/logo.png" alt="logo" />
