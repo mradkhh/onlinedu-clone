@@ -21,7 +21,7 @@ Tanlov tinglovchining ixtiyorida bo’lib, tavsiya etilayotgan kurslarda o’qis
             choise={false}
             />
             <Card
-            aos='flip-up'
+            aos='flip-down'
             image={"/Images/card2.png"}
             title={"Маркетинг и все его тонкости. Профессия маркетолога с 0 до эксперта"}
             price={"95 000 сум"}
@@ -48,7 +48,7 @@ Tanlov tinglovchining ixtiyorida bo’lib, tavsiya etilayotgan kurslarda o’qis
             choise={false}
             />
             <Card
-            aos='flip-down'
+            aos='flip-up'
             image={"/Images/card5.png"}
             title={"Маркетинг и все его тонкости. Профессия маркетолога с 0 до эксперта "}
             price={"95 000 сум"}
