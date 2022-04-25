@@ -3,7 +3,7 @@ import './Card.scss'
 
 const Card = ({image, title, price, science, rating, choise, aos}) => {
   return (
-      <div  data-aos={aos} className="card">
+      <div data-aos-delay="1000" data-aos={aos} className="card">
       <div className="card-img">
         <img src={image} alt="science" />
         <div className="more">
