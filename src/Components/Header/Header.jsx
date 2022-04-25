@@ -1,12 +1,12 @@
 import { Dropdown, Modal, Drawer } from 'antd'
 import "antd/dist/antd.css"
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import InputMask from 'react-input-mask'
 import { Link } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import styled from 'styled-components'
 import './Header.scss'
-
+import Request from '../../Services/Request'
 
 
 const Lang = styled.div`
@@ -34,9 +34,9 @@ const Lang = styled.div`
 `
 
 const Header = () => {
+  const [mobileNavCategories, setMobileNavCategories] = useState([])
   const [modalVisible, setModalVisible] = useState(false)
   const [visible,setVisible] = useState(false)
-
 
   const menu = (
     <Lang >
@@ -48,6 +48,14 @@ const Header = () => {
   const handleToasty = () => {
     toast.success("Yo'riqnoma bosildi!")
   }
+  useEffect(() => {
+    Request()
+      .get('/paid/categories')
+      .then((res) => {
+        setMobileNavCategories(res.data?.data)
+      })
+      .catch(err => console.log(err))
+  }, [])
 
   return (
     <div  data-aos-once="true" data-aos='fade-down' className="header__section">
@@ -114,12 +122,11 @@ const Header = () => {
 
           <nav className="mobile-nav">
             <ul>
-              <li><Link to="/">Aniq fanlar</Link></li>
-              <li><Link to="/">Tabiiy fanlar</Link></li>
-              <li><Link to="/">Xorijiy tillar</Link></li>
-              <li><Link to="/">PISA</Link></li>
-              <li><Link to="/">Ijtimoiy fanlar</Link></li>
-              <li><Link to="/">Milliy o'quv dasturi</Link></li>
+              {
+                mobileNavCategories.map((item, index) =>
+                <li key={index}><Link to={item?.slug}>{item?.name}</Link></li>
+                )
+              }
             </ul>
           </nav>
         </Drawer>

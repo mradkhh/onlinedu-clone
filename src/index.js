@@ -1,16 +1,12 @@
-import React from "react";
-import { createRoot } from "react-dom/client";
-import App from "./App";
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+
 import 'react-toastify/dist/ReactToastify.css';
-import "./index.css";
-import "./global.scss"
+import App from './App';
+import './global.scss';
 
+import './index.css';
 
-
-
-
-
-
-const container = document.getElementById("root");
+const container = document.getElementById('root');
 const root = createRoot(container);
 root.render(<App />);
