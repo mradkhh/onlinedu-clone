@@ -1,8 +1,20 @@
-import React from 'react'
+import {useState, useEffect} from 'react'
+import Request from '../../../Services/Request'
 import Card from '../../../Components/Cards/Card'
 import './Popular.scss'
 
 const Popular = () => {
+
+  const [course, setCourses] = useState([])
+
+  useEffect(()=> {
+    Request()
+      .get('/courses-home?per_page=6&category_type=paid&is_home=1')
+      .then((res) => {
+        setCourses(res?.data?.data)
+      })
+      .catch(err => console.log(err))
+  }, [])
   return (
     <div className="popular__section">
       <div className="container">
@@ -11,60 +23,20 @@ const Popular = () => {
           <p data-aos-duration="1000" data-aos='fade-down' className='popular__subtitle'>Ushbu kurslar bepul va pullik tarzda tavsiya etiladi. <br />
 Tanlov tinglovchining ixtiyorida bo’lib, tavsiya etilayotgan kurslarda o’qish majburiy emas</p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px] w-full">
-            <Card
-            aos='flip-left'
-            image={"/Images/card1.png"}
-            title={"Маркетинг и все его тонкости. Профессия маркетолога с 0 до эксперта"}
-            price={"95 000 сум"}
-            science={"Milliy o'quv dasturi"}
-            rating={4.5}
-            choise={false}
-            />
-            <Card
-            aos='flip-down'
-            image={"/Images/card2.png"}
-            title={"Маркетинг и все его тонкости. Профессия маркетолога с 0 до эксперта"}
-            price={"95 000 сум"}
-            science={"Ijtimoiy fanlar"}
-            rating={4.9}
-            choise={true}
-            />
-            <Card
-            aos='flip-right'
-            image={"/Images/card3.png"}
-            title={"Маркетинг и все его тонкости. Профессия маркетолога с 0 до эксперта "}
-            price={"95 000 сум"}
-            science={"Менеджмент"}
-            rating={4.6}
-            choise={false}
-            />
-            <Card
-            aos='flip-left'
-            image={"/Images/card4.png"}
-            title={"Маркетинг и все его тонкости. Профессия маркетолога с 0 до эксперта "}
-            price={"95 000 сум"}
-            science={"Манавият"}
-            rating={4.6}
-            choise={false}
-            />
-            <Card
-            aos='flip-up'
-            image={"/Images/card5.png"}
-            title={"Маркетинг и все его тонкости. Профессия маркетолога с 0 до эксперта "}
-            price={"95 000 сум"}
-            science={"Иностранные языки"}
-            rating={4}
-            choise={false}
-            />
-            <Card
-            aos='flip-right'
-            image={"/Images/card6.png"}
-            title={"Маркетинг и все его тонкости. Профессия маркетолога с 0 до эксперта "}
-            price={"95 000 сум"}
-            science={"Политика"}
-            rating={4}
-            choise={true}
-            />
+            {
+              course.map((item, index) =>
+                <Card
+                aos='flip-left'
+                image={'https://api.onlinedu.uz/storage/' + item?.image}
+                title={item?.name}
+                price={"95 000 сум"}
+                science={item?.category?.name}
+                rating={item?.rating}
+                choise={false}
+                />
+              )
+            }
+
         </div>
             <div className="more">
           <button className='all_course' data-type='primary'>Barcha kurslarni ko'rish</button>
