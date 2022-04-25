@@ -1,12 +1,23 @@
-import React from 'react'
+import {useEffect, useState} from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay'
 import './Comments.scss'
+import Request from '../../../Services/Request'
 
 const Comments = () => {
+    const [reviews, setReviews] = useState([])
+
+    useEffect(() => {
+        Request()
+            .get('/reviews')
+            .then((res) => {
+                setReviews(res?.data)
+            })
+            .catch(err => console.log(err))
+    }, [])
   return (
      <div className="comments__section">
           <div className="container">
@@ -27,12 +38,24 @@ const Comments = () => {
                     slidesPerView={1}
                     spaceBetween={50}
                     >
-                    <SwiperSlide>
-                        <div  data-aos-duration="2000" data-aos="zoom-in" className="comment">
-                            <p>“Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей. Текст генерируется абзацами случайным образом от двух до десяти предложений в абзаце, что позволяет сделать текст более привлекательным и живым.”</p>
-                        <img src="/Images/unicef.png" alt="unicef"/>
+                    {
+                        reviews.map((item, index) =>
+                        <SwiperSlide key={index}>
+                        <div   data-aos-duration="2000" data-aos="zoom-in" className="comment">
+                            <div className="comment__head">
+                                <div className="comment__head-img">
+                                    <img src={'https://api.onlinedu.uz/storage/'+ item?.image} alt="avatar" />
+                                </div>
+                                <div className="comment__head-title">
+                                    <h5 className="name">{item?.name}</h5>
+                                    <h6 className="disc">{item?.position}</h6>
+                                </div>
+                            </div>
+                            <p>{item?.comment}</p>
                         </div>
                     </SwiperSlide>
+                        )
+                    }
                     </Swiper>
                   </div>
               </div>
