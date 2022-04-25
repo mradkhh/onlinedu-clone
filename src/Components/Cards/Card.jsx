@@ -1,9 +1,9 @@
 import React from 'react'
 import './Card.scss'
 
-const Card = ({image, title, price, science, rating, choise}) => {
+const Card = ({image, title, price, science, rating, choise, aos}) => {
   return (
-      <div className="card">
+      <div  data-aos={aos} className="card">
       <div className="card-img">
         <img src={image} alt="science" />
         <div className="more">

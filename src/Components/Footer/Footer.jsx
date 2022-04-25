@@ -4,8 +4,8 @@ import './Footer.scss'
 
 const Footer = () => {
   return (
-    <div data-aos="fade-up" className="footer__section">
-      <div className="container">
+    <div className="footer__section">
+      <div data-aos="fade-up" className="container">
         <div className="footer">
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 footer__items">
             <div className="md:col-span-full lg:col-auto footer__logo">
@@ -35,7 +35,7 @@ const Footer = () => {
         </div>
       </div>
       <hr />
-      <div className="container">
+      <div data-aos="fade-up" className="container">
         <div className="copyright">
           <p className="title">
           © 2021-2022 Copyright. <span>Barcha huquqlar himoyalangan.</span>

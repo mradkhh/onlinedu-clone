@@ -12,6 +12,7 @@ const Popular = () => {
 Tanlov tinglovchining ixtiyorida bo’lib, tavsiya etilayotgan kurslarda o’qish majburiy emas</p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px]">
             <Card
+            aos='flip-left'
             image={"/Images/card1.png"}
             title={"Маркетинг и все его тонкости. Профессия маркетолога с 0 до эксперта"}
             price={"95 000 сум"}
@@ -20,6 +21,7 @@ Tanlov tinglovchining ixtiyorida bo’lib, tavsiya etilayotgan kurslarda o’qis
             choise={false}
             />
             <Card
+            aos='flip-up'
             image={"/Images/card2.png"}
             title={"Маркетинг и все его тонкости. Профессия маркетолога с 0 до эксперта"}
             price={"95 000 сум"}
@@ -28,6 +30,7 @@ Tanlov tinglovchining ixtiyorida bo’lib, tavsiya etilayotgan kurslarda o’qis
             choise={true}
             />
             <Card
+            aos='flip-right'
             image={"/Images/card3.png"}
             title={"Маркетинг и все его тонкости. Профессия маркетолога с 0 до эксперта "}
             price={"95 000 сум"}
@@ -36,6 +39,7 @@ Tanlov tinglovchining ixtiyorida bo’lib, tavsiya etilayotgan kurslarda o’qis
             choise={false}
             />
             <Card
+            aos='flip-left'
             image={"/Images/card4.png"}
             title={"Маркетинг и все его тонкости. Профессия маркетолога с 0 до эксперта "}
             price={"95 000 сум"}
@@ -44,6 +48,7 @@ Tanlov tinglovchining ixtiyorida bo’lib, tavsiya etilayotgan kurslarda o’qis
             choise={false}
             />
             <Card
+            aos='flip-down'
             image={"/Images/card5.png"}
             title={"Маркетинг и все его тонкости. Профессия маркетолога с 0 до эксперта "}
             price={"95 000 сум"}
@@ -52,6 +57,7 @@ Tanlov tinglovchining ixtiyorida bo’lib, tavsiya etilayotgan kurslarda o’qis
             choise={false}
             />
             <Card
+            aos='flip-right'
             image={"/Images/card6.png"}
             title={"Маркетинг и все его тонкости. Профессия маркетолога с 0 до эксперта "}
             price={"95 000 сум"}
