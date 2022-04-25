@@ -22,8 +22,8 @@ import Vebinar2 from './Pages/Vebinar/Vebinar2';
 function App() {
   useEffect(() => {
     AOS.init({
-      delay: 300,
-      duration: 1000,
+      delay: 200,
+      duration: 1500,
       disableMutationObserver: false
     })
   }, [])
