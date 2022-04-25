@@ -11,9 +11,9 @@ const Professor = () => {
     <div className="professor__section">
       <div className="container">
         <div className="professor">
-          <div data-aos='fade-down' className="professor__info">
-            <h2 className="professor__info-title">Bizning mutaxassislar</h2>
-            <p className="professor__info-subtitle">Yetakchi mutaxassislarimiz tomonidan tayyorlangan kurslar sizga kerakli barcha bilimlarni berib, kasbiy rivojlanishingizga yordam beradi.</p>
+          <div className="professor__info">
+            <h2  data-aos='fade-down' className="professor__info-title">Bizning mutaxassislar</h2>
+            <p data-aos-duration="1000" data-aos='fade-down' className="professor__info-subtitle">Yetakchi mutaxassislarimiz tomonidan tayyorlangan kurslar sizga kerakli barcha bilimlarni berib, kasbiy rivojlanishingizga yordam beradi.</p>
           </div>
           <div className="professor__items">
           <Swiper

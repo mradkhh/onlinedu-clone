@@ -8,7 +8,7 @@ const Popular = () => {
       <div className="container">
         <div className="popular">
           <h2 data-aos='fade-down' className="popular__title">Ommabop kurslar</h2>
-          <p data-aos='fade-down' className='popular__subtitle'>Ushbu kurslar bepul va pullik tarzda tavsiya etiladi. <br />
+          <p data-aos-duration="1000" data-aos='fade-down' className='popular__subtitle'>Ushbu kurslar bepul va pullik tarzda tavsiya etiladi. <br />
 Tanlov tinglovchining ixtiyorida bo’lib, tavsiya etilayotgan kurslarda o’qish majburiy emas</p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px]">
             <Card
