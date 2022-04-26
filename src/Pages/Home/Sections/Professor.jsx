@@ -2,6 +2,7 @@ import {useState, useEffect} from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper';
 import Request from 'Services/Request';
+import { Link } from 'react-router-dom';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay'
@@ -65,7 +66,7 @@ const Professor = () => {
           }
           </Swiper>
           </div>
-        <button data-aos='fade-up' className='more' data-type='primary'>Barchasini ko'rish</button>
+        <Link to="/expert" data-aos='fade-up' className='more' data-type='primary'>Barchasini ko'rish</Link>
         </div>
       </div>
     </div>

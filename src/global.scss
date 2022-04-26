@@ -166,6 +166,7 @@ button[data-type='primary'] {
   }
 }
 a[data-type='primary'] {
+  border-radius: 8px;
   background-color: var(--greenColor) !important;
   color: var(--whiteColor) !important;
   &:hover {

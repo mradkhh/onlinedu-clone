@@ -29,7 +29,7 @@ const Faq = () => {
         ? <Spin wrapperClassName='spinner-wrapper' size='large' />
          : <main id="faq__page">
          <div className="container">
-           <nav className="breadcrumb mt-6 mb-8 rounded-md w-full">
+           <nav  data-aos='fade-right' className="breadcrumb mt-6 mb-8 rounded-md w-full">
              <ol className="list-reset flex">
                <li><Link to={"/"} className="text-blueColor text-[14px] font-medium hover:text-greenColor">Asosiy</Link></li>
                <li><span className="text-gray-500 mx-2">
@@ -41,8 +41,8 @@ const Faq = () => {
              </ol>
            </nav>
            <section className="faq">
-               <h3 className="faq__title">Ko'p so'raladigan savollar</h3>
-               <div className="faq__items">
+               <h3  data-aos='fade-right' className="faq__title">Ko'p so'raladigan savollar</h3>
+               <div  data-aos='fade-down' className="faq__items">
                <Collapse
                  accordion
                  expandIcon={({isActive}) => isActive ? <img src="/Images/arrow-up.png" alt='arrow'/> : <img src='/Images/arrow-down.png' alt='arrow'/>}
