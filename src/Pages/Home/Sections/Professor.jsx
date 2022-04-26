@@ -34,11 +34,14 @@ const Professor = () => {
               320: {
                 slidesPerView: 1,
               },
-              678: {
+              768: {
                 slidesPerView: 2,
               },
               1023: {
                 slidesPerView: 3,
+              },
+              1200: {
+                slidesPerView: 4
               }
           }}
             autoplay={{
