@@ -44,7 +44,6 @@ function Edit() {
   const [yearError, setYearError] = useState(false);
 
   const handleSubmit = e => {
-    console.clear();
     e.preventDefault();
     if (
       firstName.length > 3

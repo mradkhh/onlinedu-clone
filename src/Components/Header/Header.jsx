@@ -1,6 +1,6 @@
 import { Drawer, Dropdown, Modal } from 'antd'
 import "antd/dist/antd.css"
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import InputMask from 'react-input-mask'
 import { Link } from 'react-router-dom'
 import { toast } from 'react-toastify'
@@ -34,9 +34,35 @@ const Lang = styled.div`
 `
 
 const Header = () => {
+  const [action, setAction] = useState(false)
+  const [phoneValue, setPhoneValue] = useState('')
+  const [checkValue, setCheckValue] = useState('')
+  const [passwordValue, setPasswordValue] = useState('')
   const [mobileNavCategories, setMobileNavCategories] = useState([])
   const [modalVisible, setModalVisible] = useState(false)
   const [visible,setVisible] = useState(false)
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    let result =+ phoneValue.replace(/ /g, '').split('').map(num => Number(num)).filter(x => Number.isInteger(x)).join('')
+    setPhoneValue(result)
+    if(result.length !== 12 && passwordValue.length < 8) {
+      setAction(false)
+    } else {setAction(true)}
+  }
+
+  useEffect(() => {
+    const data = {
+      name: phoneValue,
+      password: passwordValue
+    }
+    if (action === true) {
+      Request()
+        .post('login', data)
+        .then(res => console.log(res))
+        .catch(err => console.log(err))
+    }
+  }, [action])
 
   const menu = (
     <Lang >
@@ -139,16 +165,27 @@ const Header = () => {
             width={570}
           >
             <h3>Kirish</h3>
-            <form className='sign__modal-form'>
-              <label htmlFor="">Telefon raqam</label>
+            <form onSubmit={handleSubmit} className='sign__modal-form'>
+              <label htmlFor="phone">Telefon raqam</label>
               <InputMask
+                name='phone'
+                value={phoneValue}
+                onChange={(e) => setPhoneValue(e.target.value)}
                 mask='(+999) 99 999 99 99'
                 >
               </InputMask>
-              <label htmlFor="">Parol</label>
-              <input type="password" />
+              <label htmlFor="password">Parol</label>
+              <input
+              name='password'
+              value={passwordValue}
+              onChange={(e) => setPasswordValue(e.target.value)}
+              type="password" />
               <div className="checkbox">
-                <input type="checkbox" />
+                <input
+                name='checkbox'
+                onChange={(e) => setCheckValue( e.target.checked)}
+                value={checkValue}
+                 type="checkbox" />
                 <label htmlFor="checkbox">Eslab qolish</label>
               </div>
               <button data-type='primary'>Kirish</button>
