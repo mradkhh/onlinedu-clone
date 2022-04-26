@@ -53,10 +53,7 @@ const Faq = () => {
                    <Panel
                    header={item?.title}
                    key={item?.id}>
-<<<<<<< Updated upstream
                      <p dangerouslySetInnerHTML={{ __html: item?.body}}></p>
-=======
->>>>>>> Stashed changes
                    </Panel>
                  )
                 }
