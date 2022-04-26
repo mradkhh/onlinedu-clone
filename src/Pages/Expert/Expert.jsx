@@ -5,7 +5,6 @@ import { Spin } from 'antd'
 import { Link } from 'react-router-dom'
 import Header from '../../Components/Header/Header'
 import Footer from '../../Components/Footer/Footer'
-import ExpertCard from '../../Components/Cards/ExpertCard'
 
 const Expert = () => {
   const [loading, setLoading] = useState(true)
