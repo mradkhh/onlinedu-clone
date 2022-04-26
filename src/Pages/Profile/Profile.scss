@@ -1,4 +1,5 @@
 #profile__page {
+  overflow: hidden;
   @media (max-width: 1023px) {
     background-color: var(--bgColor);
   }

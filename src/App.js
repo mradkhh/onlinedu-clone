@@ -1,38 +1,36 @@
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import {
+  Categories,
+  Course,
+  Drection,
+  Edit,
+  Expert,
+  Faq,
+  Home,
+  NotFound,
+  Payment,
+  Profile,
+  Qualification,
+  Stat,
+  Vebinar,
+  Vebinar2,
+} from 'Pages/index';
 import { useEffect } from 'react';
 import { I18nextProvider } from 'react-i18next';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
+import option from 'Services/Aos';
 import './App.css';
 import './i18n';
-import Categories from './Pages/Categories/Categories';
-import Course from './Pages/Course/Course';
-import Drection from './Pages/Drection/Drection';
-import Expert from './Pages/Expert/Expert';
-import Faq from './Pages/Faq/Faq';
-import Home from './Pages/Home/Home';
-import NotFound from './Pages/NotFound/NotFound';
-import Payment from './Pages/Payment/Payment';
-import Edit from './Pages/Profile/Edit';
-import Profile from './Pages/Profile/Profile';
-import Qualification from './Pages/Qualification/Qualification';
-import Stat from './Pages/Stat/Stat';
-import Vebinar from './Pages/Vebinar/Vebinar';
-import Vebinar2 from './Pages/Vebinar/Vebinar2';
 
 function App() {
   useEffect(() => {
-    AOS.init({
-      delay: 200,
-      debounceDelay: 50,
-      duration: 1000,
-      disableMutationObserver: false
-    })
-  }, [])
+    AOS.init({ ...option });
+  }, []);
   return (
     <I18nextProvider>
-        <BrowserRouter>
+      <BrowserRouter>
         <ToastContainer />
         <Routes>
           <Route path='/' element={<Home />} />
