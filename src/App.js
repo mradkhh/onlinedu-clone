@@ -42,12 +42,13 @@ function App() {
           <Route path='/vebinar2' element={<Vebinar2 />} />
           <Route path='/faq' element={<Faq />} />
           <Route path='/expert' element={<Expert />} />
-          <Route path='/profile' element={<Profile />} />
-          <Route path='/edit' element={<Edit />} />
-          <Route path='/stat' element={<Stat />} />
-          <Route path='/qualification' element={<Qualification />} />
-          <Route path='/drection' element={<Drection />} />
-          <Route path='/payment' element={<Payment />} />
+          <Route path='/dashboard/' element={<Profile />} />
+          <Route path='/dashboard/profile' element={<Profile />} />
+          <Route path='/dashboard/edit' element={<Edit />} />
+          <Route path='/dashboard/stat' element={<Stat />} />
+          <Route path='/dashboard/qualification' element={<Qualification />} />
+          <Route path='/dashboard/drection' element={<Drection />} />
+          <Route path='/dashboard/payment' element={<Payment />} />
           <Route path='/*' element={<NotFound />} />
         </Routes>
       </BrowserRouter>

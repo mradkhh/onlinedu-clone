@@ -18,7 +18,7 @@ const Stat = () => {
       <div className="container flex">
         <SideMenu/>
         <div className="stat">
-          <nav className="breadcrumb after:rounded-md w-full">
+          <nav data-aos='fade-right' className="breadcrumb after:rounded-md w-full">
               <ol className="list-reset flex">
                 <button onClick={()=> setVisibleSidebar(!visibleSidebar)} className='sidebar-btn' data-type='gray'>
                   <svg width={16} height={16} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -51,8 +51,8 @@ const Stat = () => {
                 <li className="text-grayColor">Мой профиль</li>
               </ol>
             </nav>
-            <h4 className="stat__title">Статистика</h4>
-            <div className="stat__info grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <h4 data-aos='fade-right' className="stat__title">Статистика</h4>
+            <div data-aos='fade-left' className="stat__info grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="stat__info-item">
                 <h3 className="title">144 часов</h3>
                 <p>Всего часов на обучение</p>

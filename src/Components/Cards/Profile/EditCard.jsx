@@ -2,7 +2,7 @@ import './EditCard.scss'
 
 const EditCard = ({name, job, bio, image}) => {
   return (
-    <div className="edit__card">
+    <div  data-aos='fade-left' className="edit__card">
       <div className="card-head">
         <div className='info'>
           <div className="card-img">

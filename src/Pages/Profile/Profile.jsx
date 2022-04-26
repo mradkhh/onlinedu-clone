@@ -20,7 +20,7 @@ const Profile = () => {
         <div className="container flex">
           <SideMenu/>
           <section className="profile">
-          <nav className="breadcrumb after:rounded-md">
+          <nav data-aos='fade-right' className="breadcrumb after:rounded-md">
             <ol className="list-reset flex">
               <button onClick={()=> setVisibleSidebar(!visibleSidebar)} className='sidebar-btn' data-type='gray'>
                 <svg width={16} height={16} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -47,15 +47,14 @@ const Profile = () => {
               <li className="text-grayColor">Mening profilim</li>
             </ol>
           </nav>
-          <h4 className='profile__title'>Mening profilim</h4>
-
+          <h4 data-aos='fade-right' className='profile__title'>Mening profilim</h4>
           <EditCard
           image="Images/side-menu/profil.png"
           bio="По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст. В отличии от lorem ipsum, текст рыба на русском языке наполнит любой макет непонятным смыслом и придаст неповторимый колорит советских времен."
           job="Методист"
           name="Bahromov Azizbek"/>
-          <div className="education__section">
-            <div className="education__head">
+          <div  data-aos='fade-left' className="education__section">
+            <div  data-aos='fade-left' className="education__head">
               <h4 className='education__head-title'>Образование</h4>
               <a href="/" className="education__head-btn" data-type='gray'>
                 <svg width={16} height={16} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -74,8 +73,8 @@ const Profile = () => {
             specialty="Computer science"
             name="INHA University in Tashkent"/>
           </div>
-          <div className="education__section">
-            <div className="education__head">
+          <div data-aos='fade-left' className="education__section">
+            <div data-aos='fade-left' className="education__head">
               <h4 className='education__head-title'>Место работы</h4>
               <a href="/" className="education__head-btn" data-type='gray'>
                 <svg width={16} height={16} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">

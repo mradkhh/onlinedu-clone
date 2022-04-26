@@ -18,7 +18,7 @@ const Qualification = () => {
       <div className="container flex">
         <SideMenu/>
         <div className="qualification">
-          <nav className="breadcrumb after:rounded-md w-full">
+          <nav   data-aos='fade-right' className="breadcrumb after:rounded-md w-full">
               <ol className="list-reset flex">
                 <button onClick={()=> setVisibleSidebar(!visibleSidebar)} className='sidebar-btn' data-type='gray'>
                     <svg width={16} height={16} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -51,15 +51,15 @@ const Qualification = () => {
                 <li className="text-grayColor">Квалификация</li>
               </ol>
             </nav>
-            <h4 className="qualification__title">Квалификация</h4>
-            <div className="qualification__progress-head">
+            <h4  data-aos='fade-right' className="qualification__title">Квалификация</h4>
+            <div  data-aos='fade-left' className="qualification__progress-head">
               <div className='title'>
                 <h6>Пройдено 84 часов 20 минут (67%)</h6>
                 <h6>Всего 144 часов 35 минут</h6>
               </div>
               <Progress strokeWidth={6} showInfo={false} strokeColor="#26CAAC" percent={67} status="active" />
             </div>
-            <div className="qualification__progress-items grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div  data-aos='fade-left' className="qualification__progress-items grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="item">
                 <Progress strokeWidth={6} strokeColor="#26CAAC" type="circle" percent={43} width={70} />
                 <div className="info">

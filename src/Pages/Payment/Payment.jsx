@@ -19,8 +19,8 @@ const Payment = () => {
     <div id="payment__page">
       <div className="container flex">
         <SideMenu/>
-        <section className="payment">
-          <nav className="breadcrumb after:rounded-md w-full">
+        <section  className="payment">
+          <nav  data-aos='fade-right' className="breadcrumb after:rounded-md w-full">
               <ol className="list-reset">
                 <button onClick={()=> setVisibleSidebar(!visibleSidebar)} className='sidebar-btn' data-type='gray'>
                     <svg width={16} height={16} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -53,9 +53,9 @@ const Payment = () => {
                 <li className="text-grayColor">Оплата</li>
               </ol>
             </nav>
-            <h4 className="payment__title">Оплата</h4>
+            <h4  data-aos='fade-right' className="payment__title">Оплата</h4>
             <div className="payment__content">
-              <div className="payment__content-select">
+              <div  data-aos='fade-left' className="payment__content-select">
                 <div className="payment__category-select">
                   <h6>Выберите категорию для переквалификации:</h6>
                   <div className="select">
@@ -80,7 +80,7 @@ const Payment = () => {
                   </div>
                 </div>
               </div>
-              <div className="payment__content-total">
+              <div  data-aos='fade-left' className="payment__content-total">
                 <div className="payment__total">
                   <h6 className='payment__total-title'>Итого:</h6>
                   <div className="payment__total-item">
@@ -107,7 +107,7 @@ const Payment = () => {
                 </div>
               </div>
             </div>
-            <button data-type='primary' className='buy-btn'>Оплатить</button>
+            <button  data-aos='fade-up' data-type='primary' className='buy-btn'>Оплатить</button>
         </section>
       </div>
     </div>
