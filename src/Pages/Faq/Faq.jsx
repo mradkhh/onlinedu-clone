@@ -1,88 +1,65 @@
 import { Collapse } from 'antd'
-import React from 'react'
+import {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import Footer from '../../Components/Footer/Footer'
 import Header from '../../Components/Header/Header'
+import Request from 'Services/Request'
+import { Spin } from 'antd'
 import './Faq.scss'
 
 const Faq = () => {
-
   const {Panel} = Collapse
+  const [faq, setFaq] = useState([])
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    Request()
+      .get('/faq?page=1')
+      .then((res) => {
+        setFaq(res?.data?.data)
+        setLoading(false)
+      })
+      .catch(err => console.log(err))
+  }, [])
   return (
     <>
       <Header/>
-      <main id="faq__page">
-        <div className="container">
-          <nav className="breadcrumb mt-6 mb-8 rounded-md w-full">
-            <ol className="list-reset flex">
-              <li><Link to={"/"} className="text-blueColor text-[14px] font-medium hover:text-greenColor">Asosiy</Link></li>
-              <li><span className="text-gray-500 mx-2">></span></li>
-              <li className="text-grayColor">Savollarga javoblar</li>
-            </ol>
-          </nav>
-          <section className="faq">
-              <h3 className="faq__title">Ko'p so'raladigan savollar</h3>
-              <div className="faq__items">
-              <Collapse
-                accordion
-                expandIcon={({isActive}) => isActive ? <img src="/Images/arrow-up.png" alt='arrow'/> : <img src='/Images/arrow-down.png' alt='arrow'/>}
-                bordered={false}
-                expandIconPosition='right'>
-                <Panel
-                header="1. Uzluksiz kasbiy ta'lim elektron platformasi haqida batafsil ma'lumot"
-                key="1">
-                Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей. Текст генерируется абзацами случайным образом от двух до десяти предложений в абзаце, что позволяет сделать текст более привлекательным и живым для визуально-слухового восприятия.
-                </Panel>
-                <Panel
-                header="2. Uzluksiz kasbiy ta'lim elektron platformasini izlab topish"
-                key="2">
-                Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей. Текст генерируется абзацами случайным образом от двух до десяти предложений в абзаце, что позволяет сделать текст более привлекательным и живым для визуально-слухового восприятия.
-                </Panel>
-                <Panel
-                header="3. Telegram BOT dan foydalanish tartibi haqida"
-                key="3">
-                Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей. Текст генерируется абзацами случайным образом от двух до десяти предложений в абзаце, что позволяет сделать текст более привлекательным и живым для визуально-слухового восприятия.
-                </Panel>
-                <Panel
-                header="4. Uzluksiz kasbiy ta'lim elektron platformasida parolni tiklash haqida"
-                key="4">
-                Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей. Текст генерируется абзацами случайным образом от двух до десяти предложений в абзаце, что позволяет сделать текст более привлекательным и живым для визуально-слухового восприятия.
-                </Panel>
-                <Panel
-                header="5. Uzluksiz kasbiy ta'lim elektron platformasida diagnostika testidan o'tish"
-                key="5">
-                Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей. Текст генерируется абзацами случайным образом от двух до десяти предложений в абзаце, что позволяет сделать текст более привлекательным и живым для визуально-слухового восприятия.
-                </Panel>
-                <Panel
-                header="6. Uzluksiz kasbiy ta'lim elektron platformasida keyingi yil malaka oshirish shaklini tanlash (Reyestr qismi)"
-                key="6">
-                Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей. Текст генерируется абзацами случайным образом от двух до десяти предложений в абзаце, что позволяет сделать текст более привлекательным и живым для визуально-слухового восприятия.
-                </Panel>
-                <Panel
-                header="7. Uzluksiz kasbiy ta'lim elektron platformasida yaratilgan yangi akkaunt profilini tahrirlash"
-                key="7">
-                Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей. Текст генерируется абзацами случайным образом от двух до десяти предложений в абзаце, что позволяет сделать текст более привлекательным и живым для визуально-слухового восприятия.
-                </Panel>
-                <Panel
-                header="8. Uzluksiz kasbiy ta'lim elektron platformasida malaka oshirish kursini boshlash"
-                key="8">
-                Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей. Текст генерируется абзацами случайным образом от двух до десяти предложений в абзаце, что позволяет сделать текст более привлекательным и живым для визуально-слухового восприятия.
-                </Panel>
-                <Panel
-                header="9. Uzluksiz kasbiy ta'lim elektron platformasida  ro'yxatdan o'tish"
-                key="9">
-                Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей. Текст генерируется абзацами случайным образом от двух до десяти предложений в абзаце, что позволяет сделать текст более привлекательным и живым для визуально-слухового восприятия.
-                </Panel>
-                <Panel
-                header="10. Uzluksiz kasbiy ta'lim elektron platformasi orqali olingan sertifikatni haqiyqiylikka tekshirish"
-                key="11">
-                Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей. Текст генерируется абзацами случайным образом от двух до десяти предложений в абзаце, что позволяет сделать текст более привлекательным и живым для визуально-слухового восприятия.
-                </Panel>
-              </Collapse>
-              </div>
-          </section>
-        </div>
-      </main>
+      {
+        loading
+        ? <Spin wrapperClassName='spinner-wrapper' size='large' />
+         : <main id="faq__page">
+         <div className="container">
+           <nav className="breadcrumb mt-6 mb-8 rounded-md w-full">
+             <ol className="list-reset flex">
+               <li><Link to={"/"} className="text-blueColor text-[14px] font-medium hover:text-greenColor">Asosiy</Link></li>
+               <li><span className="text-gray-500 mx-2">></span></li>
+               <li className="text-grayColor">Savollarga javoblar</li>
+             </ol>
+           </nav>
+           <section className="faq">
+               <h3 className="faq__title">Ko'p so'raladigan savollar</h3>
+               <div className="faq__items">
+               <Collapse
+                 accordion
+                 expandIcon={({isActive}) => isActive ? <img src="/Images/arrow-up.png" alt='arrow'/> : <img src='/Images/arrow-down.png' alt='arrow'/>}
+                 bordered={false}
+                 expandIconPosition='right'>
+                {
+                   faq.map((item) =>
+                   <Panel
+                   header={item?.title}
+                   key={item?.id}>
+                     {(item?.body)}
+                   </Panel>
+                 )
+                }
+
+               </Collapse>
+               </div>
+           </section>
+         </div>
+       </main>
+      }
       <Footer/>
     </>
 

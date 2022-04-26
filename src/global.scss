@@ -366,3 +366,14 @@ a[type='button']:hover {
     box-shadow: none !important;
   }
 }
+
+.ant-spin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+
+  i {
+    background-color: var(--greenColor);
+  }
+}

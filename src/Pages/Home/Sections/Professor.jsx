@@ -1,12 +1,23 @@
-import React from 'react'
+import {useState, useEffect} from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper';
+import Request from 'Services/Request';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay'
 import './Professor.scss'
 
 const Professor = () => {
+  const [teachers, setTeachers] = useState([])
+
+  useEffect(() => {
+    Request()
+      .get('/teachers?page=1&per_page=5')
+      .then((res) => {
+        setTeachers(res?.data?.data)
+      })
+      .catch(err = console.log(err))
+  }, [])
   return (
     <div className="professor__section">
       <div className="container">
@@ -46,39 +57,6 @@ const Professor = () => {
               <img src="/Images/professor1.png" alt="professor" />
               <h4>Мурад Аскаров</h4>
               <h6>Маркетинг специалист</h6>
-              <p>По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст. В отличии от lorem ipsum, текст рыба на русском языке наполнит любой.</p>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div data-aos='zoom-in' className="item">
-              <img src="/Images/professor2.png" alt="professor" />
-              <h4>Александр Крюков</h4>
-              <h6>Маркетинг специалист</h6>
-              <p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях.</p>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div data-aos='zoom-in' className="item">
-              <img src="/Images/professor3.png" alt="professor" />
-              <h4>Мурад Аскаров</h4>
-              <h6>Маркетинг специалист</h6>
-              <p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях.</p>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div data-aos='zoom-in' className="item">
-              <img src="/Images/professor3.png" alt="professor" />
-              <h4>Мурад Аскаров</h4>
-              <h6>Маркетинг специалист</h6>
-              <p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях.</p>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div data-aos='zoom-in' className="item">
-              <img src="/Images/professor3.png" alt="professor" />
-              <h4>Мурад Аскаров</h4>
-              <h6>Маркетинг специалист</h6>
-              <p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях.</p>
             </div>
           </SwiperSlide>
           </Swiper>

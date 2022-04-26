@@ -32,8 +32,6 @@
         width: 100%;
         margin-bottom: 10px;
         img {
-          position: absolute;
-          z-index: 1234;
           top: -40px;
         }
         h4 {
@@ -47,14 +45,6 @@
           font-size: 16px;
           color: var(--grayColor);
           margin-bottom: 16px;
-        }
-
-        p {
-          font-style: normal;
-          font-weight: 400;
-          font-size: 16px;
-          line-height: 160%;
-          width: 100%;
         }
       }
     }
