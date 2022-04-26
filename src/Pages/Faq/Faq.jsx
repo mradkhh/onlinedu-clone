@@ -1,10 +1,9 @@
-import { Collapse } from 'antd'
-import {useState, useEffect} from 'react'
+import { Collapse, Spin } from 'antd'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import Request from 'Services/Request'
 import Footer from '../../Components/Footer/Footer'
 import Header from '../../Components/Header/Header'
-import Request from 'Services/Request'
-import { Spin } from 'antd'
 import './Faq.scss'
 
 const Faq = () => {
@@ -13,6 +12,7 @@ const Faq = () => {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
+    window.scrollTo(0,0)
     Request()
       .get('/faq?page=1')
       .then((res) => {
@@ -53,7 +53,7 @@ const Faq = () => {
                    <Panel
                    header={item?.title}
                    key={item?.id}>
-                     {(item?.body)}
+                     <p dangerouslySetInnerHTML={{ __html: item?.body}}></p>
                    </Panel>
                  )
                 }

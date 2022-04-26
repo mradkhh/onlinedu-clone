@@ -1,12 +1,12 @@
-import { Dropdown, Modal, Drawer } from 'antd'
+import { Drawer, Dropdown, Modal } from 'antd'
 import "antd/dist/antd.css"
-import React, { useState, useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import InputMask from 'react-input-mask'
 import { Link } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import styled from 'styled-components'
-import './Header.scss'
 import Request from '../../Services/Request'
+import './Header.scss'
 
 
 const Lang = styled.div`
@@ -49,6 +49,7 @@ const Header = () => {
     toast.success("Yo'riqnoma bosildi!")
   }
   useEffect(() => {
+      window.scrollTo(0, 0)
     Request()
       .get('/paid/categories')
       .then((res) => {

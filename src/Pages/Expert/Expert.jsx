@@ -12,6 +12,7 @@ const Expert = () => {
   const [teachers, setTeachers] = useState([])
 
   useEffect(() => {
+    window.scrollTo(0,0)
     Request()
       .get('/teachers?page=1&per_page=12')
       .then((res) => {
