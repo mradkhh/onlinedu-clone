@@ -14,7 +14,8 @@ const Professor = () => {
     Request()
       .get('/teachers?page=1&per_page=5')
       .then((res) => {
-        setTeachers(res?.data?.data)
+        const result = Array.isArray(res) ? res?.data?.data : []
+        setTeachers(result)
       })
       .catch(err = console.log(err))
   }, [])
