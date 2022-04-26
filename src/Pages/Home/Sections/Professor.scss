@@ -24,15 +24,20 @@
 
     &__items {
       .item {
-        padding: 48px 32px 32px 32px;
-        position: relative;
-        margin-top: 60px;
-        border: 1px solid var(--lightGrayColor);
-        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
         width: 100%;
-        margin-bottom: 10px;
+        margin-top: 50px;
         img {
-          top: -40px;
+          border-radius: 50%;
+          min-width: 120px;
+          width: 120px;
+          height: 120px;
+          object-fit: cover;
         }
         h4 {
           font-weight: 700;

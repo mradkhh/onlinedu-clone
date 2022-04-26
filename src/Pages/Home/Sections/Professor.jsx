@@ -14,10 +14,9 @@ const Professor = () => {
     Request()
       .get('/teachers?page=1&per_page=5')
       .then((res) => {
-        const result = Array.isArray(res) ? res?.data?.data : []
-        setTeachers(result)
+        setTeachers(res?.data?.data)
       })
-      .catch(err = console.log(err))
+      .catch(err => console.log(err))
   }, [])
   return (
     <div className="professor__section">
@@ -50,16 +49,17 @@ const Professor = () => {
           loop={true}
           spaceBetween={30}
           >
-          <SwiperSlide style={{
-            maxWidth: 600,
-            width: '100%'
-          }}>
-            <div data-aos='zoom-in' className="item">
-              <img src="/Images/professor1.png" alt="professor" />
-              <h4>Мурад Аскаров</h4>
-              <h6>Маркетинг специалист</h6>
-            </div>
-          </SwiperSlide>
+          {
+            teachers.map(item =>
+              <SwiperSlide key={item?.id}>
+                <div data-aos='zoom-in' className="item">
+                  <img src={'https://api.onlinedu.uz/storage/' + item?.image} alt="professor" />
+                  <h4>{item?.name}</h4>
+                  <h6>{item?.position}</h6>
+                </div>
+            </SwiperSlide>
+              )
+          }
           </Swiper>
           </div>
         <button data-aos='fade-up' className='more' data-type='primary'>Barchasini ko'rish</button>
