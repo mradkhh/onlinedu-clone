@@ -1,5 +1,5 @@
 import { Drawer } from 'antd'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import EditCard from '../../Components/Cards/Profile/EditCard'
 import Footer from '../../Components/Footer/Footer'
@@ -7,11 +7,25 @@ import Header from '../../Components/Header/Header'
 import MobileSideMenu from '../../Components/SideMenu/MobileSideMenu'
 import SideMenu from '../../Components/SideMenu/SideMenu'
 import Education from './Education'
-// import CourseCard from './CourseCard'
+import Request from 'Services/Request'
 import './Profile.scss'
 
 const Profile = () => {
   const [visibleSidebar,setVisibleSidebar] = useState(false)
+  const [userInfo, setUserInfo] = useState([])
+  // const [dashCategories, setDashCategories] = useState([])
+  // const [userPosition, setUserPosition] = useState([])
+  // const [unreadCount, setUnreadCount] = useState([])
+  // const [myBuyed, setMyBuyed] = useState([])
+  // const [certificates, setCertificates] = useState([])
+
+
+
+  useEffect(() => {
+    Request().get('/profil/get').then((res) => {
+      setUserInfo(res)
+    })
+  }, [])
 
   return (
     <>
