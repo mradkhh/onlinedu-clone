@@ -126,46 +126,56 @@
     .re-password {
       display: block;
       padding: 0;
+      font-size: 16px;
       margin-top: 14px;
       background-color: var(--whiteColor);
       border: none;
       color: var(--greenColor);
     }
 
-    .sign__modal-form {
+    .login__modal-form,
+    .register__modal-form,
+    .forgot__modal-form,
+    .bot__modal-from {
       display: flex;
       justify-content: start;
       align-items: flex-start;
       flex-direction: column;
 
-      > label {
+        label {
         margin-bottom: 8px;
-        font-size: 14px;
+        font-size: 12px;
         line-height: 100%;
         color: #898da6;
       }
 
-      > input {
+        input {
         margin-bottom: 16px;
         font-size: 14px;
         line-height: 100%;
         color: var(--blueColor);
       }
-      > input[type="password"] {
+        input[type="password"] {
         letter-spacing: 5px;
         color: var(--grayColor);
       }
 
-      .checkbox {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 8px;
-        font-size: 14px;
-        line-height: 100%;
-        color: #898da6;
-        margin-bottom: 24px;
+      .password__field {
+        position: relative;
+        .eye {
+          padding: 2px;
+          position: absolute;
+          bottom: 26px;
+          right: 10px;
+          cursor: pointer;
+          width: 22px;
+          height: 22px;
+          object-fit: contain;
+
+          
+        }
       }
+
 
       button {
         width: 100%;

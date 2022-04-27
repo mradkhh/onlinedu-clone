@@ -109,38 +109,38 @@ input {
   background-color: rgba(137, 141, 166, 0.08);
 }
 
-input[type='checkbox'] {
-  cursor: pointer;
-  -webkit-appearance: none;
-  appearance: none;
-  border: 1px solid #898da6;
-  font: inherit;
-  background-color: var(--whiteColor);
-  color: var(--greenColor);
-  width: 1rem;
-  height: 1rem;
-  border-radius: 4px;
-  display: grid;
-  place-content: center;
-}
+// input[type='checkbox'] {
+//   cursor: pointer;
+//   -webkit-appearance: none;
+//   appearance: none;
+//   border: 1px solid #898da6;
+//   font: inherit;
+//   background-color: var(--whiteColor);
+//   color: var(--greenColor);
+//   width: 1rem;
+//   height: 1rem;
+//   border-radius: 4px;
+//   display: grid;
+//   place-content: center;
+// }
 
-input[type='checkbox']::before {
-  content: '';
-  width: 1rem;
-  height: 1rem;
-  border-radius: 4px;
-  background-color: var(--whiteColor);
-  border: 1px solid var(--greenColor);
-  transform-origin: center;
-  transform: scale(0);
-  clip-path: polygon(78% 20%, 94% 34%, 48% 86%, 9% 57%, 22% 39%, 47% 58%);
-}
+// input[type='checkbox']::before {
+//   content: '';
+//   width: 1rem;
+//   height: 1rem;
+//   border-radius: 4px;
+//   background-color: var(--whiteColor);
+//   border: 1px solid var(--greenColor);
+//   transform-origin: center;
+//   transform: scale(0);
+//   clip-path: polygon(78% 20%, 94% 34%, 48% 86%, 9% 57%, 22% 39%, 47% 58%);
+// }
 
-input[type='checkbox']:checked::before {
-  transform: scale(1);
-  background-color: var(--greenColor);
-  color: var(--whiteColor);
-}
+// input[type='checkbox']:checked::before {
+//   transform: scale(1);
+//   background-color: var(--greenColor);
+//   color: var(--whiteColor);
+// }
 
 button {
   cursor: pointer;
@@ -270,7 +270,6 @@ a[type='button']:hover {
 
 // ant-drawer
 .ant-drawer {
-
   &-content-wrapper {
     width: 300px !important;
     @media (max-width: 400px) {
@@ -299,7 +298,7 @@ a[type='button']:hover {
     .mobile-nav {
       ul {
         li {
-            margin-block: 10px;
+          margin-block: 10px;
           a {
             font-weight: 400;
             color: var(--grayColor);
@@ -324,7 +323,6 @@ a[type='button']:hover {
 }
 
 .ant-select {
-
   &-focused {
     box-shadow: none !important;
     border: none !important;
@@ -342,7 +340,7 @@ a[type='button']:hover {
 
   &-selection-search {
     input {
-    outline: none !important;
+      outline: none !important;
     }
   }
 }
@@ -381,4 +379,21 @@ a[type='button']:hover {
 
 iframe {
   width: 100% !important;
+}
+
+.checkbox {
+  .ant-checkbox-checked .ant-checkbox-inner {
+    background-color: var(--greenColor);
+    border-color: var(--greenColor);
+  }
+
+  .ant-checkbox-wrapper {
+    align-items: baseline;
+
+    > span {
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--grayColor);
+    }
+  }
 }

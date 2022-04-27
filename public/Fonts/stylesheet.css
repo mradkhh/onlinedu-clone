@@ -36,10 +36,10 @@
 
 @font-face {
   font-family: 'Cera Pro';
-  src: url('CeraPro-Italic.woff2') format('woff2'),
-    url('CeraPro-Italic.woff') format('woff');
+  src: url('CeraPro-Regular.woff2') format('woff2'),
+    url('CeraPro-Regular.woff') format('woff');
   font-weight: 400;
-  font-style: italic;
+  font-style: normal;
   font-display: swap;
 }
 
