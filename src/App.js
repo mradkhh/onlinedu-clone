@@ -26,18 +26,10 @@ import './App.css';
 import './i18n';
 
 function App() {
-<<<<<<< Updated upstream
   const [userInfo, setUserInfo] = useState([])
-  const [userPosition, setUserPosition] = useState([])
-  const [categories, setCategories] = useState([])
-=======
-
->>>>>>> Stashed changes
-
 
   useEffect(() => {
     AOS.init({ ...option });
-<<<<<<< Updated upstream
     //profil.get request
     Request()
       .get('/profil/get')
@@ -45,21 +37,6 @@ function App() {
         setUserInfo(res?.data)
       })
       .catch(err => console.log(err))
-      Request()
-      .get('/profil/user-position')
-      .then((res) => {
-        setUserPosition(res?.data)
-      })
-      .catch(err => console.log(err))
-      Request()
-      .get('/dashboard/categories')
-      .then((res) => {
-        setCategories(res?.data)
-      })
-      .catch(err => console.log(err))
-=======
-
->>>>>>> Stashed changes
   }, []);
   return (
     <I18nextProvider>
