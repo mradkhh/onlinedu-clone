@@ -71,8 +71,17 @@ const Header = () => {
 
   const handleRegisterSubmit = (e, phoneValue) => {
     e.preventDefault()
-    const resultPhone = filterNumber(phoneValue)
-    console.log("Validated: ",resultPhone)
+    const parsePhone = filterNumber(phoneValue)
+    if(12 === parsePhone.length) {
+      Request()
+        .post('/register', {login: parsePhone})
+    } else if(12 !== filterNumber(phoneValue).length) {
+      setErrors({...errors, phoneError: true})
+      console.log("number err")
+    } else {
+      setErrors({...errors, passwordValueError: true})
+      console.log("pass err")
+    }
   }
   const handleForgotPassSubmit = (e, phoneValue) => {
     e.preventDefault()
