@@ -109,6 +109,11 @@ input {
   background-color: rgba(137, 141, 166, 0.08);
 }
 
+input[type="password"] {
+  letter-spacing: 5px;
+  color: var(--grayColor);
+}
+
 // input[type='checkbox'] {
 //   cursor: pointer;
 //   -webkit-appearance: none;
@@ -365,15 +370,39 @@ a[type='button']:hover {
     box-shadow: none !important;
   }
 }
-
-.ant-spin {
+.spinner-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 100px;
+  width: 100%;
+  .ant-spin {
+    .ant-spin-dot {
+    i {
+      background-color: var(--greenColor);
+    }
+   }
+  }
+}
 
-  i {
-    background-color: var(--greenColor);
+.spinner-faq-wrapper {
+  .ant-spin {
+    padding: 100px;
+    .ant-spin-dot {
+    i {
+      background-color: var(--greenColor);
+    }
+   }
+  }
+}
+
+.spinner-register-button-wrapper {
+  .ant-spin {
+    padding-block: 8px;
+    .ant-spin-dot {
+    i {
+      background-color: var(--greenColor);
+    }
+   }
   }
 }
 
@@ -387,8 +416,16 @@ iframe {
     border-color: var(--greenColor);
   }
 
+  .ant-checkbox-inner:hover {
+    border-color: var(--greenColor);
+  }
+
   .ant-checkbox-wrapper {
     align-items: baseline;
+
+    .ant-checkbox-input:focus {
+      border-color: var(--greenColor);
+    }
 
     > span {
       font-size: 12px;
@@ -396,4 +433,9 @@ iframe {
       color: var(--grayColor);
     }
   }
+}
+
+::selection {
+  background-color: var(--greenColor);
+  color: var(--whiteColor);
 }

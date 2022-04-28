@@ -43,8 +43,8 @@ const Expert = () => {
             <h3  data-aos='fade-right' className="expert__title">Отзывы международных экспертов</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 expert__items">
               {
-              teachers.map(item =>
-                  <div data-aos='zoom-in' className="item">
+              teachers.map((item, index) =>
+                  <div key={index} data-aos='zoom-in' className="item">
                     <img src={'https://api.onlinedu.uz/storage/' + item?.image} alt="professor" />
                     <h4>{item?.name}</h4>
                     <h6>{item?.position}</h6>

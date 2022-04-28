@@ -533,12 +533,16 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-center {
   text-align: center;
 }
-.text-xs {
-  font-size: 0.75rem;
-  line-height: 1rem;
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 .text-\[16px\] {
   font-size: 16px;
+}
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 .text-\[14px\] {
   font-size: 14px;
@@ -546,25 +550,22 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-\[20px\] {
   font-size: 20px;
 }
-.text-base {
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
 .font-medium {
   font-weight: 500;
-}
-.text-blueColor {
-  --tw-text-opacity: 1;
-  color: rgb(13 46 105 / var(--tw-text-opacity));
 }
 .text-grayColor {
   --tw-text-opacity: 1;
   color: rgb(137 141 166 / var(--tw-text-opacity));
 }
+.text-blueColor {
+  --tw-text-opacity: 1;
+  color: rgb(13 46 105 / var(--tw-text-opacity));
+}
 .outline {
   outline-style: solid;
 }
-.filter {
+.blur {
+  --tw-blur: blur(8px);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 .after\:rounded-md::after {

@@ -1,4 +1,4 @@
-import { Checkbox, Drawer, Dropdown, Modal } from 'antd'
+import { Checkbox, Drawer, Dropdown, Modal, Spin } from 'antd'
 import "antd/dist/antd.css"
 import { useEffect, useState } from 'react'
 import InputMask from 'react-input-mask'
@@ -40,7 +40,7 @@ const Header = () => {
     passwordValueError: false
   })
   const [phoneValue, setPhoneValue] = useState('')
-  const [checkValue, setCheckValue] = useState('')
+  const [checkValue, setCheckValue] = useState(true)
   const [passwordValue, setPasswordValue] = useState('')
   const [botCode, setBotCode] = useState('')
   const [mobileNavCategories, setMobileNavCategories] = useState([])
@@ -50,14 +50,17 @@ const Header = () => {
   const [modalActionBotVisible, setModalActionBotVisible] = useState(false)
   const [drawerVisible, setDrawerVisible] = useState(false)
   const [passwordShow, setPasswordShow] = useState(false)
-  const [registerDateToTelegram, setRegisterDateToTelegram] = useState([])
-  console.log(registerDateToTelegram)
+  const [registerDataToTelegram, setRegisterDataToTelegram] = useState([])
+  const [registerSmsCode, setRegisterSmsCode] = useState([])
+  const [modalRegisterParolVisible, setModalRegisterParolVisible] = useState(false)
+  const [modalConfirmVisible, setModalConfirmVisible] = useState(false)
+  // const [registerOnLoading, setRegisterOnLoading] = useState(false)
 
 
   const handleLoginSubmit = (e) => {
     e.preventDefault()
     const parsePhone = filterNumber(phoneValue)
-    if(12 === parsePhone.length && passwordValue.length >= 8 && passwordValue.length <= 13) {
+    if(12 === parsePhone.length && passwordValue.length >= 8) {
       console.log("Success: ", parsePhone, passwordValue)
     } else if(12 !== filterNumber(phoneValue).length) {
       setErrors({...errors, phoneError: true})
@@ -66,28 +69,78 @@ const Header = () => {
       setErrors({...errors, passwordValueError: true})
       console.log("pass err")
     }
-
   }
 
   const handleRegisterSubmit = (e) => {
-    e.preventDefault()
+    if (e && e.preventDefault) { e.preventDefault()};
+    console.log("handle submit working")
     const parsePhone = filterNumber(phoneValue)
-    if(12 === parsePhone.length) {
+    console.log(parsePhone)
+    if(parsePhone.length === 12) {
       Request()
         .post('/register', {login: parsePhone})
-        .then(res => setRegisterDateToTelegram(res?.data))
+        .then(res => {
+          setRegisterDataToTelegram(res?.data)
+        })
         .catch(err => console.log(err))
-    } else if(12 !== filterNumber(phoneValue).length) {
-      setErrors({...errors, phoneError: true})
-    } else {
-      setErrors({...errors, passwordValueError: true})
-    }
+        setModalRegisterVisible(false)
+        setModalActionBotVisible(true)
+      } else if(12 !== filterNumber(phoneValue).length) {
+        setErrors({...errors, phoneError: true})
+        console.log("number err")
+      } else {
+        setErrors({...errors, passwordValueError: true})
+        console.log("pass err")
+      }
   }
-  const handleForgotPassSubmit = (e, phoneValue) => {
+
+  const handleForgotPassSubmit = (e) => {
     e.preventDefault()
   }
   const handleBotSubmit = (e) => {
     e.preventDefault()
+    const parsePhone = filterNumber(phoneValue)
+    if(botCode.length === 5) {
+      Request()
+        .post('/register', {login: parsePhone, smscode: botCode})
+        .then(res => {
+          setRegisterSmsCode(res?.data)
+        })
+        .catch(err => console.log(err))
+        setModalActionBotVisible(false)
+        setModalRegisterParolVisible(true)
+      } else if(12 !== filterNumber(phoneValue).length) {
+        setErrors({...errors, phoneError: true})
+        console.log("number err")
+      } else {
+        setErrors({...errors, passwordValueError: true})
+        console.log("pass err")
+      }
+
+  }
+  const handleRegisterParolSubmit = (e) => {
+    e.preventDefault()
+
+  }
+  const handleConfirmSubmit = (e) => {
+    e.preventDefault()
+    const parsePhone = filterNumber(phoneValue)
+    if(botCode.length === 5) {
+      Request()
+        .post('/register', {login: parsePhone, smscode: botCode})
+        .then(res => {
+          setRegisterSmsCode(res?.data)
+        })
+        .catch(err => console.log(err))
+        setModalActionBotVisible(true)
+        setModalConfirmVisible(false)
+      } else if(12 !== filterNumber(phoneValue).length) {
+        setErrors({...errors, phoneError: true})
+        console.log("number err")
+      } else {
+        setErrors({...errors, passwordValueError: true})
+        console.log("pass err")
+      }
 
   }
 
@@ -213,7 +266,7 @@ const Header = () => {
                 onChange={(e) => setPasswordValue(e.target.value)}
                 type={passwordShow ? 'text' : 'password'} />
                 <div onClick={() => setPasswordShow(!passwordShow)} className="eye">
-                  <svg width="{23}" height="{23}" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M20.6901 11.5526C18.8309 7.23598 15.3334 4.55762 11.5597 4.55762C7.7861 4.55762 4.28858 7.23598 2.42938 11.5526C2.3787 11.6688 2.35254 11.7941 2.35254 11.9208C2.35254 12.0475 2.3787 12.1728 2.42938 12.289C4.28858 16.6056 7.7861 19.284 11.5597 19.284C15.3334 19.284 18.8309 16.6056 20.6901 12.289C20.7408 12.1728 20.7669 12.0475 20.7669 11.9208C20.7669 11.7941 20.7408 11.6688 20.6901 11.5526ZM11.5597 17.4432C8.64207 17.4432 5.88087 15.3355 4.28858 11.9208C5.88087 8.50612 8.64207 6.39841 11.5597 6.39841C14.4774 6.39841 17.2386 8.50612 18.8309 11.9208C17.2386 15.3355 14.4774 17.4432 11.5597 17.4432ZM11.5597 8.23921C10.8316 8.23921 10.1198 8.45513 9.51434 8.85967C8.90891 9.26421 8.43703 9.83919 8.15838 10.5119C7.87973 11.1846 7.80682 11.9249 7.94887 12.639C8.09093 13.3532 8.44157 14.0092 8.95645 14.5241C9.47133 15.039 10.1273 15.3896 10.8415 15.5317C11.5556 15.6737 12.2959 15.6008 12.9686 15.3221C13.6413 15.0435 14.2163 14.5716 14.6209 13.9662C15.0254 13.3607 15.2413 12.649 15.2413 11.9208C15.2413 10.9444 14.8534 10.008 14.163 9.31752C13.4726 8.62709 12.5361 8.23921 11.5597 8.23921ZM11.5597 13.7616C11.1957 13.7616 10.8398 13.6536 10.537 13.4514C10.2343 13.2491 9.99838 12.9616 9.85905 12.6252C9.71973 12.2889 9.68327 11.9188 9.7543 11.5617C9.82533 11.2046 10.0006 10.8766 10.2581 10.6192C10.5155 10.3617 10.8435 10.1864 11.2006 10.1154C11.5577 10.0443 11.9278 10.0808 12.2642 10.2201C12.6005 10.3595 12.888 10.5954 13.0903 10.8981C13.2926 11.2008 13.4005 11.5567 13.4005 11.9208C13.4005 12.409 13.2066 12.8772 12.8614 13.2224C12.5161 13.5677 12.0479 13.7616 11.5597 13.7616Z"
                      fill={passwordShow ? "#26caac" : "#898da6"} />
                   </svg>
@@ -223,7 +276,7 @@ const Header = () => {
               <Checkbox
               name='checkbox'
               defaultChecked={true}
-              value={checkValue}
+              checked={checkValue}
               onChange={(e) => setCheckValue(e.target.checked)}
               >Eslab qolish</Checkbox>
               </div>
@@ -251,20 +304,21 @@ const Header = () => {
             width={570}
           >
             <h3>Ro'yxatdan o'tish</h3>
-            <form onSubmit={handleRegisterSubmit} className='register__modal-form'>
-              <label htmlFor="phone">Telefon raqam</label>
-              <InputMask
-                name='phone'
-                value={phoneValue}
-                onChange={(e) => setPhoneValue(e.target.value)}
-                mask='(+999) 99 999 99 99'
-                >
-              </InputMask>
-            <button onClick={() => {
-              setModalRegisterVisible(false)
-              setModalActionBotVisible(true)
-            }} className='mt-1 py-3 w-full' data-type='primary' >Ro'yxatdan o'tish</button>
-            </form>
+              <form onSubmit={handleRegisterSubmit} className='register__modal-form'>
+                  <label htmlFor="phone">Telefon raqam</label>
+                  <InputMask
+                    name='phone'
+                    value={phoneValue}
+                    onChange={(e) => setPhoneValue(e.target.value)}
+                    mask='(+999) 99 999 99 99'
+                    >
+                  </InputMask>
+                  <button onClick={() => {
+                          handleRegisterSubmit()
+                          setModalRegisterVisible(false)
+                          setModalActionBotVisible(true)
+                        }} className='mt-1 py-3 w-full' data-type='primary'>Ro'yxatdan o'tish</button>
+                </form>
               <button onClick={() => {
                 setModalLoginVisible(true)
                 setModalRegisterVisible(false)
@@ -311,7 +365,7 @@ const Header = () => {
           </Modal>
 
 
-          {/* Action bot modal */}
+          {/* Action register bot modal */}
           <Modal
             style={{ top: 100}}
             visible={modalActionBotVisible}
@@ -338,7 +392,13 @@ const Header = () => {
                 mask='99999'
                 >
               </InputMask>
-            <button className='mt-3 py-3 w-full' data-type='primary' >Yuborish</button>
+            <button
+            onClick={() => {
+              handleBotSubmit()
+              setModalActionBotVisible(false)
+              setModalRegisterParolVisible(true)
+            }}
+            className='mt-3 py-3 w-full' data-type='primary' >Yuborish</button>
             </form>
               <button onClick={() => {
                 setModalLoginVisible(true)
@@ -349,6 +409,104 @@ const Header = () => {
                setModalLoginVisible(false)
                setModalRegisterVisible(true)
                setModalActionBotVisible(false)
+            }} className='re-password'>Ro'yxatdan o'tish</button>
+          </Modal>
+
+          {/* Register parol */}
+          <Modal
+            style={{ top: 100}}
+            visible={modalRegisterParolVisible}
+            footer={null}
+            onCancel={() => setModalRegisterParolVisible(false)}
+            width={570}
+          >
+            <h3>Parol o'rnatish</h3>
+            <form onSubmit={handleRegisterParolSubmit} className='bot__modal-form'>
+
+            </form>
+            <div className="password__field w-full">
+                <label htmlFor="password">Parol</label>
+                <input
+                className='w-full'
+                max={13}
+                name='password'
+                value={passwordValue}
+                onChange={(e) => setPasswordValue(e.target.value)}
+                type={passwordShow ? 'text' : 'password'} />
+                <div onClick={() => setPasswordShow(!passwordShow)} className="eye">
+                  <svg viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.6901 11.5526C18.8309 7.23598 15.3334 4.55762 11.5597 4.55762C7.7861 4.55762 4.28858 7.23598 2.42938 11.5526C2.3787 11.6688 2.35254 11.7941 2.35254 11.9208C2.35254 12.0475 2.3787 12.1728 2.42938 12.289C4.28858 16.6056 7.7861 19.284 11.5597 19.284C15.3334 19.284 18.8309 16.6056 20.6901 12.289C20.7408 12.1728 20.7669 12.0475 20.7669 11.9208C20.7669 11.7941 20.7408 11.6688 20.6901 11.5526ZM11.5597 17.4432C8.64207 17.4432 5.88087 15.3355 4.28858 11.9208C5.88087 8.50612 8.64207 6.39841 11.5597 6.39841C14.4774 6.39841 17.2386 8.50612 18.8309 11.9208C17.2386 15.3355 14.4774 17.4432 11.5597 17.4432ZM11.5597 8.23921C10.8316 8.23921 10.1198 8.45513 9.51434 8.85967C8.90891 9.26421 8.43703 9.83919 8.15838 10.5119C7.87973 11.1846 7.80682 11.9249 7.94887 12.639C8.09093 13.3532 8.44157 14.0092 8.95645 14.5241C9.47133 15.039 10.1273 15.3896 10.8415 15.5317C11.5556 15.6737 12.2959 15.6008 12.9686 15.3221C13.6413 15.0435 14.2163 14.5716 14.6209 13.9662C15.0254 13.3607 15.2413 12.649 15.2413 11.9208C15.2413 10.9444 14.8534 10.008 14.163 9.31752C13.4726 8.62709 12.5361 8.23921 11.5597 8.23921ZM11.5597 13.7616C11.1957 13.7616 10.8398 13.6536 10.537 13.4514C10.2343 13.2491 9.99838 12.9616 9.85905 12.6252C9.71973 12.2889 9.68327 11.9188 9.7543 11.5617C9.82533 11.2046 10.0006 10.8766 10.2581 10.6192C10.5155 10.3617 10.8435 10.1864 11.2006 10.1154C11.5577 10.0443 11.9278 10.0808 12.2642 10.2201C12.6005 10.3595 12.888 10.5954 13.0903 10.8981C13.2926 11.2008 13.4005 11.5567 13.4005 11.9208C13.4005 12.409 13.2066 12.8772 12.8614 13.2224C12.5161 13.5677 12.0479 13.7616 11.5597 13.7616Z"
+                     fill={passwordShow ? "#26caac" : "#898da6"} />
+                  </svg>
+                </div>
+              </div>
+              <div className="password__field w-full mt-2">
+                <label htmlFor="password">Parolni takrorlash</label>
+                <input
+                className='w-full'
+                max={13}
+                name='password'
+                value={passwordValue}
+                onChange={(e) => setPasswordValue(e.target.value)}
+                type={passwordShow ? 'text' : 'password'} />
+              </div>
+              <button className='mt-3 py-3 w-full' data-type='primary' >Yuborish</button>
+              <button onClick={() => {
+                setModalLoginVisible(true)
+                setModalRegisterVisible(false)
+                setModalActionBotVisible(false)
+                setModalRegisterParolVisible(false)
+              }} className='sign-up' >Kirish</button>
+            <button onClick={() => {
+               setModalLoginVisible(false)
+               setModalRegisterVisible(true)
+               setModalActionBotVisible(false)
+               setModalRegisterParolVisible(false)
+            }} className='re-password'>Ro'yxatdan o'tish</button>
+          </Modal>
+
+          {/* SMS confirm */}
+          <Modal
+            style={{ top: 100}}
+            visible={modalConfirmVisible}
+            footer={null}
+            onCancel={() => setModalConfirmVisible(false)}
+            width={570}
+          >
+            <h3>SMSni tasdiqlash</h3>
+            <form onSubmit={handleConfirmSubmit} className='bot__modal-form'>
+
+            </form>
+            <div className="password__field w-full">
+                <label htmlFor="password">SMS kod</label>
+                <InputMask
+                  placeholder='SMS kod'
+                  name='sms'
+                  value={botCode}
+                  onChange={(e) => setBotCode(e.target.value)}
+                  mask='99999'
+                  >
+              </InputMask>
+                <p>1:34</p>
+              </div>
+              <button
+              onClick={() => {
+                handleConfirmSubmit()
+                setModalConfirmVisible(false)
+                setModalRegisterParolVisible(true)
+              }}
+              className='mt-3 py-3 w-full' data-type='primary' >Yuborish</button>
+              <button onClick={() => {
+                setModalLoginVisible(true)
+                setModalRegisterVisible(false)
+                setModalActionBotVisible(false)
+                setModalConfirmVisible(false)
+              }} className='sign-up' >Kirish</button>
+            <button onClick={() => {
+               setModalLoginVisible(false)
+               setModalRegisterVisible(true)
+               setModalActionBotVisible(false)
+               setModalConfirmVisible(false)
             }} className='re-password'>Ro'yxatdan o'tish</button>
           </Modal>
         </div>

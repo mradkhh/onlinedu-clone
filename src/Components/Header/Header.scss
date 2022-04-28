@@ -171,8 +171,6 @@
           width: 22px;
           height: 22px;
           object-fit: contain;
-
-          
         }
       }
 
@@ -185,5 +183,26 @@
         line-height: 100%;
       }
     }
+  }
+}
+.password__field {
+  position: relative;
+
+  label {
+    margin-bottom: 8px;
+    font-size: 12px;
+    line-height: 100%;
+    color: #898da6;
+  }
+
+  .eye {
+    padding: 2px;
+    position: absolute;
+    bottom: 12px;
+    right: 10px;
+    cursor: pointer;
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
   }
 }

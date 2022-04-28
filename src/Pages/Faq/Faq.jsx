@@ -26,7 +26,10 @@ const Faq = () => {
       <Header/>
       {
         loading
-        ? <Spin wrapperClassName='spinner-wrapper' size='large' />
+        ? <div className="spinner-faq-wrapper spinner-wrapper">
+             <Spin wrapperClassName='spinner-wrapper' size='large' />
+           </div>
+
          : <main id="faq__page">
          <div className="container">
            <nav  data-aos='fade-right' className="breadcrumb mt-6 mb-8 rounded-md w-full">
