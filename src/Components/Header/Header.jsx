@@ -450,7 +450,11 @@ const Header = () => {
                 onChange={(e) => setPasswordValue(e.target.value)}
                 type={passwordShow ? 'text' : 'password'} />
               </div>
-              <button className='mt-3 py-3 w-full' data-type='primary' >Yuborish</button>
+              <button
+              onClick={() => {
+                setModalRegisterParolVisible(false)
+              }}
+              className='mt-3 py-3 w-full' data-type='primary' type='submit'>Yuborish</button>
               <button onClick={() => {
                 setModalLoginVisible(true)
                 setModalRegisterVisible(false)
@@ -475,8 +479,6 @@ const Header = () => {
           >
             <h3>SMSni tasdiqlash</h3>
             <form onSubmit={handleConfirmSubmit} className='bot__modal-form'>
-
-            </form>
             <div className="password__field w-full">
                 <label htmlFor="password">SMS kod</label>
                 <InputMask
@@ -486,16 +488,47 @@ const Header = () => {
                   onChange={(e) => setBotCode(e.target.value)}
                   mask='99999'
                   >
-              </InputMask>
+                </InputMask>
                 <p>1:34</p>
               </div>
               <button
               onClick={() => {
-                handleConfirmSubmit()
                 setModalConfirmVisible(false)
                 setModalRegisterParolVisible(true)
               }}
-              className='mt-3 py-3 w-full' data-type='primary' >Yuborish</button>
+              className='mt-3 py-3 w-full' data-type='primary' type='submit'>Yuborish</button>
+            </form>
+              <button onClick={() => {
+                setModalLoginVisible(true)
+                setModalRegisterVisible(false)
+                setModalActionBotVisible(false)
+                setModalConfirmVisible(false)
+              }} className='sign-up' >Kirish</button>
+            <button onClick={() => {
+               setModalLoginVisible(false)
+               setModalRegisterVisible(true)
+               setModalActionBotVisible(false)
+               setModalConfirmVisible(false)
+            }} className='re-password'>Ro'yxatdan o'tish</button>
+          </Modal>
+          {/* Success modal  */}
+          <Modal
+            style={{ top: 100}}
+            visible={modalFinishSuccessVisible}
+            footer={null}
+            onCancel={() => setModalFinishSuccessVisible(false)}
+            width={570}
+          >
+            <h3>Tabriklaymiz!</h3>
+            <form onSubmit={handleFinishSuccessSubmit} className='bot__modal-form'>
+            </form>
+
+              <button
+              onClick={() => {
+                setModalConfirmVisible(false)
+                setModalRegisterParolVisible(true)
+              }}
+              className='mt-3 py-3 w-full' data-type='primary' type='submit'>Yuborish</button>
               <button onClick={() => {
                 setModalLoginVisible(true)
                 setModalRegisterVisible(false)
