@@ -50,13 +50,13 @@ const Header = () => {
   const [modalActionBotVisible, setModalActionBotVisible] = useState(false)
   const [drawerVisible, setDrawerVisible] = useState(false)
   const [passwordShow, setPasswordShow] = useState(false)
+  const [registerDateToTelegram, setRegisterDateToTelegram] = useState([])
+  console.log(registerDateToTelegram)
 
 
   const handleLoginSubmit = (e) => {
     e.preventDefault()
-    // console.log(phoneValue)
     const parsePhone = filterNumber(phoneValue)
-    console.log(parsePhone)
     if(12 === parsePhone.length && passwordValue.length >= 8 && passwordValue.length <= 13) {
       console.log("Success: ", parsePhone, passwordValue)
     } else if(12 !== filterNumber(phoneValue).length) {
@@ -69,24 +69,22 @@ const Header = () => {
 
   }
 
-  const handleRegisterSubmit = (e, phoneValue) => {
+  const handleRegisterSubmit = (e) => {
     e.preventDefault()
     const parsePhone = filterNumber(phoneValue)
     if(12 === parsePhone.length) {
       Request()
         .post('/register', {login: parsePhone})
+        .then(res => setRegisterDateToTelegram(res?.data))
+        .catch(err => console.log(err))
     } else if(12 !== filterNumber(phoneValue).length) {
       setErrors({...errors, phoneError: true})
-      console.log("number err")
     } else {
       setErrors({...errors, passwordValueError: true})
-      console.log("pass err")
     }
   }
   const handleForgotPassSubmit = (e, phoneValue) => {
     e.preventDefault()
-    const resultPhone = filterNumber(phoneValue)
-    console.log("Validated: ",resultPhone)
   }
   const handleBotSubmit = (e) => {
     e.preventDefault()
