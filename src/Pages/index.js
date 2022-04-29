@@ -13,6 +13,7 @@ import Stat from './Stat/Stat';
 import Vebinar from './Vebinar/Vebinar';
 import Vebinar2 from './Vebinar/Vebinar2';
 import CreateCourse from './CreateCourse/CreateCourse'
+import CreateCourseStep1 from './CreateCourse/CreateCourseStep1';
 
 export {
   Categories,
@@ -29,5 +30,6 @@ export {
   Stat,
   Vebinar,
   Vebinar2,
-  CreateCourse
+  CreateCourse,
+  CreateCourseStep1
 }

@@ -1,0 +1,71 @@
+.create-course__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+
+  &-info {
+    background-color: var(--whiteColor);
+    border-radius: 10px;
+    box-shadow: var(--boxShadow);
+    padding: 24px;
+
+    > h5 {
+      margin-bottom: 24px;
+    }
+
+    .form {
+      display: flex;
+      justify-content: start;
+      align-items: flex-start;
+      flex-direction: column;
+
+      label {
+        margin-bottom: 8px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 100%;
+      }
+      textarea {
+        width: 100%;
+        background-color: var(--bgColor);
+        padding: 13px 16px;
+        outline: none;
+        border-radius: 8px;
+        margin-bottom: 24px;
+      }
+
+      input {
+        margin-bottom: 24px;
+      }
+    }
+
+    &-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 270px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 16px;
+    box-shadow: var(--boxShadow);
+    background-color: var(--whiteColor);
+
+    button {
+      width: 100%;
+      margin-top: 24px;
+    }
+  }
+
+
+
+}

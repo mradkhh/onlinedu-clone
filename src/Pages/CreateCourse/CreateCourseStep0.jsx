@@ -1,5 +1,6 @@
 import { Modal, Select } from 'antd';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './createCourseStep0.scss';
 
 const CreateCourseStep0 = () => {
@@ -42,9 +43,9 @@ const CreateCourseStep0 = () => {
               <Option value="developer">Dasturlash</Option>
               <Option value="dizayn">Grafik dizayn</Option>
             </Select>
-        <button onClick={() => {
+        <Link to='/dashboard/create/step1' onClick={() => {
           setModalCreateVisible(false)
-        }} data-type='primary' type='submit'>Создать</button>
+        }} data-type='primary' type='submit'>Создать</Link>
         </form>
       </Modal>
         </div>
