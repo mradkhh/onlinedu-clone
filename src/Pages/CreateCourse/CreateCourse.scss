@@ -1,0 +1,41 @@
+#create-course__page {
+  @media (max-width: 1023px) {
+    background-color: var(--bgColor);
+  }
+  .create-course {
+    padding-bottom: 90px;
+    background-color: var(--bgColor);
+    padding: 32px;
+    width: 100%;
+
+    .breadcrumb {
+      margin-bottom: 24px;
+    }
+
+    &__title {
+      margin-bottom: 24px;
+    }
+
+    &__info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+
+      button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: max-content;
+        padding-block: 11px;
+        gap: 8px;
+        width: 100%;
+      }
+      > * {
+        max-width: max-content;
+        width: 100%;
+      }
+
+    }
+  }
+}

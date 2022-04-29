@@ -15,6 +15,7 @@ import {
   Stat,
   Vebinar,
   Vebinar2,
+  CreateCourse
 } from 'Pages/index';
 import { useEffect, useState } from 'react';
 import { I18nextProvider } from 'react-i18next';
@@ -57,6 +58,8 @@ function App() {
           <Route path='/dashboard/qualification' element={<Qualification />} />
           <Route path='/dashboard/drection' element={<Drection />} />
           <Route path='/dashboard/payment' element={<Payment />} />
+          <Route path='/dashboard/create/' element={<CreateCourse />} />
+          <Route path='/dashboard/create/step1' element={<CreateCourse />} />
           <Route path='/*' element={<NotFound />} />
         </Routes>
       </BrowserRouter>

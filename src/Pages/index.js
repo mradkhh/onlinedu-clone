@@ -12,6 +12,7 @@ import Qualification from './Qualification/Qualification';
 import Stat from './Stat/Stat';
 import Vebinar from './Vebinar/Vebinar';
 import Vebinar2 from './Vebinar/Vebinar2';
+import CreateCourse from './CreateCourse/CreateCourse'
 
 export {
   Categories,
@@ -27,5 +28,6 @@ export {
   Qualification,
   Stat,
   Vebinar,
-  Vebinar2
+  Vebinar2,
+  CreateCourse
 }

@@ -1,4 +1,4 @@
-import { Checkbox, Drawer, Dropdown, Modal, Spin } from 'antd'
+import { Checkbox, Drawer, Dropdown, Modal } from 'antd'
 import "antd/dist/antd.css"
 import { useEffect, useState } from 'react'
 import InputMask from 'react-input-mask'
@@ -48,12 +48,13 @@ const Header = () => {
   const [modalRegisterVisible, setModalRegisterVisible] = useState(false)
   const [modalForgotPassVisible ,setModalForgotPassVisible] = useState(false)
   const [modalActionBotVisible, setModalActionBotVisible] = useState(false)
+  const [modalRegisterParolVisible, setModalRegisterParolVisible] = useState(false)
+  const [modalConfirmVisible, setModalConfirmVisible] = useState(false)
+  const [modalFinishSuccessVisible, setModalFinishSuccessVisible] = useState(false)
   const [drawerVisible, setDrawerVisible] = useState(false)
   const [passwordShow, setPasswordShow] = useState(false)
   const [registerDataToTelegram, setRegisterDataToTelegram] = useState([])
   const [registerSmsCode, setRegisterSmsCode] = useState([])
-  const [modalRegisterParolVisible, setModalRegisterParolVisible] = useState(false)
-  const [modalConfirmVisible, setModalConfirmVisible] = useState(false)
   // const [registerOnLoading, setRegisterOnLoading] = useState(false)
 
 
@@ -119,6 +120,10 @@ const Header = () => {
 
   }
   const handleRegisterParolSubmit = (e) => {
+    e.preventDefault()
+
+  }
+  const handleFinishSuccessSubmit = (e) => {
     e.preventDefault()
 
   }
@@ -479,24 +484,24 @@ const Header = () => {
           >
             <h3>SMSni tasdiqlash</h3>
             <form onSubmit={handleConfirmSubmit} className='bot__modal-form'>
-            <div className="password__field w-full">
-                <label htmlFor="password">SMS kod</label>
-                <InputMask
-                  placeholder='SMS kod'
-                  name='sms'
-                  value={botCode}
-                  onChange={(e) => setBotCode(e.target.value)}
-                  mask='99999'
-                  >
-                </InputMask>
-                <p>1:34</p>
-              </div>
-              <button
-              onClick={() => {
-                setModalConfirmVisible(false)
-                setModalRegisterParolVisible(true)
-              }}
-              className='mt-3 py-3 w-full' data-type='primary' type='submit'>Yuborish</button>
+              <div className="password__field w-full">
+                  <label htmlFor="password">SMS kod</label>
+                  <InputMask
+                    placeholder='SMS kod'
+                    name='sms'
+                    value={botCode}
+                    onChange={(e) => setBotCode(e.target.value)}
+                    mask='99999'
+                    >
+                  </InputMask>
+                  <p>1:34</p>
+                </div>
+                <button
+                onClick={() => {
+                  setModalConfirmVisible(false)
+                  setModalRegisterParolVisible(true)
+               }}
+               className='mt-3 py-3 w-full' data-type='primary' type='submit'>Yuborish</button>
             </form>
               <button onClick={() => {
                 setModalLoginVisible(true)
@@ -511,6 +516,8 @@ const Header = () => {
                setModalConfirmVisible(false)
             }} className='re-password'>Ro'yxatdan o'tish</button>
           </Modal>
+
+
           {/* Success modal  */}
           <Modal
             style={{ top: 100}}
@@ -520,15 +527,13 @@ const Header = () => {
             width={570}
           >
             <h3>Tabriklaymiz!</h3>
-            <form onSubmit={handleFinishSuccessSubmit} className='bot__modal-form'>
-            </form>
-
+            <p>Siz muvaffaqiyatli ro'yxatdan o'tdingiz</p>
               <button
               onClick={() => {
                 setModalConfirmVisible(false)
                 setModalRegisterParolVisible(true)
               }}
-              className='mt-3 py-3 w-full' data-type='primary' type='submit'>Yuborish</button>
+              className='mt-3 py-3 w-full' data-type='primary' type='submit'>Yopish</button>
               <button onClick={() => {
                 setModalLoginVisible(true)
                 setModalRegisterVisible(false)

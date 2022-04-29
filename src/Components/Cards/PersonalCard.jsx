@@ -1,4 +1,5 @@
 import './PersonalCard.scss'
+
 const PersonalCard = ({name, image, date}) => {
   return (
     <div className="card-personal">

@@ -1,7 +1,8 @@
 const option = {
-  delay: 200,
   debounceDelay: 50,
-  duration: 1000,
+  duration: 500,
+  once: true,
+  mirror: true,
   disableMutationObserver: false
 }
 export default option
