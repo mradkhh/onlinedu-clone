@@ -6,6 +6,10 @@ const CreateCourseStep0 = () => {
   const {Option} = Select
   const [modalCreateVisible, setModalCreateVisible ] = useState(false)
 
+  const handleSubmit = (e) => {
+    e.preventDefault()
+  }
+
   return (
     <>
         <h4 data-aos='fade-right' className="create-course__title">Авторские курсы</h4>
@@ -28,7 +32,7 @@ const CreateCourseStep0 = () => {
         onCancel={() => setModalCreateVisible(false)}
         width={570}
       >
-        <form>
+        <form onSubmit={handleSubmit}>
         <h3>Добавить новый</h3>
 
         <label htmlFor="">Тип материала</label>
