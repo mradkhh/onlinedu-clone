@@ -78,18 +78,24 @@ const CreateCourseStep1 = () => {
                   </Select>
 
                   <div className="type">
-                    <label htmlFor="">
-                    Выберите тип курсов </label>
-                    <Select defaultValue="active" style={{width: '100%'}} >
-                      <Option value="active">Kurs turini tanlang</Option>
-                      <Option value="paid">Qayta tayyorlash</Option>
-                      <Option value="free">O'zbekcha</Option>
-                     </Select>
+                    <div>
+                      <label htmlFor="">
+                      Выберите тип курсов </label>
+                      <Select defaultValue="active" style={{width: '100%'}} >
+                        <Option value="active">Kurs turini tanlang</Option>
+                        <Option value="paid">Qayta tayyorlash</Option>
+                        <Option value="free">O'zbekcha</Option>
+                      </Select>
+                    </div>
 
+                    <div>
                     <label htmlFor="">
                     Укажите продолжительность курса </label>
-                    <input type="text" />
-                    <input type="text" />
+                    <div className='time'>
+                      <input type="text" />
+                      <input type="text" />
+                    </div>
+                    </div>
 
                   </div>
                   <label htmlFor="">

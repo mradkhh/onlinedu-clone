@@ -261,6 +261,24 @@ a[type='button']:hover {
   background-color: var(--greenHoverColor);
 }
 
+button[data-type='create'] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  color: var(--grayColor);
+
+  svg {
+    path {
+      fill: var(--grayColor);
+    }
+  }
+}
+
 ::-webkit-scrollbar {
   width: 4px;
   background-color: var(--lightGrayColor);

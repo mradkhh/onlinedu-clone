@@ -16,7 +16,8 @@ import {
   Vebinar,
   Vebinar2,
   CreateCourse,
-  CreateCourseStep1
+  CreateCourseStep1,
+  CreateCourseStep2
 } from 'Pages/index';
 import { useEffect, useState } from 'react';
 import { I18nextProvider } from 'react-i18next';
@@ -61,6 +62,7 @@ function App() {
           <Route path='/dashboard/payment' element={<Payment />} />
           <Route path='/dashboard/create/' element={<CreateCourse />} />
           <Route path='/dashboard/create/step1' element={<CreateCourseStep1 />} />
+          <Route path='/dashboard/create/step2' element={<CreateCourseStep2 />} />
           <Route path='/*' element={<NotFound />} />
         </Routes>
       </BrowserRouter>
