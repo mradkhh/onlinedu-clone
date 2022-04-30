@@ -96,6 +96,16 @@ p {
   color: var(--grayColor);
 }
 
+a.active {
+  color: var(--greenColor);
+
+  svg {
+    path {
+      fill: var(--greenColor)
+    }
+  }
+}
+
 input {
   outline: none;
   width: 100%;
