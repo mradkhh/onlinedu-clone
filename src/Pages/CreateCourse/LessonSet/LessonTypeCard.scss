@@ -1,16 +1,17 @@
 #lesson-type__card {
   .card {
-    padding: 24px;
+    box-shadow: none;
+    border-radius: 0;
     .select__btn {
       display: flex;
       justify-content: flex-end;
       align-items: center;
       gap: 24px;
       a {
-        padding: 16px 32px;
+        padding: 10px 16px;
         font-style: normal;
         font-weight: 500;
-        font-size: 18px;
+        font-size: 1rem;
         line-height: 100%;
         border-radius: 8px;
         color: var(--grayColor);
@@ -19,10 +20,10 @@
 
       a.active {
         border: 2px solid var(--greenColor);
-        padding: 16px 32px;
+        padding: 10px 16px;
         font-style: normal;
         font-weight: 500;
-        font-size: 18px;
+        font-size: 1rem;
         line-height: 100%;
         border-radius: 8px;
         color: var(--whiteColor);
