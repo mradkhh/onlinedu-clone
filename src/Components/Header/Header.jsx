@@ -179,7 +179,7 @@ const Header = () => {
           </div>
           </Link>
           <Link
-          to="/faq"
+          to="/dashboard"
           className='hidden lg:block header__info-btn' data-type='outline'>Yo'riqnoma</Link>
 
           <div className="hidden lg:flex input__field">

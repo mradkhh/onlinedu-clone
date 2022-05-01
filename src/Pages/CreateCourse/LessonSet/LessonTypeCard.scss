@@ -1,0 +1,33 @@
+#lesson-type__card {
+  .card {
+    padding: 24px;
+    .select__btn {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 24px;
+      a {
+        padding: 16px 32px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 100%;
+        border-radius: 8px;
+        color: var(--grayColor);
+        border: 2px solid var(--grayColor);
+      }
+
+      a.active {
+        border: 2px solid var(--greenColor);
+        padding: 16px 32px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 100%;
+        border-radius: 8px;
+        color: var(--whiteColor);
+        background-color: var(--greenColor);
+      }
+    }
+  }
+}

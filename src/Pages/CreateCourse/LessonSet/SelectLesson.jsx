@@ -1,14 +1,14 @@
 import { Drawer } from 'antd';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import Footer from '../../Components/Footer/Footer';
-import Header from '../../Components/Header/Header';
-import MobileSideMenu from '../../Components/SideMenu/MobileSideMenu';
-import SideMenu from '../../Components/SideMenu/SideMenu';
-import CreateCourseStep0 from './CreateCourseStep0'
-import './CreateCourse.scss';
+import { Link, Outlet } from 'react-router-dom';
+import Footer from 'Components/Footer/Footer';
+import Header from 'Components/Header/Header';
+import MobileSideMenu from 'Components/SideMenu/MobileSideMenu';
+import SideMenu from 'Components/SideMenu/SideMenu';
+import LessonTypeCard from './LessonTypeCard';
+import './SelectLesson.scss';
 
-const CreateCourse = () => {
+const SelectLesson = () => {
   const [visibleSidebar,setVisibleSidebar] = useState(false)
   return (
     <>
@@ -49,8 +49,12 @@ const CreateCourse = () => {
                   </span></li>
                 <li className="text-grayColor">Мой профиль</li>
               </ol>
-            </nav>
-            <CreateCourseStep0/>
+          </nav>
+          <h5 className="create-course__title">Добавления заданий на первый урок</h5>
+          <div className="create-course__lesson">
+            <LessonTypeCard/>
+            <Outlet/>
+          </div>
         </div>
       </div>
     </div>
@@ -59,4 +63,4 @@ const CreateCourse = () => {
   )
 }
 
-export default CreateCourse
+export default SelectLesson
