@@ -47,23 +47,23 @@ function App() {
         <ToastContainer/>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/categories' element={<Categories />} />
-          <Route path='/course' element={<Course />} />
-          <Route path='/vebinar' element={<Vebinar />} />
-          <Route path='/vebinar2' element={<Vebinar2 />} />
-          <Route path='/faq' element={<Faq />} />
-          <Route path='/expert' element={<Expert />} />
-          <Route path='/dashboard/' element={<Profile />} />
-          <Route path='/dashboard/profile' element={<Profile />} />
-          <Route path='/dashboard/edit' element={<Edit />} />
-          <Route path='/dashboard/stat' element={<Stat />} />
-          <Route path='/dashboard/qualification' element={<Qualification />} />
-          <Route path='/dashboard/drection' element={<Drection />} />
-          <Route path='/dashboard/payment' element={<Payment />} />
-          <Route path='/dashboard/create/' element={<CreateCourse />} />
-          <Route path='/dashboard/create/step1' element={<CreateCourseStep1 />} />
-          <Route path='/dashboard/create/step2' element={<CreateCourseStep2 />} />
-          <Route path='/*' element={<NotFound />} />
+          <Route path='categories' element={<Categories />} />
+          <Route path='course' element={<Course />} />
+          <Route path='vebinar' element={<Vebinar />} />
+          <Route path='vebinar2' element={<Vebinar2 />} />
+          <Route path='faq' element={<Faq />} />
+          <Route path='expert' element={<Expert />} />
+          <Route path='dashboard' element={<Profile />} >
+            <Route path='profile' element={<Profile />} />
+            <Route path='edit' element={<Edit />} />
+            <Route path='stat' element={<Stat />} />
+            <Route path='qualification' element={<Qualification />} />
+            <Route path='drection' element={<Drection />} />
+            <Route path='payment' element={<Payment />} />
+            <Route path='create' element={<CreateCourse />} />
+            <Route path='create/step1' element={<CreateCourseStep1 />} />
+          </Route>
+          <Route path='*' element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </I18nextProvider>

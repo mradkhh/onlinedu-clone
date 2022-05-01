@@ -1,0 +1,1 @@
+export {addToBasket} from './reducer/action'
