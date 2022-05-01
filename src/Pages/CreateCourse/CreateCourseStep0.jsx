@@ -38,10 +38,10 @@ const CreateCourseStep0 = () => {
 
         <label htmlFor="">Тип материала</label>
         <Select defaultValue="active" style={{width: '100%'}} >
-              <Option value="active">Курс</Option>
-              <Option value="marketing">Marketing</Option>
-              <Option value="developer">Dasturlash</Option>
-              <Option value="dizayn">Grafik dizayn</Option>
+              <Option value="active">Тест</Option>
+              <Option value="marketing">Видеоурок</Option>
+              <Option value="developer">Вебинар</Option>
+              <Option value="dizayn">Текст</Option>
             </Select>
         <Link to='/dashboard/create/step1' onClick={() => {
           setModalCreateVisible(false)

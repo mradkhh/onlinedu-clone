@@ -5,12 +5,15 @@
   gap: 16px;
 
   &-info {
+    width: 100%;
+  }
+
+  &-container {
     background-color: var(--whiteColor);
     border-radius: 10px;
     box-shadow: var(--boxShadow);
     padding: 24px;
     width: 100%;
-
     > h5 {
       margin-bottom: 24px;
     }
@@ -34,46 +37,85 @@
         outline: none;
         border-radius: 8px;
         margin-bottom: 24px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 160%;
+        color: var(--blueColor);
       }
 
       input {
         margin-bottom: 24px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 160%;
+        color: var(--blueColor);
       }
 
-      input[type='file'] {
-        max-width: max-content;
-      }
-        &-footer {
-          display: flex;
-          justify-content: space-between;
-          align-items: baseline;
-          gap: 12px;
-          width: 100%;
-
-          a {
-            padding: 12px;
-            max-width: max-content;
-          }
+      .file__input {
+        position: relative;
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        flex-direction: column;
+        input[type='file'] {
+          max-width: fit-content;
+          height: 40px;
+          opacity: 0;
         }
 
-        .type {
+        .original__input {
+          z-index: 12;
+        }
+
+        .fake__input {
+          position: absolute;
+          top: 25px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 4px;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 100%;
+          cursor: pointer;
+          padding: 13px 16px;
+          border-radius: 8px;
+          background-color: var(--bgColor);
+        }
+      }
+      &-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 12px;
+        width: 100%;
+
+        a {
+          padding: 12px;
+          max-width: max-content;
+        }
+      }
+
+      .type {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+
+        .time {
           display: flex;
           justify-content: space-between;
           align-items: center;
           gap: 12px;
-
-          .time {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 12px;
-            input {
-              margin: 0;
-            }
+          input {
+            margin: 0;
           }
         }
+      }
     }
-
   }
 
   &-card {
@@ -94,7 +136,4 @@
       margin-top: 24px;
     }
   }
-
-
-
 }

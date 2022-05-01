@@ -1,0 +1,18 @@
+.action-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+  width: 100%;
+
+  button {
+    padding: 11px 16px;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 100%;
+  }
+
+  button[data-type='gray'] {
+    color: #898DA6;
+   }
+}

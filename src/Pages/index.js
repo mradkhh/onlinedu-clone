@@ -15,6 +15,7 @@ import Vebinar2 from './Vebinar/Vebinar2';
 import CreateCourse from './CreateCourse/CreateCourse'
 import CreateCourseStep1 from './CreateCourse/CreateCourseStep1';
 import CreateCourseStep2 from './CreateCourse/CreateCourseStep2';
+import CreateCourseStep3 from './CreateCourse/CreateCourseStep3';
 export {
   Categories,
   Course,
@@ -32,5 +33,6 @@ export {
   Vebinar2,
   CreateCourse,
   CreateCourseStep1,
-  CreateCourseStep2
+  CreateCourseStep2,
+  CreateCourseStep3,
 }

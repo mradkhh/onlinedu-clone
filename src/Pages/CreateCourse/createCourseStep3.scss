@@ -1,0 +1,18 @@
+.form.step3 {
+  width: 60%;
+
+  .date {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+
+    div {
+      width: 100%;
+      input {
+        width: 100%;
+      }
+    }
+  }
+}
