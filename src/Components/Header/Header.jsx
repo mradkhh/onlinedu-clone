@@ -180,7 +180,7 @@ const Header = () => {
           </Link>
           <Link
           to="/dashboard"
-          className='hidden lg:block header__info-btn' data-type='outline'>Yo'riqnoma</Link>
+          className='hidden lg:block header__info-btn' data-type='outline'>Dashboard</Link>
 
           <div className="hidden lg:flex input__field">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
