@@ -4,7 +4,7 @@
   align-items: flex-start;
   gap: 16px;
 
-  &-info {
+  &-list {
     background-color: var(--whiteColor);
     border-radius: 10px;
     box-shadow: var(--boxShadow);
@@ -15,65 +15,13 @@
       margin-bottom: 24px;
     }
 
-    .form {
-      display: flex;
-      justify-content: start;
-      align-items: flex-start;
-      flex-direction: column;
-
-      label {
-        margin-bottom: 8px;
-        font-weight: 500;
-        font-size: 12px;
-        line-height: 100%;
-      }
-      textarea {
-        width: 100%;
-        background-color: var(--bgColor);
-        padding: 13px 16px;
-        outline: none;
-        border-radius: 8px;
-        margin-bottom: 24px;
-      }
-
-      input {
-        margin-bottom: 24px;
-      }
-
-      input[type='file'] {
-        max-width: max-content;
-      }
-        &-footer {
-          display: flex;
-          justify-content: space-between;
-          align-items: baseline;
-          gap: 12px;
-          width: 100%;
-
-          a {
-            padding: 12px;
-            max-width: max-content;
-          }
-        }
-
-        .type {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          gap: 12px;
-
-          .time {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 12px;
-            input {
-              margin: 0;
-            }
-          }
-        }
+    > p {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 100%;
+      margin-bottom: 8px;
     }
-
   }
 
   &-card {
@@ -94,7 +42,4 @@
       margin-top: 24px;
     }
   }
-
-
-
 }
