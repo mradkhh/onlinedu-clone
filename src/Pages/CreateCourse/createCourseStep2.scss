@@ -87,20 +87,24 @@
           }
 
           .add-lesson {
-            display: flex;
+            form {
+              display: flex;
             justify-content: space-between;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
+            }
 
             input {
-              padding: 11px 16px;
+              padding: 9px 16px;
             }
 
             button {
-              padding: 11px 16px;
+              padding: 10px 16px;
+              font-weight: 500;
+              font-size: 1rem;
             }
           }
-          button {
+          > button {
             padding: 4px 4px 4px 0;
             margin-block: 24px;
           }

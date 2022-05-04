@@ -4,7 +4,15 @@ const initialState = {
   coursesList: [
     {
       courseTitle: 'Birinchi kurs nomi',
-      courseLesson: [
+      courseLessons: [
+        'Birinchi topshiriq',
+        'Ikkinchi topshiriq',
+        'Uchinchi topshiriq'
+      ]
+    },
+    {
+      courseTitle: 'Ikkinchi kurs nomi',
+      courseLessons: [
         'Birinchi topshiriq',
         'Ikkinchi topshiriq',
         'Uchinchi topshiriq'
