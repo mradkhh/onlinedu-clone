@@ -21,10 +21,13 @@ const CreateCourseStep2 = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    const newLesson = [{...coursesList}, {...lessonValue}]
-    console.log(newLesson)
-    const newCourse = [...coursesList, {...newLesson}]
-    console.log(newCourse)
+    const copy = [...coursesList ]
+    console.log(copy);
+    const getItemById = copy.find(item => item.id === 2)
+    const newLesson = getItemById['courseLessons']
+    const pushLesson = newLesson.push(lessonValue)
+    // const newCourse = copy.filter(item => item.id !== pushLesson.id)
+    // console.log(newCourse)
     // dispatch(createCourse(newCourse))
   }
   return (
