@@ -101,7 +101,7 @@ a.active {
 
   svg {
     path {
-      fill: var(--greenColor)
+      fill: var(--greenColor);
     }
   }
 }
@@ -447,14 +447,25 @@ iframe {
     border-color: var(--greenColor);
   }
 
-  .ant-checkbox-inner:hover {
+  .ant-checkbox:hover .ant-checkbox-inner {
     border-color: var(--greenColor);
   }
 
   .ant-checkbox-wrapper {
     align-items: baseline;
+    margin-left: 0;
 
-    .ant-checkbox-input:focus {
+    .ant-checkbox-input:focus + .ant-checkbox-inner {
+      border-color: var(--greenColor);
+    }
+    .ant-checkbox-input:hover + .ant-checkbox-inner {
+      border-color: var(--greenColor);
+    }
+    .ant-checkbox-input:checked + .ant-checkbox-inner {
+      border-color: var(--greenColor);
+    }
+
+    .ant-checkbox-inner:hover {
       border-color: var(--greenColor);
     }
 
@@ -469,4 +480,26 @@ iframe {
 ::selection {
   background-color: var(--greenColor);
   color: var(--whiteColor);
+}
+
+label {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  color: var(--grayColor);
+  margin-bottom: 8px;
+}
+
+input,
+textarea {
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+  background-color: var(--bgColor);
+  outline: none;
+  padding: 13px 16px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
 }

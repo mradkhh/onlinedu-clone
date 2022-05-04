@@ -1,15 +1,24 @@
-import { ADD_TO_BASKET } from "./type";
+import { CREATE_COURSE } from "./type";
 
 const initialState = {
-  basket: []
+  coursesList: [
+    {
+      courseTitle: 'Birinchi kurs nomi',
+      courseLesson: [
+        'Birinchi topshiriq',
+        'Ikkinchi topshiriq',
+        'Uchinchi topshiriq'
+      ]
+    }
+  ]
 }
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case ADD_TO_BASKET:
+    case CREATE_COURSE:
       return {
         ...state,
-        basket: action.basket
+        coursesList: action.course
       }
     default:
       return state

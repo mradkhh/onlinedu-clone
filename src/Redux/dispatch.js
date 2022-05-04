@@ -1,1 +1,1 @@
-export {addToBasket} from './reducer/action'
+export {createCourse} from './reducer/action'

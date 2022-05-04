@@ -1,8 +1,8 @@
-import { ADD_TO_BASKET } from "./type";
+import { CREATE_COURSE } from "./type";
 
-export const addToBasket = (basket) => {
+export const createCourse = (course) => {
   return {
-    type: ADD_TO_BASKET,
-    basket
+    type: CREATE_COURSE,
+    courses: course
   }
 }

@@ -1,1 +1,1 @@
-export const ADD_TO_BASKET = 'ADD_TO_BASKET'
+export const CREATE_COURSE = 'CREATE_COURSE'
