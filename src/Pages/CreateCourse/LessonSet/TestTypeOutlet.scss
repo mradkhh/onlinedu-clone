@@ -1,6 +1,10 @@
 #test__type {
   .test {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     &__question {
+      width: 100%;
       &-title {
         font-style: normal;
         font-weight: 500;
@@ -83,6 +87,10 @@
               justify-content: end;
               align-items: center;
               gap: 8px;
+
+              > div {
+                cursor: pointer;
+              }
             }
           }
 

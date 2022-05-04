@@ -1,4 +1,5 @@
 import './TestTypeOutlet.scss'
+import { Radio } from 'antd';
 
 const TestTypeOutlet = () => {
   return (
@@ -109,6 +110,21 @@ const TestTypeOutlet = () => {
                 </svg>
               Добавить новый вопрос</button>
           </div>
+        </div>
+        <div className="test__score">
+          <div className="test__score-title">Укажите балл</div>
+          <div className="test__score-num">3.0</div>
+          <div className="test__score-num">0.0</div>
+          <div className="test__score-num">1.5</div>
+          <div className="test__score-num">1.5</div>
+          <div className="test__score-num">0.0</div>
+        </div>
+        <div className="test__type">
+          <div className="test__type-title">Тип вопроса</div>
+          <Radio.Group >
+            <Radio value={1}>Один ответ</Radio>
+            <Radio value={2}>Несколько ответов</Radio>
+          </Radio.Group>
         </div>
       </div>
 
