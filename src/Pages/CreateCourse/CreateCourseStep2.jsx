@@ -21,14 +21,17 @@ const CreateCourseStep2 = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    const copy = [...coursesList ]
-    console.log(copy);
-    const getItemById = copy.find(item => item.id === 2)
-    const newLesson = getItemById['courseLessons']
-    const pushLesson = newLesson.push(lessonValue)
-    // const newCourse = copy.filter(item => item.id !== pushLesson.id)
-    // console.log(newCourse)
-    // dispatch(createCourse(newCourse))
+    const newCoursesList =  coursesList.map((course) => {
+      if (course?.id === 2 ) {
+        const courseLesson = course?.courseLessons
+        return {...course, courseLessons: [...courseLesson, {item: lessonValue}]}
+      }
+      else {
+        return course
+      }
+    })
+    console.log(newCoursesList)
+    dispatch(createCourse(newCoursesList))
   }
   return (
     <>
@@ -76,9 +79,9 @@ const CreateCourseStep2 = () => {
                 <div className="create-course__content-container">
                   <h5>Материалы курса</h5>
                   <p>Добавить раздел курса</p>
-                  <div className="course__lists">
+                  { coursesList && (<div className="course__lists">
                     {
-                      coursesList.map((item, i) => (
+                      coursesList?.map((item, i) => (
                         <div key={i} className="list">
                       <div className="list__header">
                         <div className="icon">
@@ -97,7 +100,7 @@ const CreateCourseStep2 = () => {
                       </div>
                       <div className="list__items">
                         {
-                          item.courseLessons.map((item, i) => (
+                          item?.courseLessons?.map((item, i) => (
                             <div key={i} className="item">
                           <div className="icon">
                             <svg width={16} height={16} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -106,7 +109,7 @@ const CreateCourseStep2 = () => {
                                 </g>
                               </svg>
                           </div>
-                          <h6 className='title' >{item}</h6>
+                          <h6 className='title' >{item.item}</h6>
                           <div className="edit">
                             <svg width={16} height={16} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M14.6667 4.82733C14.6672 4.73959 14.6503 4.65262 14.6172 4.57139C14.584 4.49017 14.5351 4.41629 14.4733 4.354L11.6467 1.52733C11.5844 1.46554 11.5105 1.41666 11.4293 1.38348C11.348 1.3503 11.2611 1.33349 11.1733 1.334C11.0856 1.33349 10.9986 1.3503 10.9174 1.38348C10.8362 1.41666 10.7623 1.46554 10.7 1.52733L8.81332 3.414L1.52666 10.7007C1.46487 10.763 1.41599 10.8368 1.38281 10.9181C1.34963 10.9993 1.33282 11.0863 1.33332 11.174V14.0007C1.33332 14.1775 1.40356 14.347 1.52859 14.4721C1.65361 14.5971 1.82318 14.6673 1.99999 14.6673H4.82666C4.91994 14.6724 5.01325 14.6578 5.10054 14.6245C5.18782 14.5912 5.26713 14.5399 5.33332 14.474L12.58 7.18733L14.4733 5.334C14.5342 5.26938 14.5838 5.19502 14.62 5.114C14.6264 5.06086 14.6264 5.00714 14.62 4.954C14.6231 4.92296 14.6231 4.8917 14.62 4.86066L14.6667 4.82733ZM4.55332 13.334H2.66666V11.4473L9.28666 4.82733L11.1733 6.714L4.55332 13.334ZM12.1133 5.774L10.2267 3.88733L11.1733 2.94733L13.0533 4.82733L12.1133 5.774Z" fill="#26CAAC" />
@@ -122,7 +125,7 @@ const CreateCourseStep2 = () => {
                         }
                       <div className="add-lesson">
                         <form onSubmit={handleSubmit}>
-                          <input value={lessonValue} onChange={(e) => setLessonValue(e.target.value)} type="text" />
+                          <input value={lessonValue} key={item.id} onChange={(e) => setLessonValue(e.target.value)} type="text" />
                           <button data-type='primary' type='submit'>Saqlash</button>
                         </form>
                       </div>
@@ -141,7 +144,9 @@ const CreateCourseStep2 = () => {
                         <path d="M10.6665 5.33366H6.6665V1.33366C6.6665 1.15685 6.59627 0.987279 6.47124 0.862254C6.34622 0.73723 6.17665 0.666992 5.99984 0.666992C5.82303 0.666992 5.65346 0.73723 5.52843 0.862254C5.40341 0.987279 5.33317 1.15685 5.33317 1.33366V5.33366H1.33317C1.15636 5.33366 0.98679 5.4039 0.861766 5.52892C0.736742 5.65394 0.666504 5.82351 0.666504 6.00033C0.666504 6.17714 0.736742 6.34671 0.861766 6.47173C0.98679 6.59675 1.15636 6.66699 1.33317 6.66699H5.33317V10.667C5.33317 10.8438 5.40341 11.0134 5.52843 11.1384C5.65346 11.2634 5.82303 11.3337 5.99984 11.3337C6.17665 11.3337 6.34622 11.2634 6.47124 11.1384C6.59627 11.0134 6.6665 10.8438 6.6665 10.667V6.66699H10.6665C10.8433 6.66699 11.0129 6.59675 11.1379 6.47173C11.2629 6.34671 11.3332 6.17714 11.3332 6.00033C11.3332 5.82351 11.2629 5.65394 11.1379 5.52892C11.0129 5.4039 10.8433 5.33366 10.6665 5.33366Z" fill="white" />
                       </svg>
                       Добавить новый раздел</button>
-                  </div>
+                  </div>)
+
+                  }
                 </div>
                 <ActionBtn next='/dashboard/create/step3' prev={-1}/>
               </div>

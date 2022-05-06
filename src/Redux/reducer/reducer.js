@@ -6,18 +6,18 @@ const initialState = {
       courseTitle: 'Birinchi kurs nomi',
       id: 1,
       courseLessons: [
-        'Birinchi topshiriq',
-        'Birinchi topshiriq',
-        'Birinchi topshiriq'
+        {item: 'Birinchi topshiriq'},
+        {item: 'Birinchi topshiriq'},
+        {item: 'Birinchi topshiriq'},
       ]
     },
     {
       courseTitle: 'Ikkinchi kurs nomi',
       id: 2,
       courseLessons: [
-        'Birinchi topshiriq',
-        'Birinchi topshiriq',
-        'Birinchi topshiriq'
+        {item: 'Birinchi topshiriq'},
+        {item: 'Birinchi topshiriq'},
+        {item: 'Birinchi topshiriq'},
       ]
     }
 
