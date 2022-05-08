@@ -25,29 +25,29 @@ import {
   VebinarTypeOutlet,
   VideoCourseTypeOutlet,
 } from 'Pages/index';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { I18nextProvider } from 'react-i18next';
 import { Provider } from 'react-redux';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import store from 'store/store';
 import option from 'Services/Aos';
-import Request from 'Services/Request';
+// import Request from 'Services/Request';
 import './App.css';
 import './i18n';
 
 function App() {
-  const [userInfo, setUserInfo] = useState([]);
+  // const [userInfo, setUserInfo] = useState([]);
 
   useEffect(() => {
     AOS.init({ ...option });
     //profil.get request
-    Request()
-      .get('/profil/get')
-      .then((res) => {
-        setUserInfo(res?.data);
-      })
-      .catch((err) => console.log(err));
+    // Request()
+    //   .get('/profil/get')
+    //   .then((res) => {
+    //     setUserInfo(res?.data);
+    //   })
+    //   .catch((err) => console.log(err));
   }, []);
   return (
     <Provider store={store}>

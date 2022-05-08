@@ -1,0 +1,95 @@
+  .list {
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      background-color: var(--bgColor);
+      padding: 12px 16px;
+      border-radius: 8px;
+      margin-bottom: 8px;
+
+      .title {
+        margin-right: auto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 100%;
+        color: var(--blueColor);
+      }
+
+      .delete {
+        cursor: pointer;
+      }
+      .icon {
+        cursor: grab;
+      }
+    }
+
+    &__items {
+      max-width: calc(100% - 50px);
+      width: 100%;
+      margin-left: auto;
+
+      .item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+        background-color: var(--bgColor);
+        padding: 10px 16px;
+        margin-bottom: 8px;
+        border-radius: 8px;
+
+        .icon {
+          cursor: grab;
+        }
+
+        .title {
+          margin-right: auto;
+          font-weight: 500;
+          font-size: 12px;
+        }
+
+        .edit {
+          cursor: pointer;
+        }
+
+        .delete {
+          cursor: pointer;
+        }
+      }
+
+      .add-lesson {
+        display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+        input {
+          padding: 9px 16px;
+        }
+
+        button {
+          padding: 10px 16px;
+          font-weight: 500;
+          font-size: 1rem;
+        }
+      }
+      > button {
+        padding: 4px 4px 4px 0;
+        margin-block: 24px;
+      }
+    }
+  }
+
+  > button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 16px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+  }

@@ -1,52 +1,63 @@
 import { ADD_TO_LESSON, REMOVE_FROM_LESSON } from '../constants/actionTypes'
-import { omit } from 'lodash'
 import { getLocalStorage } from 'utils/localStorage'
-const getStateFromLocalStorage = getLocalStorage('store')
-const customState = {
-  title: 'onlinedu-course',
-  data: [
-    {
-      courseTitle: 'Birinchi kurs',
-      courseId: 1,
-      lessons: [
-        {
-          item: 'bir'
-        },
-        {
-          item: 'ikki'
-        },
-        {
-          item: 'uch'
-        },
-      ]
-    },
-    {
-      courseTitle: 'Ikkinchi kurs',
-      courseId: 2,
-      lessons: [
-        {
-          item: 'bir'
-        },
-        {
-          item: 'ikki'
-        },
-        {
-          item: 'uch'
-        },
-      ]
-    }
-  ]
-}
-const initialState = getStateFromLocalStorage ? getStateFromLocalStorage : customState
+
+const initialState = getLocalStorage('store')
+
+// const initialState = {
+//   title: 'onlinedu-course',
+//   data: [
+//     {
+//       courseTitle: 'Birinchi kurs',
+//       courseId: uuidv4(),
+//       lessons: [
+//         {
+//           item: 'bir',
+//           id: uuidv4()
+//         },
+//         {
+//           item: 'ikki',
+//           id: uuidv4()
+//         },
+//         {
+//           item: 'uch',
+//           id: uuidv4()
+//         },
+//       ]
+//     },
+//     {
+//       courseTitle: 'Ikkinchi kurs',
+//       courseId: uuidv4(),
+//       lessons: [
+//         {
+//           item: 'bir',
+//           id: uuidv4()
+//         },
+//         {
+//           item: 'ikki',
+//           id: uuidv4()
+//         },
+//         {
+//           item: 'uch',
+//           id: uuidv4()
+//         },
+//       ]
+//     }
+//   ]
+// }
 const courseLessonReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_TO_LESSON:
       return(
         {...state,
-        ...action.payload}
+        ...action.payload
+        }
       )
     case REMOVE_FROM_LESSON:
-      return omit(state, [action.payload])
+      return(
+        {...state,
+        ...action.payload
+        }
+      )
 
     default:
       return state

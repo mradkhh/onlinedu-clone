@@ -1,39 +1,20 @@
-import {useSelector, useDispatch} from 'react-redux'
+import {useSelector} from 'react-redux'
 import { useState } from 'react';
 import { Drawer } from 'antd';
 import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
-import { addToLesson } from 'store/actions'
 import MobileSideMenu from '../../Components/SideMenu/MobileSideMenu';
 import Footer from '../../Components/Footer/Footer';
 import Header from '../../Components/Header/Header';
 import SideMenu from '../../Components/SideMenu/SideMenu';
 import ActionBtn from './ActionBtn';
 import StepCard from './StepCard';
-import CourseList from './CourseList/CourseList';
 import './createCourseStep2.scss';
+import CourseList from './CourseList/CourseList';
 
 const CreateCourseStep2 = () => {
-  const dispatch = useDispatch()
   const [visibleSidebar,setVisibleSidebar] = useState(false)
-  const [lessonValue, setLessonValue] = useState('')
   const storeData = useSelector(state => state.courseLessonReducer)
 
-  const sendLesson = () => {
-    const newLessonList = storeData.data.map(course => {
-      if (course.courseId === 2) {
-        return {
-          ...course,
-          ...course.lessons.push({item: lessonValue})
-        }
-      } else {
-        return {...course}
-      }
-    })
-
-    dispatch(addToLesson(newLessonList))
-    console.log(newLessonList, typeof newLessonList)
-  }
   return (
     <>
     <Header/>
@@ -81,12 +62,10 @@ const CreateCourseStep2 = () => {
                   <h5>Материалы курса</h5>
                   <p>Добавить раздел курса</p>
                   {
-                    storeData && storeData.data.map((item) =>
+                    storeData && storeData?.data.map((item, i) =>
                         <CourseList
-                          {...item}
-                          lessonValue={lessonValue}
-                          setLessonValue={setLessonValue}
-                          sendLesson={sendLesson}
+                          key={i}
+                          item={item}
                         />
                     )
                   }
