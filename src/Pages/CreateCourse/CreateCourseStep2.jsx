@@ -24,7 +24,7 @@ const CreateCourseStep2 = () => {
     const newCoursesList =  coursesList.map((course) => {
       if (course?.id === 2 ) {
         const courseLesson = course?.courseLessons
-        return {...course, courseLessons: [...courseLesson, {item: lessonValue}]}
+        return {...course, ...[courseLessons: [courseLesson, {item: lessonValue}]]}
       }
       else {
         return course
