@@ -30,7 +30,7 @@ import { I18nextProvider } from 'react-i18next';
 import { Provider } from 'react-redux';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
-import store from 'Redux/store';
+import store from 'store/store';
 import option from 'Services/Aos';
 import Request from 'Services/Request';
 import './App.css';

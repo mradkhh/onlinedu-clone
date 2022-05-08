@@ -7,31 +7,33 @@ import Header from '../../Components/Header/Header';
 import MobileSideMenu from '../../Components/SideMenu/MobileSideMenu';
 import SideMenu from '../../Components/SideMenu/SideMenu';
 import { useNavigate } from 'react-router-dom';
-import { createCourse } from 'Redux/dispatch';
+import { addToLesson } from 'store/actions'
 import ActionBtn from './ActionBtn';
 import StepCard from './StepCard';
 import './createCourseStep2.scss';
+import { type } from '@testing-library/user-event/dist/type';
 
 const CreateCourseStep2 = () => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
   const [visibleSidebar,setVisibleSidebar] = useState(false)
   const [lessonValue, setLessonValue] = useState('')
-  const {coursesList} = useSelector(state => state)
+  const storeData = useSelector(state => state.courseLessonReducer)
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    const newCoursesList =  coursesList.map((course) => {
-      if (course?.id === 2 ) {
-        const courseLesson = course?.courseLessons
-        return {...course, ...[courseLessons: [courseLesson, {item: lessonValue}]]}
-      }
-      else {
-        return course
+    const newLesson =  storeData.map(course => {
+      if (course.courseId === 2) {
+        return [
+          ...course,
+          ...course.push({item: lessonValue})
+        ]
+      } else {
+        return {...course}
       }
     })
-    console.log(newCoursesList)
-    dispatch(createCourse(newCoursesList))
+    console.log("This is new store: ", newLesson, typeof newLesson)
+    dispatch(addToLesson(newLesson))
   }
   return (
     <>
@@ -79,9 +81,9 @@ const CreateCourseStep2 = () => {
                 <div className="create-course__content-container">
                   <h5>Материалы курса</h5>
                   <p>Добавить раздел курса</p>
-                  { coursesList && (<div className="course__lists">
+                  { storeData && (<div className="course__lists">
                     {
-                      coursesList?.map((item, i) => (
+                      storeData?.map((item, i) => (
                         <div key={i} className="list">
                       <div className="list__header">
                         <div className="icon">
@@ -100,7 +102,7 @@ const CreateCourseStep2 = () => {
                       </div>
                       <div className="list__items">
                         {
-                          item?.courseLessons?.map((item, i) => (
+                          item?.lessons?.map((item, i) => (
                             <div key={i} className="item">
                           <div className="icon">
                             <svg width={16} height={16} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
