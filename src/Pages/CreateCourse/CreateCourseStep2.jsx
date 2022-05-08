@@ -1,7 +1,7 @@
 import {useSelector} from 'react-redux'
 import { useState } from 'react';
 import { Drawer } from 'antd';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import MobileSideMenu from '../../Components/SideMenu/MobileSideMenu';
 import Footer from '../../Components/Footer/Footer';
 import Header from '../../Components/Header/Header';
@@ -14,6 +14,7 @@ import CourseList from './CourseList/CourseList';
 const CreateCourseStep2 = () => {
   const [visibleSidebar,setVisibleSidebar] = useState(false)
   const storeData = useSelector(state => state.courseLessonReducer)
+  const navigate = useNavigate()
 
   return (
     <>
@@ -69,6 +70,7 @@ const CreateCourseStep2 = () => {
                         />
                     )
                   }
+                  <button onClick={()=> navigate('/dashboard/create/step2-lesson')} data-type='primary'>Yangi kurs qo'shish</button>
                 </div>
                 <ActionBtn next='/dashboard/create/step3' prev={-1}/>
               </div>

@@ -1,14 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { removeFromLesson } from 'store/actions'
+import { v4 as uuidv4 } from 'uuid';
+import { Modal } from 'react-bootstrap'
 
 const LessonList = ({item}) => {
-
+  const [show, setShow] = useState(false);
+  const [lessonValue, setLessonValue] = useState(item.item)
+  const handleClose = () => setShow(false);
   const storeData = useSelector(state => state.courseLessonReducer)
   const dispatch = useDispatch()
   const lessonId = item.id
   const editLesson = () => {
+    setShow(true)
 
+  }
+
+  const saveChange = () => {
+    
   }
 
   const removeLesson = () => {
@@ -42,6 +51,28 @@ const LessonList = ({item}) => {
           <path d="M6.66667 12.0007C6.84348 12.0007 7.01305 11.9304 7.13807 11.8054C7.2631 11.6804 7.33333 11.5108 7.33333 11.334V7.33398C7.33333 7.15717 7.2631 6.9876 7.13807 6.86258C7.01305 6.73756 6.84348 6.66732 6.66667 6.66732C6.48986 6.66732 6.32029 6.73756 6.19526 6.86258C6.07024 6.9876 6 7.15717 6 7.33398V11.334C6 11.5108 6.07024 11.6804 6.19526 11.8054C6.32029 11.9304 6.48986 12.0007 6.66667 12.0007ZM13.3333 4.00065H10.6667V3.33398C10.6667 2.80355 10.456 2.29484 10.0809 1.91977C9.70581 1.5447 9.1971 1.33398 8.66667 1.33398H7.33333C6.8029 1.33398 6.29419 1.5447 5.91912 1.91977C5.54405 2.29484 5.33333 2.80355 5.33333 3.33398V4.00065H2.66667C2.48986 4.00065 2.32029 4.07089 2.19526 4.19591C2.07024 4.32094 2 4.49051 2 4.66732C2 4.84413 2.07024 5.0137 2.19526 5.13872C2.32029 5.26375 2.48986 5.33398 2.66667 5.33398H3.33333V12.6673C3.33333 13.1978 3.54405 13.7065 3.91912 14.0815C4.29419 14.4566 4.8029 14.6673 5.33333 14.6673H10.6667C11.1971 14.6673 11.7058 14.4566 12.0809 14.0815C12.456 13.7065 12.6667 13.1978 12.6667 12.6673V5.33398H13.3333C13.5101 5.33398 13.6797 5.26375 13.8047 5.13872C13.9298 5.0137 14 4.84413 14 4.66732C14 4.49051 13.9298 4.32094 13.8047 4.19591C13.6797 4.07089 13.5101 4.00065 13.3333 4.00065ZM6.66667 3.33398C6.66667 3.15717 6.7369 2.9876 6.86193 2.86258C6.98695 2.73756 7.15652 2.66732 7.33333 2.66732H8.66667C8.84348 2.66732 9.01305 2.73756 9.13807 2.86258C9.2631 2.9876 9.33333 3.15717 9.33333 3.33398V4.00065H6.66667V3.33398ZM11.3333 12.6673C11.3333 12.8441 11.2631 13.0137 11.1381 13.1387C11.013 13.2637 10.8435 13.334 10.6667 13.334H5.33333C5.15652 13.334 4.98695 13.2637 4.86193 13.1387C4.7369 13.0137 4.66667 12.8441 4.66667 12.6673V5.33398H11.3333V12.6673ZM9.33333 12.0007C9.51014 12.0007 9.67971 11.9304 9.80474 11.8054C9.92976 11.6804 10 11.5108 10 11.334V7.33398C10 7.15717 9.92976 6.9876 9.80474 6.86258C9.67971 6.73756 9.51014 6.66732 9.33333 6.66732C9.15652 6.66732 8.98695 6.73756 8.86193 6.86258C8.73691 6.9876 8.66667 7.15717 8.66667 7.33398V11.334C8.66667 11.5108 8.73691 11.6804 8.86193 11.8054C8.98695 11.9304 9.15652 12.0007 9.33333 12.0007Z" fill="#EB5757" />
         </svg>
       </div>
+
+      <Modal
+        show={show}
+        onHide={handleClose}
+        backdrop="static"
+        keyboard={false}
+      >
+        <Modal.Header closeButton>
+          <Modal.Title>Taxrirlash</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+        <div
+          data-aos='fade-up'
+          className="add-lesson">
+            <input value={lessonValue} onChange={(e) => setLessonValue(e.target.value)} type="text" />
+        </div>
+        </Modal.Body>
+        <Modal.Footer>
+          <button onClick={handleClose} data-type='primary'>Yopish</button>
+          <button onClick={saveChange} data-type='primary'>Saqlash</button>
+        </Modal.Footer>
+      </Modal>
     </div>
   )
 }
