@@ -7,6 +7,9 @@
     background-color: var(--bgColor);
     padding: 32px;
     width: 100%;
+    @media (max-width: 1023px) {
+      padding-inline: 0;
+    }
 
     .breadcrumb {
       margin-bottom: 24px;
