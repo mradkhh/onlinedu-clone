@@ -1,7 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Modal from 'antd/lib/modal/Modal'
+import {useSelector, useDispatch} from 'react-redux'
+import { addToTest } from 'store/actions';
+import { v4 as uuidv4 } from 'uuid';
 import './TestCase.scss'
 
 const CaseItem = ({item}) => {
+  console.log("item", item.id)
   return (
     <div className="cases__item">
       <div className="cases__item-info">
@@ -25,7 +30,43 @@ const CaseItem = ({item}) => {
   )
 }
 
-const TestCase = ({cases}) => {
+const TestCase = ({cases, explanation}) => {
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [caseTitleValue, setCaseTitleValue] = useState('');
+  const [caseScoreValue, setCaseScoreValue] = useState('');
+  const [explanationValue, setExplanationValue] = useState(explanation)
+  const caseId = cases.id
+  console.log("casesId", cases)
+  const dispatch = useDispatch()
+  const testData = useSelector(state => state.testReducer)
+
+  const showModal = () => {
+    setIsModalVisible(true)
+  }
+  const handleOk = () => {
+    setIsModalVisible(false)
+  }
+
+  const addCase = () => {
+    const newCasesList = testData.data.map(test => {
+      if (test.id) {
+        console.log("ok")
+        console.log(test.id)
+        console.log(caseId)
+        return {
+          ...test,
+          ...test.cases.push({case_title: caseTitleValue, id: uuidv4()})
+        }
+      } else {
+        console.log("wrong")
+        return {...test}
+      }
+    })
+    console.log("newCasesList", newCasesList)
+    // dispatch(addToTest(newCasesList))
+    setCaseTitleValue('')
+    setCaseScoreValue('')
+  }
   console.log(cases)
   return (
     <div className="cases">
@@ -37,6 +78,30 @@ const TestCase = ({cases}) => {
             />
         )
       }
+        <div
+          data-aos='fade-up'
+          className="add-test">
+          <input
+          placeholder='Добавить вариант ответа'
+            className='case-title'
+            value={caseTitleValue}
+            onChange={(e) => setCaseTitleValue(e.target.value)}
+            type="text" />
+          <input
+            max={2}
+            className='case-score'
+            placeholder='балл'
+            value={caseScoreValue}
+            onChange={(e) => setCaseScoreValue(e.target.value)}
+            type="text" />
+          <button
+            onClick={addCase}
+            data-type='primary'
+            type='submit'
+          >
+            Saqlash
+          </button>
+        </div>
       <div className="cases__action">
         <button data-type='create'>
           <svg width={12} height={12} viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -44,12 +109,47 @@ const TestCase = ({cases}) => {
           </svg>
           Добавить вариант ответа
         </button>
-        <button className='cases__action-info' data-type='primary'>
+        <button onClick={showModal} className='cases__action-info' data-type='primary'>
           <svg width={16} height={16} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M7.99992 1.33398C6.68138 1.33398 5.39245 1.72498 4.29612 2.45752C3.19979 3.19006 2.34531 4.23125 1.84072 5.44943C1.33614 6.6676 1.20412 8.00805 1.46135 9.30125C1.71859 10.5945 2.35353 11.7823 3.28588 12.7147C4.21823 13.647 5.40611 14.282 6.69932 14.5392C7.99253 14.7965 9.33297 14.6644 10.5511 14.1598C11.7693 13.6553 12.8105 12.8008 13.5431 11.7045C14.2756 10.6081 14.6666 9.31919 14.6666 8.00065C14.6646 6.23314 13.9616 4.53859 12.7118 3.28878C11.462 2.03896 9.76743 1.33595 7.99992 1.33398ZM7.99992 13.334C6.94509 13.334 5.91394 13.0212 5.03688 12.4352C4.15982 11.8491 3.47623 11.0162 3.07256 10.0416C2.6689 9.06709 2.56328 7.99474 2.76907 6.96017C2.97485 5.9256 3.48281 4.9753 4.22869 4.22941C4.97457 3.48354 5.92487 2.97558 6.95944 2.7698C7.99401 2.56401 9.06636 2.66963 10.0409 3.07329C11.0154 3.47696 11.8484 4.16055 12.4344 5.03761C13.0205 5.91467 13.3333 6.94582 13.3333 8.00065C13.3316 9.41464 12.7692 10.7703 11.7694 11.7701C10.7695 12.7699 9.41391 13.3324 7.99992 13.334ZM7.99992 7.66732C7.82311 7.66732 7.65354 7.73756 7.52852 7.86258C7.40349 7.9876 7.33325 8.15717 7.33325 8.33398V10.334C7.33325 10.5108 7.40349 10.6804 7.52852 10.8054C7.65354 10.9304 7.82311 11.0007 7.99992 11.0007C8.17673 11.0007 8.3463 10.9304 8.47133 10.8054C8.59635 10.6804 8.66659 10.5108 8.66659 10.334V8.33398C8.66659 8.15717 8.59635 7.9876 8.47133 7.86258C8.3463 7.73756 8.17673 7.66732 7.99992 7.66732ZM7.99992 5.00065C7.8351 5.00065 7.67399 5.04953 7.53695 5.14109C7.39991 5.23266 7.2931 5.36281 7.23002 5.51508C7.16695 5.66735 7.15045 5.83491 7.1826 5.99656C7.21475 6.15821 7.29412 6.3067 7.41067 6.42324C7.52721 6.53978 7.67569 6.61915 7.83735 6.65131C7.999 6.68346 8.16655 6.66696 8.31882 6.60388C8.4711 6.54081 8.60124 6.434 8.69281 6.29696C8.78438 6.15992 8.83325 5.9988 8.83325 5.83398C8.83325 5.61297 8.74546 5.40101 8.58918 5.24473C8.4329 5.08845 8.22094 5.00065 7.99992 5.00065Z" fill="white" />
           </svg>
             Объяснение
         </button>
+        <Modal
+          onCancel={handleOk}
+          footer={false}
+          visible={isModalVisible}
+        >
+          <div className="modal__container">
+            <h3>Объяснение к ответу</h3>
+            <div className="text-area">
+              <label htmlFor="">Объясните правильный ответ</label>
+              <textarea
+              style={{
+                fontStyle: 'normal',
+                fontWeight: 400,
+                fontSize: '14px',
+                lineHeight: '160%',
+              }}
+                value={explanationValue}
+                onChange={e => setExplanationValue(e.target.value)}
+                name="explanation"
+                id="explanation"
+                cols="30"
+                rows="7"
+              >
+
+              </textarea>
+            </div>
+            <button
+             style={{width: '100%', marginTop: '16px', fontWeight: 500}}
+              onClick={handleOk}
+              data-type='primary'
+            >
+                Saqlash
+            </button>
+          </div>
+        </Modal>
       </div>
     </div>
   )

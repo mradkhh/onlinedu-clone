@@ -9,7 +9,7 @@ const TestTypeOutlet = () => {
   return (
     <div id="test__type">
       {
-        testData && testData.map((test, index) =>
+        testData && testData.data.map((test, index) =>
           <div key={index} className="test">
             <div className="test__question">
               <div className="test__question-title">Добавить вопрос</div>

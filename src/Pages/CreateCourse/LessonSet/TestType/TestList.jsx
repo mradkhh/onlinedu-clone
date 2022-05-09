@@ -26,9 +26,10 @@ const TestList = ({test}) => {
       <div className="total__score">{test.question_score}</div>
     </div>
     <TestCase
+      explanation={test.explanation}
       cases={cases}
     />
-    
+
   </div>
   )
 }
