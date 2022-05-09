@@ -14,7 +14,7 @@ const TestTypeOutlet = () => {
             <div className="test__question">
               <div className="test__question-title">Добавить вопрос</div>
                 <TestList
-                  test={test}
+                  testItem={test}
                 />
             </div>
             <TestType

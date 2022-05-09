@@ -16,6 +16,28 @@
         margin-bottom: 8px;
       }
 
+      .add-test {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8px;
+        margin-left: 50px;
+
+        .case-title {
+          border: 1px solid var(--greenColor);
+          width: 100%;
+          padding-block: 8px;
+        }
+        .case-score {
+          border: 1px solid var(--greenColor);
+          max-width: 80px;
+          width: 100%;
+          padding-block: 8px;
+        }
+
+
+      }
+
     }
   }
   .add-question {

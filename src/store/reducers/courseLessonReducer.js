@@ -1,4 +1,5 @@
 import { ADD_TO_LESSON, REMOVE_FROM_LESSON } from '../constants/actionTypes'
+// import { v4 as uuidv4 } from 'uuid';
 import { getLocalStorage } from 'utils/localStorage'
 
 const initialState = getLocalStorage('store')
@@ -58,7 +59,7 @@ const courseLessonReducer = (state = initialState, action) => {
         ...action.payload
         }
       )
-      
+
 
     default:
       return state
