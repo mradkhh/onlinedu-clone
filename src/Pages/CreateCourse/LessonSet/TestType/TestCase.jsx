@@ -5,16 +5,13 @@ import './TestCase.scss'
 const TestCase = ({testCase}) => {
   const storeData = useSelector(state => state.testReducer)
   const dispatch = useDispatch()
-  console.log("testCaseId", testCase.id)
 
   const removeCase = () => {
     const newCasesList = storeData.data.map(testItem => {
         return {
-          ...testItem,
           ...testItem.cases = testItem.cases.filter(item => item.id !== testCase.id)
         }
     })
-    console.log(newCasesList)
     dispatch(removeFromTest(newCasesList))
   }
   return (

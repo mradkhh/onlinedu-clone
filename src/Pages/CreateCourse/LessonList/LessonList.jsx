@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { removeFromLesson } from 'store/actions'
-import { v4 as uuidv4 } from 'uuid';
+
 import { Modal } from 'react-bootstrap'
 
 const LessonList = ({item}) => {
@@ -17,7 +17,7 @@ const LessonList = ({item}) => {
   }
 
   const saveChange = () => {
-    
+
   }
 
   const removeLesson = () => {
