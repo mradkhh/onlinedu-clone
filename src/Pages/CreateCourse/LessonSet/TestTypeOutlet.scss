@@ -40,15 +40,31 @@
 
     }
   }
-  .add-question {
+  .add-question__btn {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 8px;
+    cursor: pointer;
     padding-block: 12px;
     margin-top: 24px;
     font-weight: 500;
     font-size: 16px;
     line-height: 100%;
+  }
+
+  .add-question__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+
+    button {
+      padding-block: 11px;
+    }
+
+    textarea {
+      padding: 10px 16px;
+    }
   }
 }
