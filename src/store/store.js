@@ -8,6 +8,7 @@ const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk
 
 store.subscribe(() => {
   setLocalStorage('store', store.getState().courseLessonReducer)
+  setLocalStorage('store-test', store.getState().testReducer)
 })
 
 export default store

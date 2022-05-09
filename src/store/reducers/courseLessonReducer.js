@@ -47,17 +47,18 @@ const initialState = getLocalStorage('store')
 const courseLessonReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_TO_LESSON:
-      return(
+      return (
         {...state,
         ...action.payload
         }
       )
     case REMOVE_FROM_LESSON:
-      return(
+      return (
         {...state,
         ...action.payload
         }
       )
+      
 
     default:
       return state

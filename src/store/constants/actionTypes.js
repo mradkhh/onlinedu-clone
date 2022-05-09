@@ -1,2 +1,5 @@
 export const ADD_TO_LESSON = 'ADD_COURSE_LESSON'
 export const REMOVE_FROM_LESSON = 'REMOVE_COURSE_LESSON'
+
+export const ADD_TO_TEST = 'ADD_TO_TEST'
+export const REMOVE_FROM_TEST = 'REMOVE_FROM_TEST'

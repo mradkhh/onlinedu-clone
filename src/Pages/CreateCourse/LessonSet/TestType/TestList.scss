@@ -1,0 +1,57 @@
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    background-color: var(--bgColor);
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    &-num {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 100%;
+      color: var(--grayColor);
+    }
+
+    &-title {
+      margin-right: auto;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 100%;
+    }
+
+    &-tools {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      gap: 8px;
+
+      > div {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .total__score {
+    min-width: 64px;
+    padding: 14px 16px;
+    border-radius: 8px;
+    background-color: var(--bgColor);
+    margin-bottom: 8px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    color: var(--grayColor);
+  }
+}

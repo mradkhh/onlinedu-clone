@@ -1,0 +1,11 @@
+.test__type {
+  &-title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+    margin-bottom: 16px;
+    color: var(--grayColor);
+  }
+  margin-left: 16px;
+}
