@@ -47,10 +47,8 @@ const store = {
 
 const getStore = () => {
   if (getLocalStorage('store').title) {
-    console.log('ok')
     return getLocalStorage('store')
   } else {
-    console.log('wrong')
     setLocalStorage('store', store)
     return getLocalStorage('store')
   }
